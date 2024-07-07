@@ -10,4 +10,8 @@ tar -xvf postgresql-16.3.tar
 
 
 
+apt update
+apt-get install build-essential libreadline-dev zlib1g-dev flex bison libxml2-dev libxslt-dev libssl-dev libxml2-utils xsltproc ccache pkg-config
+
+
 
