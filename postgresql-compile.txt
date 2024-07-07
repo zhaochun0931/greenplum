@@ -24,3 +24,15 @@ tar -xf postgresql-16.3.tar.bz2
 cd postgresql-16.3
 ./configure
 make
+make install
+
+
+
+
+
+adduser postgres
+mkdir -p /usr/local/pgsql/data
+chown postgres /usr/local/pgsql/data
+su - postgres
+
+
