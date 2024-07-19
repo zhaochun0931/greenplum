@@ -50,7 +50,7 @@ drop database gemfiredb;
 
 CREATE TABLE student (id int, age int) DISTRIBUTED BY (id);
 \d
-
+\d student;
 
 
 
