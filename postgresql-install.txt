@@ -39,5 +39,17 @@ psql
 
 
 
+CREATE TABLE student (id int, age int);
+\d
+
+
+
+
+
+INSERT INTO student values (1,10);
+INSERT INTO student values (2,20);
+INSERT INTO student values (3,30);
+
+
 
 
