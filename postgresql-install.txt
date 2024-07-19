@@ -44,13 +44,11 @@ psql
 
 # create a new database
 create database gemfiredb;
-
-
 drop database gemfiredb;
 
 
 
-CREATE TABLE student (id int, age int);
+CREATE TABLE student (id int, age int) DISTRIBUTED BY (id);
 \d
 
 
