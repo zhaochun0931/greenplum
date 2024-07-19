@@ -5,3 +5,39 @@ apt install postgresql -y
 
 
 systemctl status postgresql.service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# up till now, the postgresql installation is successfully
+
+
+
+
+
+
+
+
+
+
+
+su - postgres
+psql
+
+\q
+
+
+
+
+
+
