@@ -38,6 +38,17 @@ psql
 \conninfo
 
 
+# list database
+\l
+
+
+# create a new database
+create database gemfiredb;
+
+
+
+
+
 
 CREATE TABLE student (id int, age int);
 \d
