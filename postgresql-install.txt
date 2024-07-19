@@ -52,4 +52,9 @@ INSERT INTO student values (3,30);
 
 
 
+select * from student;
+
+
+
+
 
