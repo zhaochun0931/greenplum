@@ -35,7 +35,7 @@ su - postgres
 psql
 
 \q
-
+\conninfo
 
 
 
