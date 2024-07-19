@@ -46,7 +46,7 @@ psql
 create database gemfiredb;
 
 
-
+drop database gemfiredb;
 
 
 
