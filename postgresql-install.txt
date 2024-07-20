@@ -55,7 +55,7 @@ drop table student;
 
 
 
-
+# do not support the doulbe quotation "
 INSERT INTO student values (1,10,101,'bejing 101');
 INSERT INTO student values (2, 20, 201,'shanghai 201');
 INSERT INTO student values (3, 30, 301,'beijing 888');
