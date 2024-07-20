@@ -49,6 +49,7 @@ drop database gemfiredb;
 
 
 CREATE TABLE student (id int, age int, parent_id int, address varchar(100)) DISTRIBUTED BY (id);
+drop table student;
 \d
 \d student;
 
