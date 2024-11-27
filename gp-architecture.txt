@@ -1,0 +1,17 @@
+In terms of physical topology, Greenplum database is a typical master segment structure, A Greenplum cluster is usually composed of a Master node, a Standby node and multiple Segment nodes, and the nodes are interconnected through a high-speed network. 
+
+
+Master is the entrance of the whole database. End users connect to master to perform query. 
+Standby master will provide high availability support for master. 
+The segment node is a work node, and the data exists on the segment. 
+Mirror segment will provide high availability support for segment.
+
+
+
+Greenplum database
+--- master
+--- standby
+--- segment
+
+
+
