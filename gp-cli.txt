@@ -2,5 +2,7 @@ gpstart
 
 
 gpstop
+gpstop -r
 
 
+gpstate
