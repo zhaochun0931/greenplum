@@ -1,1 +1,12 @@
+create database database_name;
+drop database database_name;
+
+
+
+
+
+
+
+drop table table_name;
+
 \q
