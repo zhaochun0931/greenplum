@@ -1,3 +1,8 @@
+psql postgres
+
+
+
+
 create database database_name;
 drop database database_name;
 
@@ -10,3 +15,36 @@ drop database database_name;
 drop table table_name;
 
 \q
+
+
+
+
+
+
+
+
+
+
+\c test
+create table student(id int, created_at TIMESTAMP);
+
+
+\d+ student;
+
+
+
+
+
+
+insert into student select generate_series(1,100000),generate_series(1,10);
+
+
+INSERT INTO student (id, created_at) SELECT generate_series(1, 100000), CURRENT_TIMESTAMP;
+
+
+
+
+
+
+select * from gp_segment_configuration order by 1;
+
