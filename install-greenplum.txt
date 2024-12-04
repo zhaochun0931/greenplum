@@ -244,6 +244,11 @@ gpstate -d /data/master/gpseg-1
 
 
 
+psql postgres
+select version();
+
+
+
 
 
 
