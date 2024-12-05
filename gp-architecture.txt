@@ -12,6 +12,7 @@ Greenplum database
 - master
 - standby
 - segment(primary segment, mirror segment)
+- interconnect
 
 
 
