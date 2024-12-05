@@ -4,10 +4,26 @@
 greenplum-db-6.24.3-rhel8-x86_64.rpm
 
 
-# add group and user
+
+# You cannot run the Greenplum Database server as root
+
 groupadd gpadmin
 useradd gpadmin -r -m -g gpadmin
 passwd gpadmin
+
+
+
+# enable passwordless login for gpadmin user
+su - gpadmin
+ssh-keygen -t rsa
+ssh-copy-id localhost
+
+
+
+
+
+
+
 
 
 # intall greenplum database
@@ -44,10 +60,7 @@ chown -R gpadmin:gpadmin /data/master /data/primary /data/mirror
 # Initializing Greenplum Database
 
 
-# enable passwordless login for gpadmin user
-su - gpadmin
-ssh-keygen -t rsa
-ssh-copy-id localhost
+
 
 touch gpinitsystem_config hostfile_gpinitsystem
 
