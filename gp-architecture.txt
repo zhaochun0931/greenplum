@@ -9,9 +9,19 @@ Mirror segment will provide high availability support for segment.
 
 
 Greenplum database
---- master
---- standby
---- segment
+- master
+- standby
+- segment
+
+
+
+
+A segment host typically runs from two to eight Greenplum segments, depending on the CPU cores, RAM, storage, network interfaces, and workloads.
+
+
+
+Greenplum Database uses Write-Ahead Logging (WAL) for master/standby master mirroring
+
 
 
 
