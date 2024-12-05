@@ -22,6 +22,17 @@ Greenplum Database provides some template databases and a default database, temp
 - postgres
 
 
+
+tablespace
+- create
+
+
+schema
+- create
+- drop
+
+
+
 table
 - create
 - drop
