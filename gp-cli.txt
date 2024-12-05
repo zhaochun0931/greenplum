@@ -6,3 +6,18 @@ gpstop -r
 
 
 gpstate
+
+
+
+
+database
+- create
+- drop
+- alter
+
+
+table
+- create
+- drop
+- alter
+
