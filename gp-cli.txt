@@ -38,3 +38,9 @@ table
 - drop
 - alter
 
+
+
+
+select * from gp_segment_configuration;
+
+
