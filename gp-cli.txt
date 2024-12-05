@@ -16,6 +16,12 @@ database
 - alter
 
 
+Greenplum Database provides some template databases and a default database, template1, template0, and postgres.
+- template1
+- template0
+- postgres
+
+
 table
 - create
 - drop
