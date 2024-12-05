@@ -6,7 +6,8 @@ gpstop -r
 
 
 gpstate
-
+gpstate -e
+gpstate -b
 
 
 
