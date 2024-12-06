@@ -2,3 +2,7 @@ docker run --name mypg1 -e POSTGRES_PASSWORD=password -d postgres
 
 docker exec -it mypg1 bash
 psql postgres
+
+
+
+the default postgres user and database are created in the entrypoint with initdb.
