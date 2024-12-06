@@ -6,6 +6,13 @@ psql postgres
 create database database_name;
 drop database database_name;
 
+\l
+\list
+\list database_name
+
+
+
+
 
 
 
@@ -15,6 +22,9 @@ drop database database_name;
 drop table table_name;
 
 \q
+
+
+
 
 
 
