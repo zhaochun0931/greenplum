@@ -1,4 +1,17 @@
-docker run --name mypg1 -e POSTGRES_PASSWORD=password -d postgres
+docker run --rm --name mypg1 -e POSTGRES_PASSWORD=password -d postgres
+docker run --rm --name mypg1 -e POSTGRES_PASSWORD=password -v $(PWD)/pg1:/var/lib/postgresql/data -d postgres
+
+
+the default postgres user and database are created in the entrypoint with initdb.
+
+PGDATA
+/var/lib/postgresql/data is the default data directory. 
+
+
+
+
+
+
 
 docker exec -it mypg1 bash
 su - postgres
@@ -6,4 +19,44 @@ psql postgres
 
 
 
-the default postgres user and database are created in the entrypoint with initdb.
+
+
+
+
+postgres=# \l
+                                                    List of databases
+   Name    |  Owner   | Encoding | Locale Provider |  Collate   |   Ctype    | Locale | ICU Rules |   Access privileges
+-----------+----------+----------+-----------------+------------+------------+--------+-----------+-----------------------
+ postgres  | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           |
+ template0 | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           | =c/postgres          +
+           |          |          |                 |            |            |        |           | postgres=CTc/postgres
+ template1 | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           | =c/postgres          +
+           |          |          |                 |            |            |        |           | postgres=CTc/postgres
+(3 rows)
+
+postgres=#
+postgres=# create database gemfire_db;
+CREATE DATABASE
+postgres=#
+postgres=#
+postgres=# \l
+                                                     List of databases
+    Name    |  Owner   | Encoding | Locale Provider |  Collate   |   Ctype    | Locale | ICU Rules |   Access privileges
+------------+----------+----------+-----------------+------------+------------+--------+-----------+-----------------------
+ gemfire_db | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           |
+ postgres   | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           |
+ template0  | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           | =c/postgres          +
+            |          |          |                 |            |            |        |           | postgres=CTc/postgres
+ template1  | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           | =c/postgres          +
+            |          |          |                 |            |            |        |           | postgres=CTc/postgres
+(4 rows)
+
+postgres=#
+
+
+
+
+
+
+
+
