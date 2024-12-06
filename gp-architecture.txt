@@ -9,9 +9,8 @@ Mirror segment will provide high availability support for segment.
 
 
 Greenplum database
-- master
-- standby
-- segment(primary segment, mirror segment)
+- master (primary master, standby master)
+- segment (primary segment, mirror segment)
 - interconnect
 
 
