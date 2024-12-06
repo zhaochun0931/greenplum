@@ -1,6 +1,7 @@
 docker run --name mypg1 -e POSTGRES_PASSWORD=password -d postgres
 
 docker exec -it mypg1 bash
+su - postgres
 psql postgres
 
 
