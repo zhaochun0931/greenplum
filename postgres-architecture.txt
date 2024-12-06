@@ -1,0 +1,21 @@
+Before you can do anything, you must initialize a database storage area on disk.
+
+A database cluster is a collection of databases that is managed by a single instance of a running database server. After initialization, a database cluster will contain a database named postgres
+
+Another database created within each cluster during initialization is called template1
+
+
+
+
+In file system terms, a database cluster is a single directory under which all data will be stored.
+
+
+There is no default, although locations such as /usr/local/pgsql/data or /var/lib/pgsql/data are popular
+
+
+To initialize a database cluster, use the command initdb, which is installed with PostgreSQL. The desired file system location of your database cluster is indicated by the -D option, for example:
+initdb -D /usr/local/pgsql/data
+
+
+Alternatively, you can run initdb via the pg_ctl program like so:
+pg_ctl -D /usr/local/pgsql/data initdb
