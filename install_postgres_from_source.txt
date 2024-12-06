@@ -1,0 +1,9 @@
+wget https://ftp.postgresql.org/pub/source/v17.2/postgresql-17.2.tar.gz
+
+md5sum postgresql-17.2.tar.gz
+181495ea481f49412d6ec026c8f3f14c  postgresql-17.2.tar.gz
+
+
+
+
+
