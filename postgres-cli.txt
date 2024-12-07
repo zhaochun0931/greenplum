@@ -71,3 +71,7 @@ grant all privileges on database gemfire_db to xxx;
 
 select * from gp_segment_configuration order by 1;
 
+
+
+# backup the database
+pg_dump gemfire_db > gemfire_db.dump
