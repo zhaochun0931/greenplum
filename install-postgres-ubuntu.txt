@@ -9,6 +9,9 @@ systemctl status postgresql.service
 
 
 
+The default postgres user in PostgreSQL does not have a predefined password after installation.
+ALTER USER postgres PASSWORD 'newpassword';
+
 
 /etc/postgresql/12/main/postgresql.conf
 
@@ -35,8 +38,6 @@ You can now start the database server using:
 
 
 
-
-ALTER USER postgres PASSWORD 'newpassword';
 
 
 
