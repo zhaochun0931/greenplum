@@ -1,0 +1,29 @@
+systemctl stop postgresql
+
+rm -rf /var/lib/postgresql/<version>/main/*
+
+pg_basebackup -h <primary-server-ip> -D /var/lib/postgresql/<version>/main -U replicator -Fp -Xs -P
+
+
+
+sudo touch /var/lib/postgresql/<version>/main/standby.signal
+
+sudo vi /var/lib/postgresql/<version>/main/postgresql.auto.conf
+
+# add the following contents
+
+primary_conninfo = 'host=<primary-server-ip> port=5432 user=replicator password=replicator_password application_name=standby'
+
+
+
+
+
+
+sudo systemctl start postgresql
+
+
+
+
+psql
+SELECT * FROM pg_stat_replication;
+
