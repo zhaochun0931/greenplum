@@ -1,6 +1,9 @@
 psql postgres
 
 
+psql -h 1.2.3.4 -U postgres -d postgres
+
+
 
 
 create database database_name;
