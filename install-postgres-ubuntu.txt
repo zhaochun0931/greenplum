@@ -6,11 +6,7 @@ systemctl status postgresql.service
 
 
 
-or 
 
-You can now start the database server using:
-
-    pg_ctlcluster 12 main start
 
 
 
@@ -22,6 +18,16 @@ You can now start the database server using:
 
 
 # up till now, the postgresql installation is successfully
+
+
+
+
+or 
+
+You can now start the database server using:
+
+    pg_ctlcluster 12 main start
+
 
 
 
