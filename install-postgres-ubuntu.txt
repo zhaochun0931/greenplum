@@ -6,6 +6,12 @@ systemctl status postgresql.service
 
 
 
+or 
+
+You can now start the database server using:
+
+    pg_ctlcluster 12 main start
+
 
 
 
