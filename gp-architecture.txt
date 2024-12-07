@@ -21,7 +21,12 @@ A segment host typically runs from two to eight Greenplum segments, depending on
 
 
 Greenplum Database uses Write-Ahead Logging (WAL) for master/standby master mirroring
+- walsender
+- walreceiver
 
+In PostgreSQL, the walsender is a background process running on the primary server in a replication setup. It is responsible for sending Write-Ahead Log (WAL) data to connected standby servers or other clients that use WAL data for replication or streaming.
 
+In PostgreSQL, the walreceiver is a process responsible for streaming Write-Ahead Logging (WAL) data from the primary server to a standby server in a replication setup.
+The walreceiver fetches WAL data from the primary server and writes it to the standby server's WAL segment files. This ensures the standby server remains synchronized with the primary server by replaying the changes described in the WAL.
 
 
