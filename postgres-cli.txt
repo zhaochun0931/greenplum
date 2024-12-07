@@ -54,6 +54,7 @@ insert into student select generate_series(1,10),generate_series(1,10);
 INSERT INTO student (id, created_at) SELECT generate_series(1, 10), CURRENT_TIMESTAMP;
 
 
+INSERT INTO student (id) SELECT generate_series(1, 100);
 
 
 
