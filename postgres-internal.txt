@@ -1,0 +1,15 @@
+How Connections Are Established
+
+PostgreSQL implements a “process per user” client/server model. In this model, every client process connects to exactly one backend process.
+
+The backend process parses the query, creates an execution plan, executes the plan, and returns the retrieved rows to the client by transmitting them over the established connection.
+
+
+
+
+
+
+
+
+
+
