@@ -5,10 +5,12 @@ rm -rf /var/lib/postgresql/<version>/main/*
 pg_basebackup -h <primary-server-ip> -D /var/lib/postgresql/<version>/main -U replicator -Fp -Xs -P
 
 
+# A server enters standby mode if a standby.signal file exists in the data directory when the server is started.
 
-sudo touch /var/lib/postgresql/<version>/main/standby.signal
 
-sudo vi /var/lib/postgresql/<version>/main/postgresql.auto.conf
+touch /var/lib/postgresql/<version>/main/standby.signal
+
+vi /var/lib/postgresql/<version>/main/postgresql.auto.conf
 
 # add the following contents
 
