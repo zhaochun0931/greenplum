@@ -1,8 +1,7 @@
 psql postgres
 
 
-psql -h 1.2.3.4 -U postgres -d postgres
-
+psql -h <remote_host> -p 5432 -U <username> -d <database>
 
 
 
