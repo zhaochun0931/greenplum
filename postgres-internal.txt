@@ -11,5 +11,8 @@ The backend process parses the query, creates an execution plan, executes the pl
 
 
 
-
+The Parser Stage
+The parser stage consists of two parts:
+- The parser defined in gram.y and scan.l is built using the Unix tools bison and flex.
+- The transformation process does modifications and augmentations to the data structures returned by the parser.
 
