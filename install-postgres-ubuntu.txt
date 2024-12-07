@@ -10,7 +10,7 @@ systemctl status postgresql.service
 
 
 
-
+/etc/postgresql/12/main/postgresql.conf
 
 
 
