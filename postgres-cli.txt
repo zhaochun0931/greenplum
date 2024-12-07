@@ -78,9 +78,12 @@ pg_dump gemfire_db > gemfire_db.dump
 
 
 # restore the database
-
+psql
 create database gemfire_db;
 
-psql gemfire_db < gemfire_db.dump
+or 
+createdb gemfire_db
 
+
+psql gemfire_db < gemfire_db.dump
 vacuumdb -a -z
