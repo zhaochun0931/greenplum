@@ -36,6 +36,7 @@ You can now start the database server using:
 
 
 
+ALTER USER postgres PASSWORD 'newpassword';
 
 
 
