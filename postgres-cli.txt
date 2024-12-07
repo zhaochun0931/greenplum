@@ -56,5 +56,15 @@ INSERT INTO student (id, created_at) SELECT generate_series(1, 10), CURRENT_TIME
 
 
 
+create user xxx with password 'xxx';
+grant all privileges on database gemfire_db to xxx;
+\du
+
+
+
+
+
+
+
 select * from gp_segment_configuration order by 1;
 
