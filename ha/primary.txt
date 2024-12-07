@@ -1,4 +1,14 @@
-sudo nano /etc/postgresql/<version>/main/postgresql.conf
+sudo vi /etc/postgresql/<version>/main/postgresql.conf
 
 
+# Allow Standby to Connect
+sudo vi /etc/postgresql/<version>/main/pg_hba.conf
+sudo systemctl restart postgresql
+
+
+
+# Create a Replication User
+sudo -u postgres psql
+
+CREATE ROLE replicator WITH REPLICATION PASSWORD 'replicator_password' LOGIN;
 
