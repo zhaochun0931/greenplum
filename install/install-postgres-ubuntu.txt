@@ -62,6 +62,12 @@ ALTER USER postgres PASSWORD 'newpassword';
 
 
 
+
+# how to install the latest PostgreSQL
+
+
+
+
 su - postgres
 psql
 
