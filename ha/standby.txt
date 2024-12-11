@@ -1,11 +1,11 @@
 systemctl stop postgresql
 
-rm -rf /var/lib/postgresql/<version>/main/*
+rm -rf /var/lib/postgresql/12/main/*
 
 
 su - postgres
 
-pg_basebackup -h <primary-server-ip> -D /var/lib/postgresql/<version>/main -U replicator -Fp -Xs -P
+pg_basebackup -h <primary-server-ip> -D /var/lib/postgresql/<version>/main -U replicator_user -Fp -Xs -P
 
 
 # A server enters standby mode if a standby.signal file exists in the data directory when the server is started.
