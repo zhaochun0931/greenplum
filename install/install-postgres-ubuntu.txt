@@ -1,3 +1,5 @@
+#install
+
 apt update
 apt install postgresql -y
 systemctl status postgresql.service
@@ -61,10 +63,19 @@ ALTER USER postgres PASSWORD 'newpassword';
 
 
 
+# uninstall
+systemctl stop postgresql
+apt remove --purge postgresql postgresql-* -y
+rm -rf /etc/postgresql /var/lib/postgresql /var/log/postgresql
+apt autoremove -y
+apt autoclean
+
 
 
 # how to install the latest PostgreSQL
-
+apt update
+apt upgrade -y
+sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 
 
 
