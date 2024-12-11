@@ -1,9 +1,21 @@
 #install
-
 apt update
-apt install postgresql -y
+apt upgrade -y
+apt install -y postgresql-common
+/usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+apt -y install postgresql
+
+
 systemctl status postgresql.service
 psql --version
+
+
+
+
+
+
+
+
 
 
 
@@ -64,12 +76,6 @@ ALTER USER postgres PASSWORD 'newpassword';
 
 
 
-# how to install the latest PostgreSQL
-apt update
-apt upgrade -y
-apt install -y postgresql-common
-/usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
-apt -y install postgresql
 
 
 
