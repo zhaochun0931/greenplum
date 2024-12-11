@@ -1,3 +1,10 @@
+su - postgres
+cd /etc/postgresql/12/main
+cp postgresql.conf postgresql.conf.backup
+cp pg_hba.conf pg_hba.conf.backup
+
+
+
 sudo vi /etc/postgresql/<version>/main/postgresql.conf
 
 
