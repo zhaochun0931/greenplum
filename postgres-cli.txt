@@ -15,6 +15,7 @@ psql -h <remote_host> -p 5432 -U <username> -d <database>
 \conninfo
 
 
+\pset pager off
 
 
 
