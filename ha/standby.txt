@@ -27,6 +27,5 @@ sudo systemctl start postgresql
 
 
 
-psql
-SELECT * FROM pg_stat_replication;
+
 
