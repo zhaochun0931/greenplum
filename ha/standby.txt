@@ -11,11 +11,6 @@ pg_basebackup -h <primary-server-ip> -D /var/lib/postgresql/<version>/main -U re
 # A server enters standby mode if a standby.signal file exists in the data directory when the server is started.
 touch /var/lib/postgresql/12/main/standby.signal
 
-vi /var/lib/postgresql/12/main/postgresql.auto.conf
-
-# add the following contents
-
-primary_conninfo = 'host=<primary-server-ip> port=5432 user=replicator password=replicator_password application_name=standby'
 
 
 
