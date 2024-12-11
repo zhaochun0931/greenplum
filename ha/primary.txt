@@ -19,3 +19,9 @@ sudo -u postgres psql
 
 CREATE ROLE replicator WITH REPLICATION PASSWORD 'replicator_password' LOGIN;
 
+
+
+
+
+psql
+SELECT * FROM pg_stat_replication;
