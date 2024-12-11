@@ -25,3 +25,6 @@ CREATE ROLE replicator_user WITH REPLICATION PASSWORD 'replicator_password' LOGI
 
 psql
 SELECT * FROM pg_stat_replication;
+
+
+select pg_is_in_recovery();
