@@ -1,6 +1,10 @@
 apt update
 apt install postgresql -y
 systemctl status postgresql.service
+psql --version
+
+
+
 
 
 
