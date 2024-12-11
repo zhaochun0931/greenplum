@@ -25,7 +25,7 @@ primary_conninfo = 'host=<primary-server-ip> port=5432 user=replicator password=
 sudo systemctl start postgresql
 
 
-
+select pg_is_in_recovery();
 
 
 
