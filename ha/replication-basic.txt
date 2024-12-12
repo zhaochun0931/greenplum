@@ -1,0 +1,6 @@
+Determine Your Replication Setup
+
+
+Decide whether you are setting up:
+- Streaming replication (common for real-time replication).
+- Point-in-time recovery (PITR) using WAL files from an archive.
