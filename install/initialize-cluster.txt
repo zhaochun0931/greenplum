@@ -1,5 +1,4 @@
 # initialize the cluster
-
 su - postgres
 
 mkdir /tmp/xxx
@@ -18,7 +17,11 @@ port = 5432
 
 
 
-# You can now start the database server using:
+
+
+
+
+# start the database server
 /usr/lib/postgresql/17/bin/pg_ctl -D /tmp/xxx -l logfile start
 /usr/lib/postgresql/17/bin/pg_ctl -D /tmp/yyy -l logfile start
 
