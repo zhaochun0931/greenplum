@@ -9,6 +9,8 @@ mkdir /tmp/yyy
 /usr/lib/postgresql/17/bin/initdb -D /tmp/yyy
 
 
+
+
 make sure the port is unique in the postgresql.conf of each directory (/tmp/xxx, /tmp/yyy)
 
 port = 5432
@@ -17,13 +19,11 @@ port = 5432
 
 
 # You can now start the database server using:
-
-
-
 /usr/lib/postgresql/17/bin/pg_ctl -D /tmp/xxx -l logfile start
-
-
 /usr/lib/postgresql/17/bin/pg_ctl -D /tmp/yyy -l logfile start
+
+
+/usr/lib/postgresql/17/bin/pg_ctl -D /tmp/xxx stop
 
 
 
