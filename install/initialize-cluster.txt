@@ -24,3 +24,10 @@ port = 5432
 
 
 /usr/lib/postgresql/17/bin/pg_ctl -D /tmp/yyy -l logfile start
+
+
+
+
+psql -p 5432
+psql -p 5532
+psql -p 5632
