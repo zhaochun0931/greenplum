@@ -20,6 +20,18 @@ A segment host typically runs from two to eight Greenplum segments, depending on
 
 
 
+Master 和 Segment 其实都是一个单独的 PostgreSQL 数据库。每一个都有自己单独的套元数据字典，在这里， Master 节点一般也叫主节点， Segment 也叫做数据节点。
+
+Segment 节点与 Master 节点的通信，通过千兆(或万兆)网卡组成的内部连接(InterConnect)，在同一台数据节点机器上可以放多个 Segment，不同的 Segment 节点会被赋予不同的端口，同时， Segment 之间也不断地进行着交互。为了实现高可用，每个 Segment 都有对应的备节点( Mirror Segment)，分别存在于不同的机器上。
+
+Client 一般只能与 Master 节点进行交互， Client 将 SQL 发给 Master，然后 Master 对 SQL 进行分析后，再将其分配给所有的 Segment 进行操作，并且将汇总结果返回给客户端。
+
+
+
+
+
+
+
 Greenplum Database uses Write-Ahead Logging (WAL) for master/standby master mirroring
 - walsender
 - walreceiver
