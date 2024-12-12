@@ -1,7 +1,0 @@
-su - postgres
-
-mkdir /tmp/xxx
-mkdir /tmp/yyy
-
-/usr/lib/postgresql/17/bin/initdb -D /tmp/xxx
-/usr/lib/postgresql/17/bin/initdb -D /tmp/yyy
