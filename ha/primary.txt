@@ -1,5 +1,5 @@
 su - postgres
-cd /etc/postgresql/12/main
+cd /etc/postgresql/17/main
 cp postgresql.conf postgresql.conf.backup
 cp pg_hba.conf pg_hba.conf.backup
 
