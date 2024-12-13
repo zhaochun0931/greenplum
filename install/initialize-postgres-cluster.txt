@@ -1,3 +1,12 @@
+initdb creates a new PostgreSQL database cluster.
+
+Creating a database cluster consists of creating the directories in which the cluster data will live, generating the shared catalog tables (tables that belong to the whole cluster rather than to any particular database), and creating the postgres, template1, and template0 databases. 
+
+The postgres database is a default database meant for use by users, utilities and third party applications. 
+template1 and template0 are meant as source databases to be copied by later CREATE DATABASE commands. template0 should never be modified, but you can add objects to template1, which by default will be copied into databases created later.
+
+
+
 # initialize the cluster
 su - postgres
 
