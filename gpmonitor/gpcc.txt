@@ -1,0 +1,14 @@
+Greenplum Command Center
+
+Tanzu Greenplum command center is a management tool for the VMware VMware Greenplum Big Data Platform.
+
+
+
+
+
+1）重启GPCC是否有变化？
+
+
+2) 能否到gpperfmon数据库执行下SELECT语句：select * from gpmetrics.gpcc_disk_history order by ctime desc limit 10;
+
+3）上传下$GPCC_HOME/logs目录下的webserver.log
