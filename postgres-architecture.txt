@@ -82,6 +82,17 @@ postgres=#
 
 
 
+In PostgreSQL, each table is related to (at least) one data file.
+
+gemfire=# SELECT relfilenode, relname FROM pg_class WHERE relname = 't_test';
+ relfilenode | relname
+-------------+---------
+       16390 | t_test
+(1 row)
+
+gemfire=#
+
+
 
 
 
