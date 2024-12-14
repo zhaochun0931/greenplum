@@ -30,3 +30,9 @@ Replace /path/to/wal_archive with the location of your archived WAL files.
 
 Remove the recovery.signal File
 
+
+
+
+
+archive_mode
+we enable archive_mode by setting it to on. With archive mode enabled, we can specify a command that will execute when PostgreSQL no longer needs a WAL file for crash recovery.
