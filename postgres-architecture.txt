@@ -70,13 +70,14 @@ It actually contains the real data (that is, tables, indexes, and so on). Inside
 
 
 
-postgres=#  SELECT oid, datname FROM pg_database;
- oid |  datname
------+-----------
-   5 | postgres
-   1 | template1
-   4 | template0
-(3 rows)
+postgres=# SELECT oid, datname FROM pg_database;
+  oid  |  datname
+-------+-----------
+     5 | postgres
+     1 | template1
+     4 | template0
+ 16389 | gemfire
+(4 rows)
 
 postgres=#
 
@@ -91,6 +92,21 @@ gemfire=# SELECT relfilenode, relname FROM pg_class WHERE relname = 't_test';
 (1 row)
 
 gemfire=#
+
+
+
+As soon as the table is created, PostgreSQL will create an empty file on the disk:
+
+$ ls -al /var/lib/postgresql/17/main/base/16389/16390
+-rw------- 1 postgres postgres 0 Dec 14 03:16 /var/lib/postgresql/17/main/base/16389/16390
+$
+
+
+
+
+
+
+
 
 
 
