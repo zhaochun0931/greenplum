@@ -63,6 +63,33 @@ The PostgreSQL disk layout
 
 
 
+
+
+base - the actual data directory
+It actually contains the real data (that is, tables, indexes, and so on). Inside the base directory, each database will have its own subdirectory
+
+
+
+postgres=#  SELECT oid, datname FROM pg_database;
+ oid |  datname
+-----+-----------
+   5 | postgres
+   1 | template1
+   4 | template0
+(3 rows)
+
+postgres=#
+
+
+
+
+
+
+
+
+
+
+
 default two tablespaces to stores all system data.
 - pg_default
 - pg_global
