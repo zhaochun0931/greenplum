@@ -36,3 +36,4 @@ Remove the recovery.signal File
 
 archive_mode
 we enable archive_mode by setting it to on. With archive mode enabled, we can specify a command that will execute when PostgreSQL no longer needs a WAL file for crash recovery.
+In the archive_command setting, the %p value represents the full path to the WAL file, and %f resolves to the filename
