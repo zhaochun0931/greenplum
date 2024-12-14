@@ -136,6 +136,9 @@ select * from gp_segment_configuration order by 1;
 
 # backup the database
 pg_dump gemfire_db > gemfire_db.dump
+pg_dumpall
+
+
 
 
 # restore the database
