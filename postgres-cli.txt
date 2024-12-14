@@ -150,6 +150,12 @@ createdb gemfire_db
 
 
 pg_ctl reload -D your_data_directory_here
+SELECT pg_reload_conf();
+
+
+SELECT * FROM pg_stat_activity;
+
+
 
 psql gemfire_db < gemfire_db.dump
 vacuumdb -a -z
