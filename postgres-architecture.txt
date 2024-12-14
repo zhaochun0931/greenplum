@@ -101,10 +101,37 @@ $ ls -al /var/lib/postgresql/17/main/base/16389/16390
 -rw------- 1 postgres postgres 0 Dec 14 03:16 /var/lib/postgresql/17/main/base/16389/16390
 $
 
+$ file /var/lib/postgresql/17/main/base/16389/16390
+/var/lib/postgresql/17/main/base/16389/16390: data
+$
 
 
+$ pg_filedump /var/lib/postgresql/17/main/base/16389/16390
+
+*******************************************************************
+* PostgreSQL File/Block Formatted Dump Utility
+*
+* File: /var/lib/postgresql/17/main/base/16389/16390
+* Options used: None
+*******************************************************************
+
+Block    0 ********************************************************
+<Header> -----
+ Block Offset: 0x00000000         Offsets: Lower      36 (0x0024)
+ Block: Size 8192  Version    4            Upper    8096 (0x1fa0)
+ LSN:  logid      0 recoff 0x01d66048      Special  8192 (0x2000)
+ Items:    3                      Free Space: 8060
+ Checksum: 0x0000  Prune XID: 0x00000000  Flags: 0x0000 ()
+ Length (including item array): 36
+
+<Data> -----
+ Item   1 -- Length:   28  Offset: 8160 (0x1fe0)  Flags: NORMAL
+ Item   2 -- Length:   28  Offset: 8128 (0x1fc0)  Flags: NORMAL
+ Item   3 -- Length:   28  Offset: 8096 (0x1fa0)  Flags: NORMAL
 
 
+*** End of File Encountered. Last Block Read: 0 ***
+$
 
 
 
