@@ -57,6 +57,25 @@ drop database database_name;
 
 
 
+SELECT name, setting FROM pg_settings WHERE category = 'File Locations';
+
+postgres=# SELECT name, setting FROM pg_settings WHERE category = 'File Locations';
+       name        |         setting
+-------------------+--------------------------
+ config_file       | /tmp/xxx/postgresql.conf
+ data_directory    | /tmp/xxx
+ extension_destdir |
+ external_pid_file |
+ hba_file          | /tmp/xxx/pg_hba.conf
+ ident_file        | /tmp/xxx/pg_ident.conf
+(6 rows)
+
+postgres=#
+
+
+
+
+
 
 
 
