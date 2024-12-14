@@ -122,6 +122,19 @@ default two tablespaces to stores all system data.
 - pg_global
 
 
+postgres=# \db
+       List of tablespaces
+    Name    |  Owner   | Location
+------------+----------+----------
+ pg_default | postgres |
+ pg_global  | postgres |
+(2 rows)
+
+postgres=#
+
+
+
+
 
 table
 Tables form the building block of relational-database storage.
