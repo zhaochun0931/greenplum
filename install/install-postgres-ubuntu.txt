@@ -6,6 +6,9 @@ apt install -y postgresql-common
 apt -y install postgresql
 
 
+apt install postgresql-filedump
+
+
 
 # verify
 systemctl status postgresql.service
