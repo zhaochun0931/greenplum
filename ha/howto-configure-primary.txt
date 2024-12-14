@@ -14,7 +14,7 @@ sudo systemctl restart postgresql
 
 
 
-# Create a Replication User
+# Create a replication User
 su - postgres
 psql
 CREATE ROLE replicator_user WITH REPLICATION LOGIN PASSWORD 'replicator_password';
