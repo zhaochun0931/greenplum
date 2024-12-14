@@ -146,5 +146,10 @@ or
 createdb gemfire_db
 
 
+
+
+
+pg_ctl reload -D your_data_directory_here
+
 psql gemfire_db < gemfire_db.dump
 vacuumdb -a -z
