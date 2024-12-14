@@ -42,4 +42,12 @@ default two tablespaces to stores all system data.
 
 
 
+table
+Tables form the building block of relational-database storage.
+
+
+
+index
+
+
 
