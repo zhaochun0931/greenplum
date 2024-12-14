@@ -152,7 +152,7 @@ createdb gemfire_db
 
 
 
-pg_ctl reload -D your_data_directory_here
+pg_ctl reload -D your_data_directory
 SELECT pg_reload_conf();
 
 
