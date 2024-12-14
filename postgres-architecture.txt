@@ -139,6 +139,12 @@ $
 
 
 
+global - the global data
+The global directory will contain the global system tables. This directory is small.
+
+
+
+
 
 
 
