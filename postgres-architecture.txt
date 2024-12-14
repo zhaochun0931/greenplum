@@ -33,3 +33,13 @@ postgres -D /usr/local/pgsql/data
 postgres -D /usr/local/pgsql/data >logfile 2>&1 &
 
 
+
+
+
+default two tablespaces to stores all system data.
+- pg_default
+- pg_global
+
+
+
+
