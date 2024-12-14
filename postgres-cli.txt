@@ -106,7 +106,7 @@ drop table table_name;
 
 
 
-
+CREATE TABLE t_test AS SELECT * FROM generate_series(1, 1000000);
 
 
 insert into student select generate_series(1,10),generate_series(1,10);
