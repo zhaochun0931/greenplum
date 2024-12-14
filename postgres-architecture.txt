@@ -36,6 +36,33 @@ postgres -D /usr/local/pgsql/data >logfile 2>&1 &
 
 
 
+
+
+
+├── base
+├── global
+├── pg_commit_ts
+├── pg_dynshmem
+├── pg_logical
+├── pg_multixact
+├── pg_notify
+├── pg_replslot
+├── pg_serial
+├── pg_snapshots
+├── pg_stat
+├── pg_stat_tmp
+├── pg_subtrans
+├── pg_tblspc
+├── pg_twophase
+├── PG_VERSION
+├── pg_wal
+├── pg_xact
+├── postgresql.auto.conf
+├── postmaster.opts
+└── postmaster.pid
+
+
+
 default two tablespaces to stores all system data.
 - pg_default
 - pg_global
