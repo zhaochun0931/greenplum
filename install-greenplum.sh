@@ -1,7 +1,6 @@
 # install greenplum database in Redhat linux
 
 
-greenplum-db-6.24.3-rhel8-x86_64.rpm
 
 
 
@@ -27,7 +26,7 @@ ssh-copy-id localhost
 
 
 # intall greenplum database
-yum install ./greenplum-db-6.24.3-rhel8-x86_64.rpm
+yum install greenplum-db-7.4.0-el8-x86_64.rpm
 
 
 # change permission
