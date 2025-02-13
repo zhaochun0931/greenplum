@@ -26,7 +26,7 @@ ssh-copy-id localhost
 
 
 # intall greenplum database
-yum install greenplum-db-7.4.0-el8-x86_64.rpm
+yum install -y greenplum-db-7.4.0-el8-x86_64.rpm
 
 
 # change permission
