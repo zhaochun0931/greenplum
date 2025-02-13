@@ -1,11 +1,13 @@
-# install greenplum database in Redhat linux
+# install the greenplum in Rocky linux
+
+# intall greenplum database to the default directory /usr/local/greenplum-db-7.4.0
+# it will also create a soft link greenplum-db in /usr/local to /usr/local/greenplum-db-7.4.0
+yum install -y greenplum-db-7.4.0-el8-x86_64.rpm
 
 
 
 
-
-# You cannot run the Greenplum Database server as root
-
+# create gpadmin group and gpadmin user to manage the greenplum database
 groupadd gpadmin
 useradd gpadmin -r -m -g gpadmin
 passwd gpadmin
@@ -14,19 +16,10 @@ passwd gpadmin
 
 # enable passwordless login for gpadmin user
 su - gpadmin
-ssh-keygen -t rsa
+ssh-keygen
 ssh-copy-id localhost
 
 
-
-
-
-
-
-
-
-# intall greenplum database
-yum install -y greenplum-db-7.4.0-el8-x86_64.rpm
 
 
 # change permission
@@ -59,7 +52,7 @@ chown -R gpadmin:gpadmin /data/master /data/primary /data/mirror
 #initialize Greenplum Database
 
 
-
+su - gpadmin
 
 touch gpinitsystem_config
 touch hostfile_gpinitsystem
