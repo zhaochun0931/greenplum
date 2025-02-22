@@ -43,8 +43,18 @@ chown -R gpadmin:gpadmin /data/master /data/primary /data/mirror
 
 su - gpadmin
 
-touch gpinitsystem_config
+
+# Creating the Initialization Host File
 touch hostfile_gpinitsystem
+
+
+# Creating the Greenplum Database Configuration File
+touch gpinitsystem_config
+
+
+
+
+
 source /usr/local/greenplum-db/greenplum_path.sh
 gpinitsystem -c gpinitsystem_config -h hostfile_gpinitsystem
 
