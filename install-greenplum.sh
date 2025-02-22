@@ -24,19 +24,8 @@ ssh-copy-id localhost
 
 # change permission
 chown -R gpadmin:gpadmin /usr/local/greenplum*
-
-
-
-
-
-
-
-
-
-
-# create the directory
-mkdir -p /data/master /data/primary /data/mirror
 chown -R gpadmin:gpadmin /data/master /data/primary /data/mirror
+mkdir -p /data/master /data/primary /data/mirror
 
 
 
