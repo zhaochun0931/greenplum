@@ -1,0 +1,11 @@
+install the greenplum in the standby (gp2)
+
+/etc/hosts
+
+
+
+set up the ssh-passwordless
+
+ssh-copy-id gp2
+
+gpinitstandby -s gp2
