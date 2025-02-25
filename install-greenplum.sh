@@ -62,6 +62,9 @@ gpinitsystem -c gpinitsystem_config -h hostfile_gpinitsystem
 
 
 
+# edit the ~/.bashrc and initialize some parameters
+
+
 
 [gpadmin@gemfire-gp ~]$ gpinitsystem -c gpinitsystem_config -h hostfile_gpinitsystem
 20230816:06:10:16:041012 gpinitsystem:gemfire-gp:gpadmin-[INFO]:-Checking configuration parameters, please wait...
