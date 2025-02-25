@@ -3,6 +3,7 @@ install the greenplum in the standby (gp2)
 /etc/hosts
 
 
+create the /data/master in the gp2
 
 set up the ssh-passwordless
 
