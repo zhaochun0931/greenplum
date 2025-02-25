@@ -10,3 +10,13 @@ set up the ssh-passwordless
 ssh-copy-id gp2
 
 gpinitstandby -s gp2
+
+
+
+
+
+
+# remove
+
+gpinitstandby -r
+
