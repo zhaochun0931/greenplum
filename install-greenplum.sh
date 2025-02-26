@@ -64,7 +64,8 @@ touch hostfile_gpinitsystem gpinitsystem_config
 
 
 
-source /usr/local/greenplum-db/greenplum_path.sh
+source /usr/local/greenplum-db-7.4.0/greenplum_path.sh
+
 gpinitsystem -c gpinitsystem_config -h hostfile_gpinitsystem
 
 
