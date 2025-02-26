@@ -18,6 +18,8 @@ set up the ssh-passwordless
 
 ssh-copy-id gp2
 
+
+# run below command in the current active master 
 gpinitstandby -s gp2
 
 
