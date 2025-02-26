@@ -26,7 +26,7 @@ ssh-copy-id localhost
 sudo -i
 chown -R gpadmin:gpadmin /usr/local/greenplum*
 mkdir -p /data/master /data/primary /data/mirror
-chown -R gpadmin:gpadmin /data/master /data/primary /data/mirror
+chown -R gpadmin:gpadmin /data
 
 
 
