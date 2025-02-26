@@ -1,0 +1,24 @@
+VERSION: 1.0.0.1
+# describe the Greenplum database parameters
+DATABASE: your_database
+USER: your_username
+HOST: localhost
+PORT: 5432
+GPLOAD:
+   INPUT:
+    - SOURCE:
+         LOCAL_HOSTNAME:
+           - localhost
+         PORT: 8080
+         FILE:
+           - /path/data.csv
+    - FORMAT: csv
+    - DELIMITER: ','
+    - QUOTE: '"'
+    - ERROR_LIMIT: 100
+    - MAX_LINE_LENGTH: 327680
+   OUTPUT:
+    - TABLE: public.my_table
+    - MODE: INSERT
+   #PRELOAD:
+   # - TRUNCATE: true
