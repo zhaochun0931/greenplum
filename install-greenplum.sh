@@ -1,6 +1,8 @@
 
 # intall greenplum database to the default directory /usr/local/greenplum-db-7.4.0
 # it will also create a soft link greenplum-db in /usr/local to /usr/local/greenplum-db-7.4.0
+# install the dabatabase with root user
+sudo -i
 yum install -y greenplum-db-7.4.0-el8-x86_64.rpm
 
 
@@ -71,7 +73,6 @@ gpinitsystem -c gpinitsystem_config -h hostfile_gpinitsystem
 
 
 
-# edit the ~/.bashrc and initialize some parameters
 
 
 
@@ -301,3 +302,10 @@ gpstate -d /data/master/gpseg-1
 20250213:14:09:17:028708 gpstate:gp1:gpadmin-[INFO]:-   Total number mirror segments acting as mirror segments    = 2
 20250213:14:09:17:028708 gpstate:gp1:gpadmin-[INFO]:-----------------------------------------------------
 [gpadmin@gp1 ~]$
+
+
+
+
+# edit the ~/.bashrc and initialize some parameters
+
+
