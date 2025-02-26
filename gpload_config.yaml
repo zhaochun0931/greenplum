@@ -14,11 +14,8 @@ GPLOAD:
            - /path/data.csv
     - FORMAT: csv
     - DELIMITER: ','
-    - QUOTE: '"'
     - ERROR_LIMIT: 100
     - MAX_LINE_LENGTH: 327680
    OUTPUT:
     - TABLE: public.my_table
     - MODE: INSERT
-   #PRELOAD:
-   # - TRUNCATE: true
