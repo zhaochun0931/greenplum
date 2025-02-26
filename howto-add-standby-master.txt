@@ -5,6 +5,15 @@ install the greenplum in the standby (gp2)
 
 create the /data/master directory in the gp2
 
+sudo -i
+mkdir -p /data/master
+chown -R gpadmin:gpadmin /data
+
+
+
+
+
+
 set up the ssh-passwordless
 
 ssh-copy-id gp2
