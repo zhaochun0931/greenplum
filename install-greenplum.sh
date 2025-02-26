@@ -1,8 +1,13 @@
-# install the greenplum in Rocky linux
 
 # intall greenplum database to the default directory /usr/local/greenplum-db-7.4.0
 # it will also create a soft link greenplum-db in /usr/local to /usr/local/greenplum-db-7.4.0
 yum install -y greenplum-db-7.4.0-el8-x86_64.rpm
+
+
+
+# disable the firewall
+
+
 
 
 
