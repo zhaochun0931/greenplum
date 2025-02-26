@@ -11,3 +11,64 @@ $ gpfdist
 2025-02-26 08:51:16 25214 INFO IPV4 socket: 0.0.0.0:8080
 2025-02-26 08:51:16 25214 INFO Opening listening socket succeeded
 Serving HTTP on port 8080, directory /home/gpadmin/gpAdminLogs
+
+
+
+
+
+gpfdist -p 8080 -P 8081 -f "./data.csv" -t 30 -m 327680
+
+-p 8080: Port for the gpfdist server.
+-P 8081: Logging port.
+-f "/path/to/data.csv": Path to the CSV data file.
+-t 30: Timeout for reading.
+-m 327680: Maximum memory for gpfdist.
+
+
+
+
+$ gpfdist -p 8080 -P 8081 -f "./data.csv" -t 30 -m 327680
+2025-02-26 09:37:32 29101 INFO Before opening listening sockets - following listening sockets are available:
+2025-02-26 09:37:32 29101 INFO IPV6 socket: [::]:8080
+2025-02-26 09:37:32 29101 INFO IPV4 socket: 0.0.0.0:8080
+2025-02-26 09:37:32 29101 INFO Trying to open listening socket:
+2025-02-26 09:37:32 29101 INFO IPV6 socket: [::]:8080
+2025-02-26 09:37:32 29101 INFO Opening listening socket succeeded
+2025-02-26 09:37:32 29101 INFO Trying to open listening socket:
+2025-02-26 09:37:32 29101 INFO IPV4 socket: 0.0.0.0:8080
+2025-02-26 09:37:32 29101 INFO Opening listening socket succeeded
+Serving HTTP on port 8080, directory /home/gpadmin/gpAdminLogs
+
+
+
+
+
+
+CREATE EXTERNAL TABLE ext_test_table (id  INT, name VARCHAR(100), age INT, address VARCHAR(200))
+LOCATION ('gpfdist://localhost:8080/data.csv')
+FORMAT 'TEXT' (DELIMITER ',');
+
+
+
+
+
+
+# \d
+                      List of relations
+ Schema |      Name      |     Type      |  Owner  | Storage
+--------+----------------+---------------+---------+---------
+ public | ext_test_table | foreign table | gpadmin |
+ public | my_table       | table         | gpadmin | heap
+(2 rows)
+
+testdb=# select * from ext_test_table;
+ id |   name    | age | address
+----+-----------+-----+---------
+  1 |  xiaoming |  20 |  sx
+  2 |  xiaoming |  30 |  sx
+  3 |  xiaoming |  40 |  sx
+(3 rows)
+
+testdb=#
+
+
