@@ -45,12 +45,8 @@ chown -R gpadmin:gpadmin /data
 su - gpadmin
 
 
-# Creating the Initialization Host File
-touch hostfile_gpinitsystem
-
-
-# Creating the Greenplum Database Configuration File
-touch gpinitsystem_config
+# Creating the Initialization Host File and the Greenplum Database Configuration File
+touch hostfile_gpinitsystem gpinitsystem_config
 
 
 
