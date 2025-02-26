@@ -1,1 +1,12 @@
+CREATE TABLE my_table (
+    id INT,
+    name VARCHAR(100),
+    age INT,
+    address VARCHAR(200)
+);
+
+
+
+
+
 gpload -f gpload_config.yaml
