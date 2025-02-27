@@ -6,3 +6,5 @@ create database testdb;
 
 create extension gpss;
 
+create table companies(id varchar (200), city varchar (200), foundation timestamp, description text, data json);
+
