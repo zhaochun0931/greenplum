@@ -1,0 +1,8 @@
+psql postgres
+
+create database testdb;
+
+\c testdb;
+
+create extension gpss;
+
