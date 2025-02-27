@@ -1,1 +1,6 @@
 brew install apr xerces-c
+
+
+./configure
+
+make -j8
