@@ -1,0 +1,24 @@
+DATABASE: rabbitmqdb
+USER: gpadmin
+PASSWORD: password
+HOST: localhost
+PORT: 5432
+VERSION: 2
+
+RABBITMQ:
+  INPUT:
+    SOURCE:
+      SERVER: "admin:password@localhost:5672"
+      QUEUE: qq1
+      VIRTUALHOST: "/"
+    DATA:
+      COLUMNS:
+        - NAME: c
+          TYPE: int
+      FORMAT: CSV
+  OUTPUT:
+    SCHEMA: public
+    TABLE: student
+  COMMIT:
+    MINIMAL_INTERVAL: 200
+    CONSISTENCY: at-least
