@@ -1,13 +1,16 @@
 psql postgres
 
-create database testdb;
+create database rabbitmqdb;
 
-\c testdb;
+\c rabbitmqdb;
 
 create extension gpss;
 
-create table companies(id varchar (200), city varchar (200), foundation timestamp, description text, data json);
-
+CREATE TABLE student (
+    id INT,
+    name VARCHAR(100),
+    address VARCHAR(200)
+);
 
 
 
