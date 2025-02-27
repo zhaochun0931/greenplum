@@ -1,7 +1,7 @@
 {
    "ListenAddress": {
       "Host": "",
-      "Port": 50007,
+      "Port": 5000,
       "SSL": false
    },
    "Gpfdist": {
