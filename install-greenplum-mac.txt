@@ -1,1 +1,1 @@
-brew install apr
+brew install apr xerces-c
