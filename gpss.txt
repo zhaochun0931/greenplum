@@ -16,5 +16,5 @@ CREATE TABLE student (
 
 
 
-
-gpss ./gpsscfg.json --log-dir ./gpsslogs
+gpss -c gpss-config.json
+gpss -c gpss-config.json --log-dir ./gpsslogs
