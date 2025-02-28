@@ -11,7 +11,7 @@ KAFKA:
       TOPIC: test-topic
     VALUE:
       COLUMNS:
-        - NAME: c
+        - NAME: id
           TYPE: int
       FORMAT: CSV
   OUTPUT:
