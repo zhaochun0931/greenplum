@@ -1,4 +1,4 @@
-DATABASE: rabbitmqdb
+DATABASE: kafkadb
 USER: gpadmin
 PASSWORD: password
 HOST: localhost
