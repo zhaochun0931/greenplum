@@ -1,0 +1,37 @@
+yum install postgresql-contrib
+
+
+
+psql postgres
+
+
+SELECT * FROM pg_extension WHERE extname = 'pgcrypto';
+
+
+
+CREATE EXTENSION pgcrypto;
+
+DROP EXTENSION IF EXISTS pgcrypto;
+
+
+
+
+
+# add below line to postgresql.conf
+shared_preload_libraries = 'pgcrypto'
+
+
+gpstop -r
+
+
+
+
+
+
+
+
+
+gpconfig -s shared_preload_libraries
+
+
+
