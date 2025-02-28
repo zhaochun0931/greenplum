@@ -8,7 +8,7 @@ KAFKA:
   INPUT:
     SOURCE:
       BROKERS: localhost:9092
-      TOPIC: qq1
+      TOPIC: test-topic
     VALUE:
       COLUMNS:
         - NAME: c
