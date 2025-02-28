@@ -20,4 +20,4 @@ gpss -c gpss-config.json
 gpss -c gpss-config.json --log-dir ./gpsslogs
 
 
-gpsscli load rabbitmq.yam
+gpsscli load rabbitmq.yaml
