@@ -1,0 +1,19 @@
+DATABASE: rabbitmqdb
+USER: gpadmin
+PASSWORD: password
+HOST: localhost
+PORT: 5432
+VERSION: 2
+KAFKA:
+  INPUT:
+    SOURCE:
+      BROKERS: localhost:9092
+      TOPIC: qq1
+    VALUE:
+      COLUMNS:
+        - NAME: c
+          TYPE: int
+      FORMAT: CSV
+  OUTPUT:
+    SCHEMA: public
+    TABLE: student
