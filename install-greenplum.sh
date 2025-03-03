@@ -46,7 +46,7 @@ chown -R gpadmin:gpadmin /data
 
 
 
-
+# Required Environment Variables
 
 GPHOME=/usr/local/greenplum-db-7.4.0
 
