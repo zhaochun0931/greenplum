@@ -48,6 +48,17 @@ chown -R gpadmin:gpadmin /data
 
 
 
+GPHOME=/usr/local/greenplum-db-7.4.0
+
+MASTER_DATA_DIRECTORY=/data/master/gpseg-1
+
+LD_LIBRARY_PATH=/usr/local/greenplum-db-7.4.0/lib
+
+PATH=/usr/local/greenplum-db-7.4.0/bin
+
+
+
+
 
 
 
