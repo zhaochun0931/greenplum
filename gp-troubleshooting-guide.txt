@@ -1,1 +1,3 @@
+psql postgres
+
 select * from gp_segment_configuration;
