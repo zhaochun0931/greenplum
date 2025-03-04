@@ -20,7 +20,7 @@ DROP EXTENSION IF EXISTS pgcrypto;
 gpconfig -c shared_preload_libraries -v 'pgcrypto'
 
 
-gpstop -r
+gpstop -ra
 
 
 
