@@ -17,8 +17,7 @@ DROP EXTENSION IF EXISTS pgcrypto;
 
 
 
-# add below line to postgresql.conf
-shared_preload_libraries = 'pgcrypto'
+gpconfig -c shared_preload_libraries -v 'pgcrypto'
 
 
 gpstop -r
