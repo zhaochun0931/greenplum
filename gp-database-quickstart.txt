@@ -9,3 +9,8 @@ create table t_test (id int);
 
 
 insert into t_test SELECT generate_series(1,100);
+
+
+
+explain select * from t_test where id = 10;
+
