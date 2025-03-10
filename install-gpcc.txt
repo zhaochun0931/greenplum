@@ -98,9 +98,13 @@ $
 
 
 
+cat ~/.pgpass
 
 
 
+$ cat ~/.pgpass
+*:5432:gpperfmon:gpmon:CutEAtpY
+$
 
 
 
