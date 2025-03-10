@@ -1,0 +1,9 @@
+psql postgres
+
+
+create database testdb;
+
+\c testdb
+
+create table t_test (id int);
+
