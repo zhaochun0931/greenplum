@@ -83,7 +83,17 @@ RELOADING pg_hba.conf. PLEASE WAIT ...
 
 
 
+source /usr/local/greenplum-cc-6.12.0/gpcc_path.sh
 
+gpcc start
+
+$ gpcc start
+2025-03-10 03:13:02 Starting the gpcc agents and webserver...
+2025-03-10 03:13:02 No need to migrate gpmetrics folder from /data/master/gpseg-1/gpmetrics
+2025-03-10 03:13:02 Starting GPCC 6.12.0 from /usr/local/greenplum-cc-6.12.0 ...
+2025-03-10 03:13:05 Agent successfully started on 1/1 hosts
+2025-03-10 03:13:05 View Greenplum Command Center at http://data73:28080
+$
 
 
 
