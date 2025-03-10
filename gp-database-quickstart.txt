@@ -14,3 +14,14 @@ insert into t_test SELECT generate_series(1,100);
 
 explain select * from t_test where id = 10;
 
+
+
+
+
+
+
+
+
+
+
+PGOPTIONS='-c gp_session_role=utility' psql -h <hostname> -p <port> postgres
