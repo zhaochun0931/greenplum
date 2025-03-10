@@ -11,10 +11,76 @@ gpconfig -s shared_preload_libraries
 
 
 
+mkdir -p /usr/local/greenplum-cc-6.12.0
+chown -R gpadmin:gpadmin /usr/local/greenplum-cc-6.12.0
+
+
 unzip greenplum-cc-web-6.12.0-gp6-rhel8-x86_64.zip
+
+
+
 cd greenplum-cc-web-6.12.0-gp6-rhel8-x86_64
 
-MASTER_DATA_DIRECTORY=/data/master/gpseg-1
+
+
+./gpccinstall-6.12.0
+
+
+$ ./gpccinstall-6.12.0
+Where would you like to install Greenplum Command Center? (Default=/usr/local)
+
+Greenplum Command Center will be installed in /usr/local/greenplum-cc-6.12.0
+
+What would you like to name this installation of Greenplum Command Center? (Default=gpcc)
+
+
+What port would you like the gpcc webserver to use? (Default=28080)
+
+
+Would you like to enable SSL/TLS? Yy/Nn (Default=Y)
+n
+
+********************************************************************************
+* WARNING: Your connections to GPCC will be insecure.                          *
+********************************************************************************
+
+Please choose a display language (Default=English)
+1.  English
+2.  Chinese
+3.  Korean
+4.  Russian
+5.  Japanese
+1
+
+INSTALLATION IN PROGRESS...
+********************************************************************************
+* Please check your .pgpass file for the default password.                     *
+* We recommend changing the default password for the gpmon user unless you     *
+* plan to connect through LDAP or kerberos.                                    *
+********************************************************************************
+CREATING SUPERUSER 'gpmon'...
+CREATING COMMAND CENTER DATABASE 'gpperfmon'...
+RELOADING pg_hba.conf. PLEASE WAIT ...
+
+********************************************************************************
+*                                                                              *
+* INSTALLATION IS ALMOST COMPLETED                                             *
+*                                                                              *
+* The last step is to update the metrics_collector extension, which needs to   *
+* restart the Greenplum Database cluster. Please proceed to $GPCC_HOME and     *
+* follow the instructions in this file:                                        *
+*                                                                              *
+*                            update-extension.txt                              *
+*                                                                              *
+* Some new features may not be available before the update is done.            *
+*                                                                              *
+* To use GPCC with the old metrics_collector extension, source gpcc_path.sh    *
+* and run 'gpcc start'.                                                        *
+*                                                                              *
+********************************************************************************
+
+
+
 
 
 
