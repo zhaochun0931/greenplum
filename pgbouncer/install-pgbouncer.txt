@@ -2,6 +2,10 @@
 └── users.txt
 
 
+
+pgbouncer pgbouncer.ini
+
+
 $ pgbouncer pgbouncer.ini
 2025-03-11 08:35:27.353 EDT [453722] LOG kernel file descriptor limit: 65535 (hard: 65535); max_client_conn: 100, max expected fd use: 192
 2025-03-11 08:35:27.354 EDT [453722] LOG listening on 0.0.0.0:6543
@@ -11,4 +15,4 @@ $ pgbouncer pgbouncer.ini
 
 
 
-pgbouncer -d  pgbouncer.ini
+pgbouncer -d pgbouncer.ini
