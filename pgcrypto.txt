@@ -34,3 +34,33 @@ gpconfig -s shared_preload_libraries
 
 
 
+
+
+
+# test
+
+
+ALTER DATABASE testdb SET pgcrypto.fips TO on;
+
+
+CREATE TABLE users (
+    id int,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    encrypted_password BYTEA -- BYTEA is used to store binary data (encrypted content)
+);
+
+
+
+INSERT INTO users (name, email, encrypted_password)
+VALUES
+('Alice', 'alice@example.com', pgp_sym_encrypt('mysecretpassword', 'encryption_key'));
+
+
+
+
+SELECT name, email, pgp_sym_decrypt(encrypted_password, 'encryption_key') AS decrypted_password
+FROM users
+WHERE name = 'Alice';
+
+
