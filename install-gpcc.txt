@@ -23,6 +23,10 @@ cd greenplum-cc-web-6.12.0-gp6-rhel8-x86_64
 
 
 
+
+
+su - gpadmin
+
 ./gpccinstall-6.12.0
 
 
