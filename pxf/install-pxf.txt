@@ -20,3 +20,6 @@ $
 
 
 
+
+
+pxf cluster register
