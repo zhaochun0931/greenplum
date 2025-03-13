@@ -86,7 +86,6 @@ RELOADING pg_hba.conf. PLEASE WAIT ...
 
 
 
-
 source /usr/local/greenplum-cc-6.12.0/gpcc_path.sh
 
 gpcc start
@@ -113,6 +112,7 @@ $
 
 
 
+gpcc --settings
 
 
 
