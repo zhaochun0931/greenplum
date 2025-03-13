@@ -1,7 +1,3 @@
-Greenplum Command Center
-
-Tanzu Greenplum command center is a management tool for the VMware VMware Greenplum Big Data Platform.
-
 gpcc --version
 
 
