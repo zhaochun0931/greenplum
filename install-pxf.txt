@@ -1,1 +1,4 @@
+yum install pxf-gp6-6.10.1-2.el8.x86_64.rpm
+
+
 
