@@ -24,3 +24,7 @@ $
 
 
 pxf cluster register
+
+pxf cluster sync
+
+pxf cluster start
