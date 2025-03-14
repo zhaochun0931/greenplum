@@ -30,3 +30,10 @@ pxf cluster sync
 pxf cluster start
 
 pxf cluster status
+
+
+
+
+psql postgres
+
+CREATE EXTENSION pxf;
