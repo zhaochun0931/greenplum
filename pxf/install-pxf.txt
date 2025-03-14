@@ -34,6 +34,10 @@ pxf cluster status
 
 
 
+mv *xml /usr/local/pxf-gp7/servers/default
+
+
+
 psql postgres
 
 CREATE EXTENSION pxf;
