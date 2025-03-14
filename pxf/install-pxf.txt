@@ -7,7 +7,8 @@ yum install -y pxf-gp6-6.10.1-2.el8.x86_64.rpm
 chown -R gpadmin:gpadmin /usr/local/pxf-gp*
 
 
-export PATH=$PATH:/usr/local/pxf-gp6/bin
+export PATH=/usr/local/pxf-gp6/bin:$PATH
+
 
 
 which java
