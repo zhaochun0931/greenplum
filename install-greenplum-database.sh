@@ -33,20 +33,9 @@ yum install -y greenplum-db-7.4.0-el8-x86_64.rpm
 
 
 
-
-
-
-
-# change permission
-sudo -i
-chown -R gpadmin:gpadmin /usr/local/greenplum*
-
-
-greenplum-db-7.4.0
-
-
 mkdir -p /data/master /data/primary /data/mirror
 chown -R gpadmin:gpadmin /data
+chown -R gpadmin:gpadmin /usr/local/greenplum*
 
 
 
