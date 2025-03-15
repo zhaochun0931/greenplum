@@ -1,0 +1,16 @@
+# Use root/pivotal gpadmin/pivotal credentials
+version: '3.9'
+
+services:
+
+  gp:
+    image: datagrip/greenplum
+    restart: always
+    hostname: gp
+    networks:
+      - gp_network
+
+
+networks:
+  gp_network:
+    driver: bridge
