@@ -1,0 +1,9 @@
+<configuration>
+  <property>
+        <name>pxf.service.user.impersonation</name>
+        <value>false</value>
+        <description>
+            End-user identity impersonation, set to true to enable, false to disable.
+        </description>
+    </property>
+</configuration>
