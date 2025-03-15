@@ -36,24 +36,25 @@ pxf cluster status
 
 
 
+usermod -aG hadoop gpadmin
+
+
+
 
 
 
 psql postgres
 
 CREATE EXTENSION pxf;
+
+GRANT SELECT ON PROTOCOL pxf TO gpadmin;
+grant insert ON PROTOCOL pxf to gpadmin;
+
+
+
 CREATE EXTERNAL TABLE ext_hdfs_data(location text) LOCATION ('pxf://testdata/xxx?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=E',');
 CREATE EXTERNAL TABLE ext_hdfs_data2(location text) LOCATION ('pxf://testdata/xxx?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=E',');
 CREATE EXTERNAL TABLE ext_hdfs_data4(id int, name varchar(20)) LOCATION ('pxf://testdata/testcsv?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=',');
-
-
-
-
-
-
-
-GRANT SELECT ON PROTOCOL pxf TO gpadmin;
-
 
 select * from ext_hdfs_data;
 
@@ -76,3 +77,26 @@ postgres=# select * from ext_hdfs_data4;
 (3 rows)
 
 postgres=#
+
+
+
+
+
+
+
+
+CREATE WRITABLE EXTERNAL TABLE ext_hdfs_data6(name text) LOCATION ('pxf://testdata/green2hadoop?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
+INSERT INTO ext_hdfs_data6 (name) VALUES ('xiaoming'),('xiaoming2');
+
+
+
+$ hdfs dfs -ls /testdata/
+drwxr-xr-x   - gpadmin supergroup          0 2025-03-14 23:59 /testdata/green2hadoop
+$ 
+$ hdfs dfs -cat /testdata/green2hadoop/*
+xiaoming
+xiaoming2
+$
+
+
+
