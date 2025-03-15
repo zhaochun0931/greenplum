@@ -1,13 +1,9 @@
-yum install -y java-1.8.0-openjdk
-
-
-yum install -y pxf-gp6-6.10.1-2.el8.x86_64.rpm
-
-
+yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
+yum install -y pxf-gp7-6.11.0-2.el8.x86_64.rpm
 chown -R gpadmin:gpadmin /usr/local/pxf-gp*
 
 
-export PATH=/usr/local/pxf-gp6/bin:$PATH
+export PATH=/usr/local/pxf-gp7/bin:$PATH
 
 
 
