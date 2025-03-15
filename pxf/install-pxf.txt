@@ -43,6 +43,8 @@ psql postgres
 
 CREATE EXTENSION pxf;
 CREATE EXTERNAL TABLE ext_hdfs_data(location text) LOCATION ('pxf://testdata/xxx?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=E',');
+CREATE EXTERNAL TABLE ext_hdfs_data2(location text) LOCATION ('pxf://testdata/xxx?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=E',');
+
 GRANT SELECT ON PROTOCOL pxf TO gpadmin;
 
 
