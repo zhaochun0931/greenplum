@@ -44,6 +44,13 @@ psql postgres
 CREATE EXTENSION pxf;
 CREATE EXTERNAL TABLE ext_hdfs_data(location text) LOCATION ('pxf://testdata/xxx?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=E',');
 CREATE EXTERNAL TABLE ext_hdfs_data2(location text) LOCATION ('pxf://testdata/xxx?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=E',');
+CREATE EXTERNAL TABLE ext_hdfs_data4(id int, name varchar(20)) LOCATION ('pxf://testdata/testcsv?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=',');
+
+
+
+
+
+
 
 GRANT SELECT ON PROTOCOL pxf TO gpadmin;
 
@@ -51,3 +58,21 @@ GRANT SELECT ON PROTOCOL pxf TO gpadmin;
 select * from ext_hdfs_data;
 
 
+postgres=# select * from ext_hdfs_data;
+   location
+--------------
+ hello hadoop
+(1 row)
+
+postgres=#
+
+
+postgres=# select * from ext_hdfs_data4;
+ id |   name
+----+----------
+  1 | xiaoming
+  2 | xxx
+  3 | yyy
+(3 rows)
+
+postgres=#
