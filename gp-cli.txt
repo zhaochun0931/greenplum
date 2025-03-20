@@ -91,7 +91,14 @@ PGOPTIONS='-c gp_session_role=utility' psql -h <hostname> -p <port> postgres
 
 
 select oid from pg_database where datname = current_database();
+SELECT oid, datname FROM pg_database WHERE datname = 'your_database';
+SELECT * FROM gp_dist_random('pg_class') WHERE relname = 'your_tablename';
+
+
+
 select relfilenode from pg_class where relname = 't1';
+
+
 
 
 
