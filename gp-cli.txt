@@ -1,4 +1,5 @@
-gpstart
+gpstart -m
+
 
 
 gpstop
@@ -81,7 +82,6 @@ postgres=#
 
 
 set allow_system_table_mods=TRUE;
-
 PGOPTIONS='-c gp_session_role=utility' psql -h <hostname> -p <port> postgres
 
 
@@ -94,6 +94,11 @@ select oid from pg_database where datname = current_database();
 select relfilenode from pg_class where relname = 't1';
 
 
+
+
+pg_class
+
+pg_class is a system catalog table that stores metadata about tables, indexes, sequences, views, and other relations.
 
 
 
