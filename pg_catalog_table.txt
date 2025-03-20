@@ -1,3 +1,0 @@
-pg_class
-
-pg_class is a system catalog table that stores metadata about tables, indexes, sequences, views, and other relations.
