@@ -44,6 +44,51 @@ table
 
 
 
+
+
+
+
+
+
+
+gpcheckperf
+
+
+
+
+
+
+
+
+psql postgres
+
 select * from gp_segment_configuration;
+
+postgres=# select * from gp_segment_configuration;
+ dbid | content | role | preferred_role | mode | status | port | hostname | address |       datadir
+------+---------+------+----------------+------+--------+------+----------+---------+----------------------
+    1 |      -1 | p    | p              | n    | u      | 5432 | data73   | data73  | /data/master/gpseg-1
+    2 |       0 | p    | p              | s    | u      | 6000 | data73   | data73  | /data/primary/gpseg0
+    4 |       0 | m    | m              | s    | u      | 7000 | data73   | data73  | /data/mirror/gpseg0
+    3 |       1 | p    | p              | s    | u      | 6001 | data73   | data73  | /data/primary/gpseg1
+    5 |       1 | m    | m              | s    | u      | 7001 | data73   | data73  | /data/mirror/gpseg1
+(5 rows)
+
+postgres=#
+
+
+
+
+
+set allow_system_table_mods=TRUE;
+
+PGOPTIONS='-c gp_session_role=utility' psql -h <hostname> -p <port> postgres
+
+
+
+
+
+
+
 
 
