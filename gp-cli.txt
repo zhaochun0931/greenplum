@@ -81,8 +81,15 @@ postgres=#
 
 
 
-set allow_system_table_mods=TRUE;
 PGOPTIONS='-c gp_session_role=utility' psql -h <hostname> -p <port> postgres
+set allow_system_table_mods=TRUE;
+update gp_segment_configuration set status = 'u' , role  = 'p' where dbid = 2;
+
+
+
+
+
+
 
 
 
