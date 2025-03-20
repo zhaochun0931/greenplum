@@ -90,5 +90,13 @@ PGOPTIONS='-c gp_session_role=utility' psql -h <hostname> -p <port> postgres
 
 
 
+select oid from pg_database where datname = current_database();
+select relfilenode from pg_class where relname = 't1';
+
+
+
+
+
+
 
 
