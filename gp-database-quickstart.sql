@@ -5,14 +5,14 @@ create database testdb;
 
 \c testdb
 
-create table t_test (id int);
+create table t1 (id int);
 
 
-insert into t_test SELECT generate_series(1,100);
+insert into t1 SELECT generate_series(1,100);
 
 
 
-explain select * from t_test where id = 10;
+explain select * from t1 where id = 10;
 
 
 
