@@ -38,6 +38,7 @@ SELECT pg_size_pretty(pg_total_relation_size('t1'));
 SELECT pg_size_pretty(pg_relation_size('t1'));
 
 
+SELECT relname, relfilenode FROM pg_class WHERE relnamespace = (SELECT oid FROM pg_namespace WHERE nspname = 'public');
 
 
 explain select * from t1 where id = 10;
