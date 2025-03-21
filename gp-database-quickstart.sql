@@ -16,6 +16,29 @@ SELECT attname, atttypid::regtype, attlen, attnotnull, atthasdef FROM pg_attribu
 WHERE attrelid = (SELECT oid FROM pg_class WHERE relname = 't1') 
 AND attnum > 0;
 
+SELECT column_name, data_type, character_maximum_length, is_nullable, column_default 
+FROM information_schema.columns 
+WHERE table_name = 't1';
+
+SELECT indexname, indexdef 
+FROM pg_indexes 
+WHERE tablename = 't1';
+
+SELECT conname, contype, conrelid::regclass AS table_name, confrelid::regclass AS referenced_table
+FROM pg_constraint 
+WHERE conrelid = 't1'::regclass;
+
+SELECT relname, spcname 
+FROM pg_class c 
+JOIN pg_tablespace t ON c.reltablespace = t.oid 
+WHERE relname = 't1';
+
+SELECT pg_size_pretty(pg_total_relation_size('t1'));
+
+SELECT pg_size_pretty(pg_relation_size('t1'));
+
+
+
 
 explain select * from t1 where id = 10;
 
