@@ -10,6 +10,8 @@ create table t1 (id int);
 
 insert into t1 SELECT generate_series(1,100);
 
+select * from pg_class where relname = 't1';
+
 
 
 explain select * from t1 where id = 10;
