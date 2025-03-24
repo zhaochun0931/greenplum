@@ -76,6 +76,8 @@ source /usr/local/greenplum-db-7.4.0/greenplum_path.sh
 gpinitsystem -c gpinitsystem_config -h hostfile_gpinitsystem
 
 
+# gpinitsystem -c gpinitsystem_config -h hostfile_gpinitsystem -s gp2 --mirror-mode=spread
+
 
 
 
