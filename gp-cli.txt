@@ -123,6 +123,9 @@ COPY (SELECT * FROM pg_class WHERE relname = 'my_table') TO '/path/to/output/pg_
 
 
 
+select * from pg_database;
+
+select * from pg_tables where tablename = 'table_test';
 
 
 
