@@ -119,3 +119,11 @@ pg_class is a system catalog table that stores metadata about tables, indexes, s
 
 
 
+COPY (SELECT * FROM pg_class WHERE relname = 'my_table') TO '/path/to/output/pg_class_row.csv' WITH CSV HEADER;
+
+
+
+
+
+
+
