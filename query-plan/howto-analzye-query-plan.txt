@@ -1,0 +1,41 @@
+createdb testdb
+
+psql testdb
+
+create table student (id int, name varchar(100));
+
+create table score(id int, yuwen int, shuxue int);
+
+
+
+
+insert into student values(1, 'xiaoming');
+
+
+insert into student values(12, 'xxx');
+
+
+insert into student values(39, 'yyy');
+
+
+
+insert into score values(1, 98, 100);
+
+insert into score values(12, 96, 90);
+
+insert into score values(39, 90, 988);
+
+
+
+# explain select * from student;
+                                  QUERY PLAN
+-------------------------------------------------------------------------------
+ Gather Motion 3:1  (slice1; segments: 3)  (cost=0.00..431.00 rows=1 width=13)
+   ->  Seq Scan on student  (cost=0.00..431.00 rows=1 width=13)
+ Optimizer: Pivotal Optimizer (GPORCA)
+(3 rows)
+
+testdb=#
+
+
+
