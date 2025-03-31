@@ -27,3 +27,8 @@ mc mb myminio/gptest
 mc ls myminio
 
 
+mc cp /etc/hosts myminio/gptest
+
+
+
+mc rb myminio/gptest
