@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 cp /usr/local/pxf-gp6/templates/minio-site.xml /usr/local/pxf-gp6/servers/default/
 
 
@@ -18,9 +8,13 @@ pxf cluster restart
 
 
 
+
+createdb testdb
+
+psql testdb
+
+
 CREATE EXTENSION pxf;
-
-
 
 
 CREATE EXTERNAL TABLE t2(id int) LOCATION ('pxf://gptest/hello.txt?PROFILE=s3:text') FORMAT 'TEXT' (delimiter=E',');
