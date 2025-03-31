@@ -1,3 +1,4 @@
 wget https://dl.min.io/server/minio/release/darwin-amd64/minio
 chmod +x minio
-./minio server /data
+
+./minio server --address 0.0.0.0:9000 --console-address 0.0.0.0:9001 /tmp/minio
