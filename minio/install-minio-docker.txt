@@ -2,7 +2,10 @@ mkdir data
 
 docker network create minio-network
 
-docker run -it --rm -p 9000:9000 -p 9001:9001 -v $(pwd)/data:/data --network minio-network --hostname minio --name minio minio/minio server --address ":9000" --console-address ":9001" /data
+docker run -it --rm -p 9000:9000 -p 9001:9001 -v $(pwd)/data:/data --network minio-network --hostname minio \
+--env MINIO_ROOT_USER="admin" \
+--env MINIO_ROOT_PASSWORD="password" \
+minio/minio server --address ":9000" --console-address ":9001" /data
 
 
 
