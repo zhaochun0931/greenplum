@@ -11,28 +11,29 @@ mc alias set myminio http://minio:9000 minioadmin minioadmin
 
 mc config host list
 
-mc admin info  myminio
+mc admin info myminio
 
 
 
 
 
 
-mc mb myminio/gptest
+mc mb myminio/gp-bucket
 mc ls myminio
-mc ls myminio/gptest
+mc ls myminio/gp-bucket
+
+
+
+echo 123 > hello.txt
+mc cp hello.txt myminio/gp-bucket
+
+
+
+mc cat myminio/gp-bucket/hello.txt
 
 
 
 
-mc cp hello.txt myminio/gptest
 
+mc rb myminio/gp-bucket
 
-
-mc cat myminio/gptest/hello.txt
-
-
-
-
-
-mc rb myminio/gptest
