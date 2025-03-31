@@ -42,4 +42,11 @@ WARN: Detected default credentials 'minioadmin:minioadmin', we recommend that yo
 
 
 cp /usr/local/pxf-gp6/templates/minio-site.xml /usr/local/pxf-gp6/servers/default/
-cp /usr/local/pxf-gp6/templates/s3-site.xml /usr/local/pxf-gp6/servers/default/
+
+
+
+
+
+CREATE EXTERNAL TABLE t2(id int) LOCATION ('pxf://gptest/hello.txt?PROFILE=s3:text') FORMAT 'TEXT' (delimiter=E',');
+
+
