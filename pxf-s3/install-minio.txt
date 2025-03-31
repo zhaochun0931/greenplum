@@ -1,3 +1,10 @@
 wget https://dl.min.io/server/minio/release/linux-amd64/minio
 chmod +x minio
 ./minio server /tmp/minio/ --address 0.0.0.0 --console-address 0.0.0.0:9001
+
+
+
+
+
+cp /usr/local/pxf-gp6/templates/minio-site.xml /usr/local/pxf-gp6/servers/default/
+
