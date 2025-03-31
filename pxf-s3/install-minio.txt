@@ -1,36 +1,3 @@
-wget https://dl.min.io/server/minio/release/linux-amd64/minio
-chmod +x minio
-./minio server --address 0.0.0.0:9000 --console-address 0.0.0.0:9001 /tmp/minio
-
-
-
-
-
-
-
-
-$ ./minio server --address 0.0.0.0:9000 --console-address 0.0.0.0:9001 /tmp/minio
-MinIO Object Storage Server
-Copyright: 2015-2025 MinIO, Inc.
-License: GNU AGPLv3 - https://www.gnu.org/licenses/agpl-3.0.html
-Version: RELEASE.2025-03-12T18-04-18Z (go1.24.1 linux/amd64)
-
-API: http://0.0.0.0:9000
-   RootUser: minioadmin
-   RootPass: minioadmin
-
-WebUI: http://0.0.0.0:9001
-   RootUser: minioadmin
-   RootPass: minioadmin
-
-CLI: https://min.io/docs/minio/linux/reference/minio-mc.html#quickstart
-   $ mc alias set 'myminio' 'http://0.0.0.0:9000' 'minioadmin' 'minioadmin'
-
-Docs: https://docs.min.io
-WARN: Detected default credentials 'minioadmin:minioadmin', we recommend that you change these values with 'MINIO_ROOT_USER' and 'MINIO_ROOT_PASSWORD' environment variables
-
-
-
 
 
 
