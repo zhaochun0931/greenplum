@@ -22,3 +22,8 @@ mc admin info  myminio
 
 
 
+
+mc mb myminio/gptest
+mc ls myminio
+
+
