@@ -11,7 +11,13 @@ docker run -it -d --network minio-network minio/mc
 
 
 docker exec -it 
-mc config host add gp http://minio:9000 minioadmin minioadmin
+
+mc alias set myminio http://minio:9000 minioadmin minioadmin
+
+mc config host list
+
+mc admin info  myminio
+
 
 
 
