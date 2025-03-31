@@ -10,6 +10,10 @@ docker run -p 9000:9000 -p 9001:9001 -v ./data:/data minio/minio --network minio
 docker run -it -d --network minio-network minio/mc  
 
 
+
+
+
+
 docker exec -it 
 
 mc alias set myminio http://minio:9000 minioadmin minioadmin
@@ -25,9 +29,18 @@ mc admin info  myminio
 
 mc mb myminio/gptest
 mc ls myminio
+mc ls myminio/gptest
+
+
 
 
 mc cp hello.txt myminio/gptest
+
+
+
+mc cat myminio/gptest/hello.txt
+
+
 
 
 
