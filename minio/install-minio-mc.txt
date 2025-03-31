@@ -1,0 +1,38 @@
+docker run -it -d --network minio-network minio/mc  
+
+
+
+
+
+
+docker exec -it 
+
+mc alias set myminio http://minio:9000 minioadmin minioadmin
+
+mc config host list
+
+mc admin info  myminio
+
+
+
+
+
+
+mc mb myminio/gptest
+mc ls myminio
+mc ls myminio/gptest
+
+
+
+
+mc cp hello.txt myminio/gptest
+
+
+
+mc cat myminio/gptest/hello.txt
+
+
+
+
+
+mc rb myminio/gptest
