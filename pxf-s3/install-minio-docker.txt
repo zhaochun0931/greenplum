@@ -1,3 +1,14 @@
 mkdir data
 
-docker run -p 9000:9000 -p 9001:9001 -v ./data:/data minio/minio server /data --console-address ":9001"
+docker network create minio-network
+docker run -it -d -p 9000:9000 -p 9001:9001 -v ./data:/data minio/minio server /data --console-address ":9001" --network minio-network --hostname minio
+docker run -p 9000:9000 -p 9001:9001 -v ./data:/data minio/minio --network minio-network --hostname minio server /data --console-address ":9001" 
+
+
+
+docker run -it -d minio/mc  --network minio-network
+
+
+docker exec -it 
+mc config host add gp http://localhost:9000 minioadmin minioadmin 
+
