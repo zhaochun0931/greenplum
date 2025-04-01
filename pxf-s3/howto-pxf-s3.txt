@@ -27,13 +27,14 @@ CREATE EXTERNAL TABLE t1(id int) LOCATION ('pxf://gpbucket/hello.txt?PROFILE=s3:
 
 
 
-insert into t2 select * from generate_series(1,100);
 
 
 CREATE WRITABLE EXTERNAL TABLE t2 (id int)
 LOCATION ('pxf://gpbucket/t2?PROFILE=s3:parquet&SERVER=default&COMPRESSION_CODEC=snappy')
 FORMAT 'custom' (formatter = 'pxfwritable_export')
 ENCODING 'UTF8';
+
+insert into t2 select * from generate_series(1,100);
 
 
 
@@ -44,5 +45,9 @@ ENCODING 'UTF8';
 
 CREATE WRITABLE EXTERNAL TABLE t3 (name text)
 LOCATION ('pxf://gpbucket/t3?PROFILE=s3:text&SERVER=default')
-FORMAT 'custom' (formatter = 'pxfwritable_export')
+FORMAT 'csv'
 ENCODING 'UTF8';
+
+insert into t3 select * from generate_series(1,100);
+
+
