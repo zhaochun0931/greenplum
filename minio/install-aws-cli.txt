@@ -1,4 +1,23 @@
+curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+
+
+
+
+
+
+
+
 docker run --rm --network minio-network --name aws-cli \
 -e AWS_ACCESS_KEY_ID=admin \
 -e AWS_SECRET_ACCESS_KEY=password \
 amazon/aws-cli s3 ls s3://gp-bucket --endpoint-url http://minio:9000 --no-verify-ssl
+
+
+
+
+
+
+
