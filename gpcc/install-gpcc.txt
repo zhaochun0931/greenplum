@@ -117,6 +117,19 @@ gpcc --settings
 
 
 
+1. 發現這個故障的具體時間點
+2. 包含這個時間點的GPCC/GPDB的日誌, 可以使用GPMT工具收集
+
+參考KB: https://knowledge.broadcom.com/external/article?articleNumber=297023
+參考命令: # gpmt gp_log_collector -with-gpcc -start 2025-04-01 -end 2025-04-01
+
+
+
+
+
+
+
+
 1）重启GPCC是否有变化？
 
 
