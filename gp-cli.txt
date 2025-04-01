@@ -130,3 +130,14 @@ select * from pg_tables where tablename = 'table_test';
 
 
 
+
+
+
+
+COPY (SELECT oid, * FROM pg_class WHERE relname = 'table_test') TO '/tmp/111';
+
+copy pg_class from '/tmp/111' with oids;
+
+
+
+
