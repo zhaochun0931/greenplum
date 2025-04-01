@@ -56,7 +56,7 @@ docker run -it -d --network minio-network minio/mc
 
 docker exec -it 
 
-mc alias set myminio http://minio:9000 minioadmin minioadmin
+mc alias set myminio http://localhost:9000 admin password
 
 mc config host list
 
@@ -67,22 +67,22 @@ mc admin info myminio
 
 
 
-mc mb myminio/gp-bucket
+mc mb myminio/gpbucket
 mc ls myminio
-mc ls myminio/gp-bucket
+mc ls myminio/gpbucket
 
 
 
 echo 123 > hello.txt
-mc cp hello.txt myminio/gp-bucket
+mc cp hello.txt myminio/gpbucket
 
 
 
-mc cat myminio/gp-bucket/hello.txt
+mc cat myminio/gpbucket/hello.txt
 
 
 
 
 
-mc rb myminio/gp-bucket
+mc rb myminio/gpbucket
 
