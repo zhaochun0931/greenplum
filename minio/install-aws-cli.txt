@@ -13,6 +13,17 @@ aws --endpoint-url http://localhost:9000 s3 ls
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 docker run --rm --network minio-network --name aws-cli \
 -e AWS_ACCESS_KEY_ID=admin \
 -e AWS_SECRET_ACCESS_KEY=password \
