@@ -27,7 +27,7 @@ CREATE EXTERNAL TABLE t1(id int) LOCATION ('pxf://gpbucket/hello.txt?PROFILE=s3:
 
 
 
-insert into test select * from generate_series(1,100);
+insert into t2 select * from generate_series(1,100);
 
 
 CREATE WRITABLE EXTERNAL TABLE t2 (id int)
@@ -36,7 +36,13 @@ FORMAT 'custom' (formatter = 'pxfwritable_export')
 ENCODING 'UTF8';
 
 
-CREATE WRITABLE EXTERNAL TABLE t3 (id int)
+
+
+
+
+
+
+CREATE WRITABLE EXTERNAL TABLE t3 (name text)
 LOCATION ('pxf://gpbucket/t3?PROFILE=s3:text&SERVER=default')
 FORMAT 'custom' (formatter = 'pxfwritable_export')
 ENCODING 'UTF8';
