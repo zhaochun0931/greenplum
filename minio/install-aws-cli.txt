@@ -6,7 +6,10 @@ sudo ./aws/install
 
 
 
+aws configure
 
+aws --endpoint-url http://localhost:9000 s3 mb s3://my-bucket
+aws --endpoint-url http://localhost:9000 s3 ls 
 
 
 
