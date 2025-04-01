@@ -4,16 +4,11 @@ wget https://dl.min.io/server/minio/release/linux-amd64/minio
 wget https://dl.min.io/server/minio/release/linux-arm64/minio
 
 chmod +x minio
+
+export MINIO_ROOT_USER=admin
+export MINIO_ROOT_PASSWORD=password
+
 ./minio server --address 0.0.0.0:9000 --console-address 0.0.0.0:9001 /tmp/minio
-
-
-
-
-
-
-
-
-
 
 
 
@@ -29,18 +24,29 @@ License: GNU AGPLv3 - https://www.gnu.org/licenses/agpl-3.0.html
 Version: RELEASE.2025-03-12T18-04-18Z (go1.24.1 linux/amd64)
 
 API: http://0.0.0.0:9000
-   RootUser: minioadmin
-   RootPass: minioadmin
+   RootUser: admin
+   RootPass: password
 
 WebUI: http://0.0.0.0:9001
-   RootUser: minioadmin
-   RootPass: minioadmin
+   RootUser: admin
+   RootPass: password
 
 CLI: https://min.io/docs/minio/linux/reference/minio-mc.html#quickstart
-   $ mc alias set 'myminio' 'http://0.0.0.0:9000' 'minioadmin' 'minioadmin'
+   $ mc alias set 'myminio' 'http://0.0.0.0:9000' 'admin' 'password'
 
 Docs: https://docs.min.io
-WARN: Detected default credentials 'minioadmin:minioadmin', we recommend that you change these values with 'MINIO_ROOT_USER' and 'MINIO_ROOT_PASSWORD' environment variables
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
