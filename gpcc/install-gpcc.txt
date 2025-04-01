@@ -150,3 +150,20 @@ gpcc --settings
 3. Please help upload the GPCC logs which cover Feb 20 under $GPCC_HOME/logs
 4. Please help upload the GPDB master log on Feb 20 under $MASTER_DATA_DIRECTORY/pg_log
 5. Please help confirm if the queries with "unknown" are from a UDF of not?
+
+
+
+
+
+
+
+PCC的圖形界面裡, 首頁CPU的讀數數據源是來自表 gpmetrics.gpcc_system_history. 
+建議如果下次在遇到類似的現象, 可以看下這個表裡的讀數是否都是0或者空
+
+建議語句為:
+
+\c gpperfmon ;
+select ctime,hostname,cpu_user,cpu_sys,cpu_idle,cpu_iowait  from gpmetrics.gpcc_system_history order by ctime  desc limit 100;
+如果這個語句返回的數值有異常, 那麼有可能是agent 層面在收集數據的時候出了問題, 我們可以針對對應的時間檢查agent日誌.
+
+
