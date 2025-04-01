@@ -17,6 +17,6 @@ psql testdb
 CREATE EXTENSION pxf;
 
 
-CREATE EXTERNAL TABLE t2(id int) LOCATION ('pxf://gptest/hello.txt?PROFILE=s3:text') FORMAT 'TEXT' (delimiter=E',');
+CREATE EXTERNAL TABLE t1(id int) LOCATION ('pxf://gpbucket/hello.txt?PROFILE=s3:text') FORMAT 'TEXT' (delimiter=E',');
 
 
