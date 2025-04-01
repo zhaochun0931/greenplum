@@ -20,3 +20,14 @@ CREATE EXTENSION pxf;
 CREATE EXTERNAL TABLE t1(id int) LOCATION ('pxf://gpbucket/hello.txt?PROFILE=s3:text') FORMAT 'TEXT' (delimiter=E',');
 
 
+
+
+
+
+
+
+
+create table t2 (id int);
+insert into t2 select * from generate_series(1,100);
+
+
