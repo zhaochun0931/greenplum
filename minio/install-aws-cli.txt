@@ -12,9 +12,11 @@ aws configure
 aws --endpoint-url http://localhost:9000 s3 ls 
 
 aws --endpoint-url http://localhost:9000 s3 mb s3://my-bucket
+aws --endpoint-url http://localhost:9000 s3 rb s3://my-bucket
 
+aws --endpoint-url http://localhost:9000 s3 cp hello.txt s3://my-bucket
 
-
+aws --endpoint-url http://localhost:9000 s3 ls s3://my-bucket
 
 
 
