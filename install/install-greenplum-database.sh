@@ -18,6 +18,9 @@ passwd gpadmin
 su - gpadmin
 ssh-keygen
 ssh-copy-id localhost
+ssh-copy-id hostname1
+ssh-copy-id hostname2
+
 
 
 
