@@ -17,9 +17,9 @@ passwd gpadmin
 # enable passwordless login for gpadmin user
 su - gpadmin
 ssh-keygen
-ssh-copy-id localhost
-ssh-copy-id hostname1
-ssh-copy-id hostname2
+sshpass -p password ssh-copy-id localhost
+sshpass -p password ssh-copy-id hostname1
+sshpass -p password ssh-copy-id hostname2
 
 
 
@@ -36,11 +36,14 @@ yum install -y greenplum-db-7.4.0-el8-x86_64.rpm
 
 
 
-
-
 mkdir -p /data/master /data/primary /data/mirror
 chown -R gpadmin:gpadmin /data
 chown -R gpadmin:gpadmin /usr/local/greenplum*
+
+
+gpssh -f hostfile_exkeys -e 'mkdir -p /data/master /data/primary /data/mirror'
+gpssh -f hostfile_exkeys -e 'chown -R gpadmin:gpadmin /data'
+gpssh -f hostfile_exkeys -e 'chown -R gpadmin:gpadmin /usr/local/greenplum*'
 
 
 
