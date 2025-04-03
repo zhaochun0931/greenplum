@@ -8,12 +8,12 @@ gpconfig -s shared_preload_libraries
 
 
 mkdir -p /usr/local/greenplum-cc-6.12.0
-chown -R gpadmin:gpadmin /usr/local/greenplum-cc-6.12.0
 
+chown -R gpadmin:gpadmin /usr/local/greenplum-cc-6.12.0
 
 unzip greenplum-cc-web-6.12.0-gp6-rhel8-x86_64.zip
 
-
+chown -R gpadmin:gpadmin greenplum-cc-web-6.12.0-gp6-rhel8-x86_64
 
 cd greenplum-cc-web-6.12.0-gp6-rhel8-x86_64
 
