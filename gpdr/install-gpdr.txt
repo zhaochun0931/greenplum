@@ -2,8 +2,5 @@ sudo rpm -ivh greenplum-disaster-recovery-1.2.0-1.el8.x86_64.rpm
 
 sudo chown -R gpadmin:gpadmin /usr/local/gpdr
 
-
-
-
-
+echo 'source /usr/local/gpdr/gpdr_path.sh' >> ~/.bashrc
 
