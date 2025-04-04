@@ -1,1 +1,7 @@
+sudo rpm -ivh greenplum-disaster-recovery-1.2.0-1.el8.x86_64.rpm
+
+
+
+
+
 
