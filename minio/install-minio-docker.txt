@@ -11,6 +11,15 @@ minio/minio server --address ":9000" --console-address ":9001" /data
 
 
 
+docker run -it --rm --name minio \
+-p 9000:9000 -p 9001:9001 \
+-v $(pwd)/minio-data:/data \
+-v $(pwd)/mycert:/root/.minio/certs \
+--network minio-network --hostname minio \
+--env MINIO_ROOT_USER="admin" \
+--env MINIO_ROOT_PASSWORD="password" \
+minio/minio server --address ":9000" --console-address ":9001" /data
+
 
 
 
