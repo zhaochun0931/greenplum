@@ -52,6 +52,9 @@ Docs: https://docs.min.io
 
 
 
+# enable https
+
+
 
 
 
