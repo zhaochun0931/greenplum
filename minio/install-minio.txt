@@ -1,7 +1,9 @@
 mkdir -p /tmp/minio
 
+# x86
 wget https://dl.min.io/server/minio/release/linux-amd64/minio
 
+# arm
 wget https://dl.min.io/server/minio/release/linux-arm64/minio
 
 chmod +x minio
