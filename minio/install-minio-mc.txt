@@ -1,9 +1,10 @@
+# linux x86
 curl https://dl.min.io/client/mc/release/linux-amd64/mc \
   --create-dirs \
   -o $HOME/minio-binaries/mc
 
 
-
+# linux arm
 curl https://dl.min.io/client/mc/release/linux-arm64/mc \
   --create-dirs \
   -o ~/minio-binaries/mc
