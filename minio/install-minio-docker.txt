@@ -13,5 +13,4 @@ minio/minio server --address ":9000" --console-address ":9001" /data
 
 
 
-
 docker run --name minio bitnami/minio
