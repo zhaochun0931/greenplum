@@ -4,3 +4,23 @@ sudo chown -R gpadmin:gpadmin /usr/local/gpdr
 
 echo 'source /usr/local/gpdr/gpdr_path.sh' >> ~/.bashrc
 
+
+
+
+
+
+
+
+
+
+
+cp /usr/local/gpdr/templates/posix_config_file.yml ~/
+
+gpdr configure backup --config-file posix_config_file.yml
+
+
+
+
+
+
+
