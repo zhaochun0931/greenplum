@@ -1,0 +1,12 @@
+#  GPDR configuration file example for POSIX based repository
+#
+# Example for POSIX-compliant file systems and NFS.
+#
+# For NFS, the requirements follow PostgreSQL documentation:
+# https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM
+
+# the type of storage used for the repository
+type: posix
+
+# absolute path to where backups and archives will be stored
+path: /tmp/repository
