@@ -11,7 +11,7 @@ echo 'source /usr/local/gpdr/gpdr_path.sh' >> ~/.bashrc
 
 
 
-
+# primary cluster
 
 
 cp /usr/local/gpdr/templates/posix_config_file.yml ~/
@@ -24,3 +24,5 @@ gpdr configure backup --config-file posix_config_file.yml
 
 
 
+# Recovery Cluster
+gpdr configure restore --config-file posix_config_file.yml --use-existing-cluster
