@@ -26,6 +26,8 @@ gpdr configure backup --config-file posix_config_file.yml
 
 # recovery cluster
 gpdr configure restore --config-file posix_config_file.yml --use-existing-cluster
+
+
 gpdr configure restore --config-file posix_config_file.yml --recovery-cluster-config-file recovery_cluster_config_file_gp6.yml
 
 
@@ -42,6 +44,7 @@ gpdr backup --type full
 gpstop -af
 gpdr restore -t incr --restore-point latest
 gpdr info restore
+gpdr promote
 
 
 
