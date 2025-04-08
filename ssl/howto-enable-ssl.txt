@@ -1,3 +1,15 @@
 SHOW ssl;
 
 
+SELECT * FROM pg_stat_ssl WHERE pid = pg_backend_pid();
+
+testdb=# SELECT * FROM pg_stat_ssl WHERE pid = pg_backend_pid();
+ pid  | ssl | version |         cipher         | bits | client_dn | client_serial | issuer_dn
+------+-----+---------+------------------------+------+-----------+---------------+-----------
+ 4348 | t   | TLSv1.3 | TLS_AES_256_GCM_SHA384 |  256 |           |               |
+(1 row)
+
+testdb=#
+
+
+
