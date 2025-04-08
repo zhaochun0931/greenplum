@@ -45,6 +45,7 @@ gpstop -af
 gpdr restore -t incr --restore-point latest
 gpdr info restore
 gpdr promote
+gpstart
 
 
 
