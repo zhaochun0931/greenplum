@@ -1,3 +1,8 @@
+psql "host=localhost port=5433 dbname=testdb user=postgres password=password sslmode=require"
+
+
+
+
 SHOW ssl;
 
 
