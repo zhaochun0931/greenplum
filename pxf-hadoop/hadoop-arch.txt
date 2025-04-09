@@ -1,0 +1,14 @@
+The core components of Hadoop include:
+
+1. Hadoop Distributed File System (HDFS)
+The storage layer, which splits data into chunks and distributes them across the cluster.
+
+2. MapReduce
+A processing layer that allows for distributed data processing in parallel across nodes.
+
+3. YARN (Yet Another Resource Negotiator)
+Manages resources across the cluster and schedules tasks.
+
+4. Hadoop Common
+A set of utilities and libraries needed for other Hadoop modules.
+
