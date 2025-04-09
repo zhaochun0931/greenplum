@@ -3,8 +3,9 @@ apt install openjdk-8-jdk
 java -version
 which java
 
-mkdir -p /hadoop/datanode /hadoop/namenode
 
+# create the namenode and datanode directory
+mkdir -p /hadoop/{name,data1,data2}
 
 
 
