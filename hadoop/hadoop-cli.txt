@@ -7,3 +7,8 @@ hdfs dfs -put xxx /hadoop/data1/test
 hdfs dfs -cat /hadoop/data1/test/xxx
 
 
+echo 1 >> xxx
+hdfs dfs -put xxx /hadoop/data1/
+hdfs dfs -cat /hadoop/data1/xxx
+
+
