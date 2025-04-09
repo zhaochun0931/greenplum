@@ -1,9 +1,9 @@
-hdfs dfs -mkdir -p /data/test
-hdfs dfs -ls /data/test
+hdfs dfs -mkdir -p /hadoop/data1/test
+hdfs dfs -ls /hadoop/data1/test
 
 echo "hello world" > xxx
-hdfs dfs -put xxx /data/test
+hdfs dfs -put xxx /hadoop/data1/test
 
-hdfs dfs -cat /data/test/xxx
+hdfs dfs -cat /hadoop/data1/test/xxx
 
 
