@@ -41,6 +41,7 @@ export HADOOP_HOME=/home/hadoop/hadoop-3.4.1
 export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
 
 
+/home/hadoop/hadoop-3.4.1/etc/hadoop/hadoop-env.sh
 
 hadoop version
 
