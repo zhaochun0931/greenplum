@@ -14,7 +14,6 @@ mkdir -p /hadoop/datanode /hadoop/namenode
 
 
 adduser hadoop
-usermod -aG hadoop
 
 
 su - hadoop
