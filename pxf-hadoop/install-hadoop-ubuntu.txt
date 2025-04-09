@@ -60,6 +60,10 @@ hdfs namenode -format
 
 # Start the NameNode and DataNode
 start-dfs.sh
+stop-dfs.sh
+
+
+
 
 
 $ start-dfs.sh
