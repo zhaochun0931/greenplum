@@ -1,0 +1,104 @@
+apt update
+apt install openjdk-8-jdk
+java -version
+which java
+
+mkdir -p /hadoop/datanode
+mkdir -p /hadoop/namenode
+
+
+
+
+
+
+
+
+
+adduser hadoop
+usermod -aG sudo hadoop
+
+
+
+ssh-keygen
+ssh-copy-id localhost
+
+
+
+
+
+
+https://hadoop.apache.org/releases.html
+wget https://dlcdn.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz
+
+
+sha512sum hadoop-3.4.1.tar.gz
+
+
+
+# sha512sum hadoop-3.4.1.tar.gz
+09cda6943625bc8e4307deca7a4df76d676a51aca1b9a0171938b793521dfe1ab5970fdb9a490bab34c12a2230ffdaed2992bad16458169ac51b281be1ab6741  hadoop-3.4.1.tar.gz
+#
+
+
+
+
+tar -xzvf hadoop-3.4.1.tar.gz
+
+
+
+chown -Rf hadoop:hadoop /home/hadoop/hadoop-3.4.1
+chown -Rf hadoop:hadoop /hadoop
+
+
+
+
+export JAVA_HOME=/
+export HADOOP_HOME=/home/hadoop/hadoop-3.4.1
+export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
+
+
+
+hadoop version
+
+
+
+
+
+
+
+
+
+
+# Validate Hadoop Configuration
+hdfs namenode -format
+
+
+
+# Start the NameNode and DataNode
+start-dfs.sh
+
+
+$ start-dfs.sh
+Starting namenodes on [0.0.0.0]
+Starting datanodes
+Starting secondary namenodes [gp2]
+$ jps
+8658 Jps
+8549 SecondaryNameNode
+8198 NameNode
+8328 DataNode
+$
+
+
+
+
+
+# Start the YARN Resource and Node Managers
+start-yarn.sh
+
+
+
+
+start-all.sh
+
+
