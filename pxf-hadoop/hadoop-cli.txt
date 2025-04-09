@@ -1,0 +1,9 @@
+hdfs dfs -mkdir -p /data/test
+hdfs dfs -ls /data/test
+
+echo "hello world" > xxx
+hdfs dfs -put xxx /data/test
+
+hdfs dfs -cat /data/test/xxx
+
+
