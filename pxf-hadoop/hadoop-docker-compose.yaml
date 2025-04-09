@@ -1,0 +1,48 @@
+services:
+  namenode:
+    image: bde2020/hadoop-namenode:latest
+    hostname: namenode
+    environment:
+      - CLUSTER_NAME=hadoop-cluster
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:8020
+    ports:
+      - "9870:9870"  # NameNode Web UI
+      - "9000:9000"  # IPC Port
+    networks:
+      - hadoop_network
+    volumes:
+      - ./name:/data
+
+  datanode1:
+    image: bde2020/hadoop-datanode:latest
+    hostname: datanode1
+    environment:
+      - CLUSTER_NAME=hadoop-cluster
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:8020
+    ports:
+      - "9864:9864"  # DataNode Web UI
+    networks:
+      - hadoop_network
+    depends_on:
+      - namenode
+    volumes:
+      - ./data1:/data
+
+  datanode2:
+    image: bde2020/hadoop-datanode:latest
+    hostname: datanode2
+    environment:
+      - CLUSTER_NAME=hadoop-cluster
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:8020
+    ports:
+      - "9865:9864"  # DataNode Web UI
+    networks:
+      - hadoop_network
+    depends_on:
+      - namenode
+    volumes:
+      - ./data2:/data
+
+networks:
+  hadoop_network:
+    driver: bridge
