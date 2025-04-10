@@ -21,3 +21,15 @@ Shows HDFS status, file browser, logs, Datanode list, etc.
 
 
 hdfs namenode -format
+
+
+
+
+
+
+hdfs dfs -mkdir /mydata
+echo 111 > xxx
+echo 222 > yyy
+hdfs dfs -put xxx /mydata
+hdfs dfs -put yyy /mydata
+hdfs dfs -ls /mydata
