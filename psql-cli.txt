@@ -1,8 +1,41 @@
-psql -h IP -p PORT -U USER -d DBNAME
+psql -h <remote_host> -p 5432 -U <username> -d <database>
+
+
+
 
 psql -V
 
+$ psql -V
+psql (PostgreSQL) 17.4 (Ubuntu 17.4-1.pgdg20.04+2)
+postgres@ubuntu1:~$
+
+
+
+
+
 psql -l
+
+$ psql -l
+                                                     List of databases
+   Name    |  Owner   | Encoding | Locale Provider |   Collate   |    Ctype    | Locale | ICU Rules |   Access privileges
+-----------+----------+----------+-----------------+-------------+-------------+--------+-----------+-----------------------
+ postgres  | postgres | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           |
+ repmgr    | repmgr   | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           |
+ template0 | postgres | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           | =c/postgres          +
+           |          |          |                 |             |             |        |           | postgres=CTc/postgres
+ template1 | postgres | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           | =c/postgres          +
+           |          |          |                 |             |             |        |           | postgres=CTc/postgres
+ testdb    | postgres | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           |
+ xxx       | postgres | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           |
+(6 rows)
+
+postgres@ubuntu1:~$
+
+
+
+
+
+
 
 psql -c "SQL_STATEMENT"
 
@@ -11,7 +44,8 @@ psql -f FILE_NAME
 
 
 
-SELECT pg_reload_conf();
+psql -c 'SELECT pg_reload_conf();'
+
 
 
 create user username with password 'password';
@@ -41,7 +75,6 @@ psql
 psql postgres
 
 
-psql -h <remote_host> -p 5432 -U <username> -d <database>
 
 
 
