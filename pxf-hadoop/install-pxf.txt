@@ -88,6 +88,7 @@ postgres=#
 
 
 
+CREATE WRITABLE EXTERNAL TABLE t2_w(id int) LOCATION ('pxf://hadoop/t2_w?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
 
 CREATE WRITABLE EXTERNAL TABLE ext_hdfs_data6(name text) LOCATION ('pxf://testdata/green2hadoop?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
 INSERT INTO ext_hdfs_data6 (name) VALUES ('xiaoming'),('xiaoming2');
