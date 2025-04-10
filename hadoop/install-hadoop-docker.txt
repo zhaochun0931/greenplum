@@ -17,3 +17,7 @@ In modern Hadoop, replaced by 8020, but still supported for backward compatibili
 Accessible in your browser: http://localhost:9870
 
 Shows HDFS status, file browser, logs, Datanode list, etc.
+
+
+
+hdfs namenode -format
