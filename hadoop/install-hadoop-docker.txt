@@ -33,3 +33,4 @@ echo 222 > yyy
 hdfs dfs -put xxx /mydata
 hdfs dfs -put yyy /mydata
 hdfs dfs -ls /mydata
+hdfs dfs -cat /mydata/*
