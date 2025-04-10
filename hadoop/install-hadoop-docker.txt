@@ -3,12 +3,17 @@ Used by DataNodes and HDFS clients to read/write file system metadata.
 
 Set via: fs.defaultFS = hdfs://namenode:8020 in core-site.xml.
 
-🔹 9000 – Legacy FS URI Port
+
+
+9000 – Legacy FS URI Port
 Historically used for fs.defaultFS = hdfs://namenode:9000 in older Hadoop versions.
 
 In modern Hadoop, replaced by 8020, but still supported for backward compatibility.
 
-🔹 9870 – NameNode Web UI
+
+
+
+9870 – NameNode Web UI
 Accessible in your browser: http://localhost:9870
 
 Shows HDFS status, file browser, logs, Datanode list, etc.
