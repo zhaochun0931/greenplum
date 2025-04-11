@@ -17,6 +17,11 @@ CREATE USER yyy;
 
 
 
+CREATE USER myuser WITH PASSWORD 'mypassword';
+
+
+
+
 
 
 
@@ -30,3 +35,9 @@ SELECT rolname FROM pg_roles WHERE rolcanlogin;
 
 \du
 
+
+
+
+
+CREATE USER myuser WITH PASSWORD 'password';
+GRANT CONNECT ON DATABASE gpperfmon TO xman;
