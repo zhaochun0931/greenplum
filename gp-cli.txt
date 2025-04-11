@@ -79,6 +79,12 @@ postgres=#
 
 
 
+select * from gp_stat_replication;
+
+
+
+
+
 
 
 PGOPTIONS='-c gp_session_role=utility' psql -h <hostname> -p <port> postgres
