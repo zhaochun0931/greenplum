@@ -15,5 +15,18 @@ CREATE USER yyy;
 
 
 
-SELECT rolname FROM pg_roles;
+
+
+
+
+
+SELECT * from pg_roles;
+SELECT rolname, rolsuper, rolcreaterole, rolcreatedb, rolcanlogin FROM pg_roles;
+
 SELECT rolname FROM pg_roles WHERE rolcanlogin;
+
+
+
+
+\du
+
