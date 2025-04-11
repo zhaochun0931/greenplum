@@ -1,3 +1,14 @@
+gpload runs a load by invoking the Greenplum Database parallel file server (gpfdist)
+
+
+
+
+
+
+
+
+
+
 CREATE TABLE my_table (
     id INT,
     name VARCHAR(100),
