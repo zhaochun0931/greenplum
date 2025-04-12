@@ -146,21 +146,11 @@ The global directory will contain the global system tables. This directory is sm
 
 
 
+/var/lib/postgresql
 
-
-pg_hba.conf - host-based network configuration
-The pg_hba.conf file configures the PostgreSQL's internal firewall and represents one of the two most important configuration files in a PostgreSQL cluster.
-
-
-
-pg_ident.conf - ident authentication
-The pg_ident.conf file can be used in conjunction with the pg_hba.conf file to configure ident authentication.
-
-
-
-postgresql.conf - the central PostgreSQL configuration file
-Finally, there is the main PostgreSQL configuration file. All configuration parameters can be changed in postgresql.conf
-
+pg_hba.conf
+pg_ident.conf
+postgresql.conf
 
 
 
