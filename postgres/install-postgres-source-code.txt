@@ -1,6 +1,4 @@
 wget https://ftp.postgresql.org/pub/source/v17.4/postgresql-17.4.tar.gz
-
-
 md5sum postgresql-17.4.tar.gz
 6c6cb3f34286ca839077176b714f494d  postgresql-17.4.tar.gz
 
@@ -23,6 +21,17 @@ cd postgresql-17.4
 ./configure
 make
 make install
+
+
+
+
+
+
+
+
+
+
+
 
 
 
