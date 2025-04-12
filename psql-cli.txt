@@ -277,6 +277,10 @@ SELECT pg_is_in_recovery();
 
 
 
+
+
+
+
 copy
 
 copy from
@@ -295,6 +299,12 @@ copy t1 from '/tmp/t1';
 
 
 
+create table t1 (id int, name varchar(100));
+INSERT INTO t1 SELECT generate_series(1,10), 'aaa';
+copy t1 to '/tmp/t1' using delimiters '|';
+copy t1 to '/tmp/t1' using delimiters ',';
+truncate t1;
+copy t1 from '/tmp/t1' using delimiters '|';
 
 
 
