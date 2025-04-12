@@ -214,8 +214,7 @@ Database Structural Objects
 
 
 
-
-
+In PostgreSQL, a schema is kind of like a namespace or a folder within a database.
 
 
 
