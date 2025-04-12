@@ -154,7 +154,16 @@ postgresql.conf
 
 
 
+
+
 If you happen to use prebuilt binaries, you might not find postgresql.conf directly inside your data directory. It is more likely to be located in some subdirectory of /etc/ (on Linux/Unix). The precise location is highly dependent on the type of operating system you are using. The typical location of data directories is /var/lib/pgsql/data, but postgresql.conf is often located under /etc/postgresql/9.X/main/postgresql.conf (as in Ubuntu and similar systems), or under /etc directly.
+
+
+
+psql -c 'select * from pg_reload_conf();'
+
+Kill -HUP <postgres_process_id>
+
 
 
 
