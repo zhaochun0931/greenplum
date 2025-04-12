@@ -159,5 +159,39 @@ testdb=#
 
 
 
+VACUUM ANALYZE t1;
+
+testdb=# SELECT * FROM pg_stat_user_tables WHERE relname = 't1';
+-[ RECORD 1 ]-------+------------------------------
+relid               | 16390
+schemaname          | public
+relname             | t1
+seq_scan            | 3
+last_seq_scan       | 2025-04-12 22:53:39.522973+00
+seq_tup_read        | 30
+idx_scan            |
+last_idx_scan       |
+idx_tup_fetch       |
+n_tup_ins           | 10
+n_tup_upd           | 1
+n_tup_del           | 1
+n_tup_hot_upd       | 1
+n_tup_newpage_upd   | 0
+n_live_tup          | 9
+n_dead_tup          | 0
+n_mod_since_analyze | 0
+n_ins_since_vacuum  | 0
+last_vacuum         | 2025-04-12 22:55:59.45118+00
+last_autovacuum     |
+last_analyze        | 2025-04-12 22:55:59.452874+00
+last_autoanalyze    |
+vacuum_count        | 1
+autovacuum_count    | 0
+analyze_count       | 1
+autoanalyze_count   | 0
+
+testdb=#
+
+
 
 
