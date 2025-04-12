@@ -1,0 +1,10 @@
+Write-Ahead Log (WAL)
+
+
+
+
+
+
+checkpoints
+
+A checkpoint is a known safe starting point for recovery, since it guarantees that all the previous changes to the database have already been written to disk.
