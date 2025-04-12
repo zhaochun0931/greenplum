@@ -1,1 +1,17 @@
+In PostgreSQL, the term heap refers to a table's physical storage structure in the database.
+
+It's not a fixed-length structure like an array but instead a dynamically allocated structure, meaning that rows in a table are stored in the heap as individual records that can grow, shrink, or be modified over time.
+
+
+
+Structure of a Heap Table
+
+Tuple: Each row in the heap is called a tuple. A tuple is a data structure containing the values of the row's columns.
+
+Block: PostgreSQL stores tuples in pages or blocks. By default, each block is 8KB in size (configurable), and each block can hold multiple tuples. When a table grows, it can span multiple blocks.
+
+Visibility Map: PostgreSQL uses a visibility map that marks which tuples (rows) in a heap are visible to transactions.
+
+Heap Header: The header contains metadata, such as the tuple's transaction information, to indicate whether the tuple is live, deleted, or has been updated.
+
 
