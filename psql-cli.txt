@@ -277,5 +277,16 @@ SELECT pg_is_in_recovery();
 
 
 
+copy
+
+copy from
+
+copy to
+
+
+
+
+
+
 
 
