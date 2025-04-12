@@ -290,6 +290,9 @@ copy t1 to '/tmp/t1';
 create table t2 (id int);
 copy t2 from '/tmp/t1';
 
+truncate t1;
+copy t1 from '/tmp/t1';
+
 
 
 
