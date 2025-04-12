@@ -1,10 +1,13 @@
 docker run --rm --name pg1 -e POSTGRES_PASSWORD=password -d postgres
 
+the default postgres user and database are created in the entrypoint with initdb.
+
+
+
 
 docker run --rm --name pg1 -e POSTGRES_PASSWORD=password -v $(PWD)/pg1:/var/lib/postgresql/data -d postgres
 
 
-the default postgres user and database are created in the entrypoint with initdb.
 
 PGDATA
 /var/lib/postgresql/data is the default data directory. 
