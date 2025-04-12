@@ -32,9 +32,17 @@ make install
 
 
 
-
-
 make -j$(nproc)
+
+
+
+
+
+
+
+
+
+
 
 
 
