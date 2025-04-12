@@ -284,6 +284,16 @@ copy from
 copy to
 
 
+create table t1 (id int);
+insert into t1 select * from generate_series(1,100,5);
+copy t1 to '/tmp/t1';
+create table t2 (id int);
+copy t2 from '/tmp/t1';
+
+
+
+
+
 
 
 
