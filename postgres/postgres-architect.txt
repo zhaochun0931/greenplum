@@ -214,7 +214,19 @@ Database Structural Objects
 
 
 
-In PostgreSQL, a schema is kind of like a namespace or a folder within a database.
+In PostgreSQL, a schema is kind of like a namespace or a folder within a database. PostgreSQL automatically creates a schema named public in every new database, and all users can use it unless restricted.
+
+
+postgres=# SHOW search_path;
+   search_path
+-----------------
+ "$user", public
+(1 row)
+
+postgres=#
+
+
+
 
 
 
