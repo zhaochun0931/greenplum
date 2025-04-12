@@ -4,6 +4,7 @@ services:
   db1:
     image: postgres
     container_name: db1
+    hostname: db1
     restart: always
     # set shared memory limit when using docker-compose
     shm_size: 128mb
@@ -21,6 +22,7 @@ services:
   db2:
     image: postgres
     container_name: db2
+    hostname: db2
     restart: always
     # set shared memory limit when using docker-compose
     shm_size: 128mb
