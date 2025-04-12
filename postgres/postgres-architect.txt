@@ -32,6 +32,27 @@ It actually contains the real data (that is, tables, indexes, and so on). Inside
 
 
 
+
+
+postmaster
+
+The POSTGRESQL server uses two distinct programs: postmaster and postgres. The postmaster process accepts all requests for database access. It does authentication and starts a postgres process to handle the connection. The postgres process executes user queries and returns results.
+
+In newer versions of PostgreSQL, the actual process is named postgres, even though historically it was called postmaster.
+
+ps aux | grep postgres
+
+
+
+
+
+
+
+
+
+
+
+
 # database oid
 
 select oid, * from pg_database;
