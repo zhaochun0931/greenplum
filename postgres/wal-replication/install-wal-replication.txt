@@ -14,6 +14,10 @@ psql -c 'SELECT * FROM pg_stat_replication;'
 
 
 
+# edit the pg_hba.conf in master and allow the standby ip to access the replication
+
+The replication database is specifically used for replication connections, such as the connections that happen when setting up streaming replication in PostgreSQL. It's not a regular user database, but rather a special-purpose database used to authenticate replication connections.
+
 
 
 
