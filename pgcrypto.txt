@@ -97,7 +97,7 @@ WHERE name = 'Alice';
 
 
 
-
+# Encrypting and Decrypting Data (Symmetric Encryption)
 
 SELECT pgp_sym_encrypt('helloworld', 'mykey');
 
