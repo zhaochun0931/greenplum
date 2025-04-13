@@ -88,3 +88,58 @@ FROM users
 WHERE name = 'Alice';
 
 
+
+
+
+
+
+
+
+
+
+
+
+SELECT pgp_sym_encrypt('helloworld', 'mykey');
+
+postgres=#
+postgres=# SELECT pgp_sym_encrypt('helloworld', 'mykey');
+-[ RECORD 1 ]---+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+pgp_sym_encrypt | \xc30d040703023a44dfa37229c6ec7ad23b012e3cb6e10ab9ccf98e319e37e93a6f9538011f5536314ae30152e166506053fd640249831ada2e2f8d4f5d5a00d5b84cfd26d00890fb6191defe
+
+postgres=#
+
+
+
+
+
+SELECT pgp_sym_decrypt(pgp_sym_encrypt('helloworld', 'mykey'), 'mykey');
+
+postgres=# SELECT pgp_sym_decrypt(pgp_sym_encrypt('helloworld', 'mykey'), 'mykey');
+ pgp_sym_decrypt
+-----------------
+ helloworld
+(1 row)
+
+postgres=#
+
+
+
+
+SELECT pgp_sym_decrypt('\xc30d040703023a44dfa37229c6ec7ad23b012e3cb6e10ab9ccf98e319e37e93a6f9538011f5536314ae30152e166506053fd640249831ada2e2f8d4f5d5a00d5b84cfd26d00890fb6191defe', 'mykey');
+ 
+ 
+postgres=# SELECT pgp_sym_decrypt('\xc30d040703023a44dfa37229c6ec7ad23b012e3cb6e10ab9ccf98e319e37e93a6f9538011f5536314ae30152e166506053fd640249831ada2e2f8d4f5d5a00d5b84cfd26d00890fb6191defe', 'mykey');
+ pgp_sym_decrypt
+-----------------
+ helloworld
+(1 row)
+postgres=#
+
+
+
+
+
+
+
+
+
