@@ -66,6 +66,13 @@ SELECT rolname FROM pg_roles WHERE rolcanlogin = TRUE;
 
 
 
+psql -c "SHOW config_file;"
+
+
+
+
+
+
 
 
 su - postgres
