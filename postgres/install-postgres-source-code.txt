@@ -1,5 +1,9 @@
 apt update
 apt-get install -y build-essential libreadline-dev zlib1g-dev flex bison libxml2-dev libxslt-dev libssl-dev libxml2-utils xsltproc ccache pkg-config
+apt-get install libkrb5-dev
+
+
+
 
 
 
