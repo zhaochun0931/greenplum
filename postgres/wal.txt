@@ -30,3 +30,13 @@ archive_mode = always
 archive_command = 'cp /data1/pg_wal/%f /tmp/archive/%f'
 
 
+
+
+show archive_mode;
+show data_directory;
+select pg_switch_wal();
+
+
+
+
+
