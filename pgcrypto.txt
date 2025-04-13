@@ -1,5 +1,9 @@
 yum install postgresql-contrib
 
+apt-get install postgresql-contrib
+
+
+
 
 
 psql postgres
