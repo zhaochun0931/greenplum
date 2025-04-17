@@ -1,3 +1,16 @@
+gppkg -i greenplum_backup_restore-1.31.0-gp6-rhel8-x86_64.gppkg
+
+
+
+gpbackup --version
+
+
+
+
+
+
+
+
 gpbackup --backup-dir /tmp/xxx --dbname xxx
 
 
