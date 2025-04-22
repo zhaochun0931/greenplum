@@ -1,6 +1,3 @@
-Apache Hive is a data warehouse system built on top of Hadoop. 
-
-It lets you query and analyze large datasets stored in Hadoop’s HDFS (Hadoop Distributed File System) using a language very similar to SQL, called HiveQL.
-
+Apache Hive is a popular open-source data warehousing framework that allows users to query large datasets stored in distributed storage systems like Hadoop HDFS, Apache Ozone, Amazon S3, or Microsoft Azure Data Lake Storage (ADLS). 
 
 
