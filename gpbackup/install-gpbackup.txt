@@ -6,42 +6,51 @@ gpbackup --version
 
 
 
+createdb testdb
+psql testdb
+create table t1 (id int);
+insert into t1 select * from generate_series(1,100);
 
 
 
 
 
-gpbackup --backup-dir /tmp/xxx --dbname xxx
+
+gpbackup --backup-dir /home/gpadmin/xxx --dbname testdb
 
 
 
-$ ./gpbackup --backup-dir /tmp/xxx --dbname xxx
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-gpbackup version = 1.30.7
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Greenplum Database Version = 7.4.0 build commit:27de6dc6d00607a5630a41fd2c0ad489f40e2ad4
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Starting backup of database xxx
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Backup Timestamp = 20250317042149
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Backup Database = xxx
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Gathering table state information
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Acquiring ACCESS SHARE locks on tables
+
+$ gpbackup --backup-dir /home/gpadmin/xxx --dbname testdb
+20250421:21:06:36 gpbackup:gpadmin:data74:1647431-[INFO]:-gpbackup version = 1.31.0
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Greenplum Database Version = 6.29.0 build commit:eebc116aa51a4caa34c33702277dfd7850e7b79c
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Starting backup of database testdb
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Backup Timestamp = 20250421210637
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Backup Database = testdb
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Gathering table state information
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Acquiring ACCESS SHARE locks on tables
 Locks acquired:  1 / 1 [================================================================] 100.00% 0s
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Gathering additional table metadata
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Getting storage information
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Metadata will be written to /tmp/xxx/gpseg-1/backups/20250317/20250317042149/gpbackup_20250317042149_metadata.sql
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Writing global database metadata
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Global database metadata backup complete
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Writing pre-data metadata
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Pre-data metadata metadata backup complete
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Writing post-data metadata
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Post-data metadata backup complete
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Writing data to file
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Gathering additional table metadata
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Getting partition definitions
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Getting storage information
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Getting child partitions with altered schema
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Metadata will be written to /home/gpadmin/xxx/gpseg-1/backups/20250421/20250421210637/gpbackup_20250421210637_metadata.sql
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Writing global database metadata
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Global database metadata backup complete
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Writing pre-data metadata
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Pre-data metadata backup complete
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Writing post-data metadata
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Post-data metadata backup complete
+20250421:21:06:37 gpbackup:gpadmin:data74:1647431-[INFO]:-Writing data to file
 Tables backed up:  1 / 1 [==============================================================] 100.00% 0s
-20250317:04:21:49 gpbackup:gpadmin:data73:680404-[INFO]:-Data backup complete
-20250317:04:21:50 gpbackup:gpadmin:data73:680404-[INFO]:-Found neither /usr/local/greenplum-db-7.4.0/bin/gp_email_contacts.yaml nor /home/gpadmin/gp_email_contacts.yaml
-20250317:04:21:50 gpbackup:gpadmin:data73:680404-[INFO]:-Email containing gpbackup report /tmp/xxx/gpseg-1/backups/20250317/20250317042149/gpbackup_20250317042149_report will not be sent
-20250317:04:21:50 gpbackup:gpadmin:data73:680404-[INFO]:-Beginning cleanup
-20250317:04:21:50 gpbackup:gpadmin:data73:680404-[INFO]:-Cleanup complete
-20250317:04:21:50 gpbackup:gpadmin:data73:680404-[INFO]:-Backup completed successfully
-[gpadmin@data73 bin]$
+20250421:21:06:38 gpbackup:gpadmin:data74:1647431-[INFO]:-Data backup complete
+20250421:21:06:39 gpbackup:gpadmin:data74:1647431-[INFO]:-Found neither /usr/local/greenplum-db-6.29.0/bin/gp_email_contacts.yaml nor /home/gpadmin/gp_email_contacts.yaml
+20250421:21:06:39 gpbackup:gpadmin:data74:1647431-[INFO]:-Email containing gpbackup report /home/gpadmin/xxx/gpseg-1/backups/20250421/20250421210637/gpbackup_20250421210637_report will not be sent
+20250421:21:06:39 gpbackup:gpadmin:data74:1647431-[INFO]:-Beginning cleanup
+20250421:21:06:39 gpbackup:gpadmin:data74:1647431-[INFO]:-Cleanup complete
+20250421:21:06:39 gpbackup:gpadmin:data74:1647431-[INFO]:-Backup completed successfully
+$
+
 
 
 
