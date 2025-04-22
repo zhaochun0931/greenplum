@@ -21,3 +21,9 @@ select count(distinct a) from hive_example;
 select sum(b) from hive_example;
 
 
+
+
+
+
+Accessing HiveServer2 Web UI:
+Accessed on browser at http://localhost:10002/
