@@ -79,26 +79,4 @@ $
 
 
 
-gprestore --backup-dir /tmp/ --create-db
-
-
-$ ./gprestore --backup-dir /tmp/ --create-db
-20250317:04:15:06 gprestore:gpadmin:data73:679425-[INFO]:-Restore Key = 20250317041351
-20250317:04:15:06 gprestore:gpadmin:data73:679425-[INFO]:-gpbackup version = 1.30.7
-20250317:04:15:06 gprestore:gpadmin:data73:679425-[INFO]:-gprestore version = 1.30.7
-20250317:04:15:06 gprestore:gpadmin:data73:679425-[INFO]:-Greenplum Database Version = 7.4.0 build commit:27de6dc6d00607a5630a41fd2c0ad489f40e2ad4
-20250317:04:15:06 gprestore:gpadmin:data73:679425-[INFO]:-Creating database
-20250317:04:15:07 gprestore:gpadmin:data73:679425-[INFO]:-Database creation complete for: xxx
-20250317:04:15:07 gprestore:gpadmin:data73:679425-[INFO]:-Restoring pre-data metadata
-Pre-data objects restored:  8 / 8 [=====================================================] 100.00% 0s
-20250317:04:15:08 gprestore:gpadmin:data73:679425-[INFO]:-Pre-data metadata restore complete
-Table data loads restored:  1 / 1 [=====================================================] 100.00% 0s
-20250317:04:15:08 gprestore:gpadmin:data73:679425-[INFO]:-Data restore complete
-20250317:04:15:08 gprestore:gpadmin:data73:679425-[INFO]:-Restoring post-data metadata
-20250317:04:15:08 gprestore:gpadmin:data73:679425-[INFO]:-Post-data metadata restore complete
-20250317:04:15:08 gprestore:gpadmin:data73:679425-[INFO]:-Found neither /usr/local/greenplum-db-7.4.0/bin/gp_email_contacts.yaml nor /home/gpadmin/gp_email_contacts.yaml
-20250317:04:15:08 gprestore:gpadmin:data73:679425-[INFO]:-Email containing gprestore report /tmp/gpseg-1/backups/20250317/20250317041351/gprestore_20250317041351_20250317041506_report will not be sent
-20250317:04:15:08 gprestore:gpadmin:data73:679425-[INFO]:-Beginning cleanup
-20250317:04:15:08 gprestore:gpadmin:data73:679425-[INFO]:-Cleanup complete
-20250317:04:15:08 gprestore:gpadmin:data73:679425-[INFO]:-Restore completed successfully
-$ 
+gprestore --backup-dir /home/gpadmin/xxx/ --timestamp 20250421043418 --create-db
