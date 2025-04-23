@@ -13,3 +13,10 @@ CREATE TABLE student (
 );
 
 
+
+
+rabbitmq:
+
+100,xxx1,yyy1
+101,xxx2,yyy2
+102,xxx3,yyy3
