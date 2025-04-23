@@ -13,5 +13,3 @@ CREATE TABLE student (
 );
 
 
-
-gpsscli load rabbitmq.yaml
