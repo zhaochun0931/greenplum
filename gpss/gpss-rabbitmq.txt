@@ -11,13 +11,3 @@ CREATE TABLE student (
     name VARCHAR(100),
     address VARCHAR(200)
 );
-
-
-
-
-
-gpss -c gpss-config.json
-gpss -c gpss-config.json --log-dir ./gpsslogs
-
-
-gpsscli load rabbitmq.yaml
