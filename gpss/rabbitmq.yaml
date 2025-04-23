@@ -13,8 +13,12 @@ RABBITMQ:
       VIRTUALHOST: "/"
     DATA:
       COLUMNS:
-        - NAME: c
+        - NAME: id
           TYPE: int
+        - NAME: name
+          TYPE: text
+        - NAME: address
+          TYPE: text
       FORMAT: CSV
   OUTPUT:
     SCHEMA: public
