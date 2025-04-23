@@ -106,6 +106,6 @@ CREATE WRITABLE EXTERNAL TABLE t3 (
 LOCATION ('gpfdist://localhost:8080/data2.csv')
 FORMAT 'csv' (DELIMITER ',');
 
-insert into t4 values(100,'xiaoming');
-insert into t4 values(101,'xiaoming2');
+insert into t3 values(100,'xiaoming');
+insert into t3 values(101,'xiaoming2');
 
