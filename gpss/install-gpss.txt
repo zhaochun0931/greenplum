@@ -9,3 +9,14 @@ GPSS uses the gpfdist protocol to store data in external tables
 
 gpss -c gpss-config.json
 gpss -c gpss-config.json --log-dir ./gpsslogs
+
+
+
+
+
+
+
+gpsscli load kafka.yaml
+
+
+gpsscli list
