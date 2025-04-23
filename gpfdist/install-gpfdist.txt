@@ -4,6 +4,8 @@ Greenplum Parallel File Server(gpfdist)
 
 
 
+# start the gpfdist server first
+
 
 $ gpfdist
 2025-02-26 08:51:16 25214 INFO Before opening listening sockets - following listening sockets are available:
