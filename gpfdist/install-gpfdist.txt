@@ -58,6 +58,21 @@ FORMAT 'TEXT' (DELIMITER ',');
 
 
 
+
+CREATE EXTERNAL TABLE t2 (
+  id INT,
+  name TEXT
+)
+LOCATION ('gpfdist://localhost:8080/data.csv')
+FORMAT 'csv' (DELIMITER ',');
+
+
+
+
+
+
+
+
 # \d
                       List of relations
  Schema |      Name      |     Type      |  Owner  | Storage
