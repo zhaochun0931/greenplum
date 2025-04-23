@@ -75,6 +75,7 @@ FORMAT 'csv' (DELIMITER ',');
 
 
 
+
 # \d
                       List of relations
  Schema |      Name      |     Type      |  Owner  | Storage
@@ -93,4 +94,18 @@ testdb=# select * from ext_test_table;
 
 testdb=#
 
+
+
+
+
+
+CREATE WRITABLE EXTERNAL TABLE t3 (
+  id INT,
+  name TEXT
+)
+LOCATION ('gpfdist://localhost:8080/data2.csv')
+FORMAT 'csv' (DELIMITER ',');
+
+insert into t4 values(100,'xiaoming');
+insert into t4 values(101,'xiaoming2');
 
