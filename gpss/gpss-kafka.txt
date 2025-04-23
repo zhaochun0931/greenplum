@@ -14,8 +14,4 @@ CREATE TABLE student (
 
 
 
-gpsscli load kafka.yaml
-
-
-gpsscli list
 
