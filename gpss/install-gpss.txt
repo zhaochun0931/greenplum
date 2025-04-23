@@ -16,6 +16,9 @@ gpss -c gpss-config.json --log-dir ./gpsslogs
 
 
 
+gpsscli load rabbitmq.yaml
+
+
 gpsscli load kafka.yaml
 
 
