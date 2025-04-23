@@ -6,6 +6,27 @@ GPSS uses the gpfdist protocol to store data in external tables
 
 
 
+gpss
+
+
+$ gpss
+20250423 04:06:10 - 2116285 [INFO] using gpss default config
+20250423 04:06:10 - 2116285 [INFO] config file content:
+{"ListenAddress":{"Host":"","Port":5000,"DebugPort":0,"Certificate":null},"Gpfdist":{"Host":"data74","Port":8080,"ReuseTables":true,"Certificate":null,"BindAddress":"0.0.0.0"},"logging":{}}
+20250423 04:06:10 - 2116285 [INFO] gpss-listen-address-prefix: :5000
+20250423 04:06:10 - 2116285 [INFO] Please set 'JobStore' in the config if you want to save job status.
+20250423 04:06:10 - 2116285 [INFO] gpss version: 2.0.1
+20250423 04:06:10 - 2116285 [INFO] librdkafka version: 1.4.2(10402ff)
+20250423 04:06:10 - 2116285 [INFO] gpfdist listening on 0.0.0.0:8080
+20250423 04:06:10 - 2116285 [INFO] start timeout session cleaner...
+20250423 04:06:10 - 2116285 [INFO] gpss listening on :5000
+20250423 04:06:10 - 2116285 [INFO] 'JobStore' is empty. No job will be resumed.
+20250423 04:06:10 - 2116285 [INFO] Finished resuming jobs.
+
+
+
+
+
 
 gpss -c gpss-config.json
 gpss -c gpss-config.json --log-dir ./gpsslogs
