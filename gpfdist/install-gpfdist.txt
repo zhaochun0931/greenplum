@@ -1,6 +1,6 @@
-Greenplum Parallel File Server
+Greenplum Parallel File Server(gpfdist)
 
-gpfdist
+
 
 
 
