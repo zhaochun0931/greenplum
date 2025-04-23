@@ -1,0 +1,5 @@
+The Greenplum Streaming Server (GPSS)
+
+The Greenplum Streaming Server is a gRPC server
+
+GPSS uses the gpfdist protocol to store data in external tables
