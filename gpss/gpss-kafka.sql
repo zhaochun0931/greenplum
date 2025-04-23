@@ -11,7 +11,3 @@ CREATE TABLE student (
     name VARCHAR(100),
     address VARCHAR(200)
 );
-
-
-
-
