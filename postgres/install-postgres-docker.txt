@@ -11,7 +11,7 @@ the default postgres user and database are created in the entrypoint with initdb
 
 
 PGDATA
-/var/lib/postgresql/data is the default data directory. 
+/var/lib/postgresql/data is the default data directory
 
 
 
