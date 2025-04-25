@@ -1,0 +1,23 @@
+version: v3
+
+sources:
+  - gpdb:
+      host: localhost
+      port: 5432
+      user: gpadmin
+      password: changeme
+      database: testdb
+      work_schema: public
+      tables:
+        - table: t1
+          schema: public
+          filter: id > 10
+
+targets:
+  - file:
+      url: /tmp/gpss-unload-1.csv
+      content:
+        csv:
+          columns:
+            - name: id
+              header: id
