@@ -31,3 +31,26 @@ gpinitstandby -s gp2
 
 gpinitstandby -r
 
+
+
+
+
+
+
+
+
+
+
+
+# switch 
+
+gpstop -m -f
+
+
+export PGPORT=5432
+
+gpactivatestandby
+
+
+
+
