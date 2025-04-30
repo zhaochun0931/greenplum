@@ -1,0 +1,4 @@
+tar -xzvf gpcopy-2.7.1.tar.gz -C /usr/local
+
+
+
