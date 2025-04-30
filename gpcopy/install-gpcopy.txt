@@ -1,4 +1,10 @@
 tar -xzvf gpcopy-2.7.1.tar.gz -C /usr/local
 
 
+export PATH=/usr/local/gpcopy-2.7.1:$PATH
 
+
+
+$ gpcopy --version
+gpcopy version 2.7.1
+$
