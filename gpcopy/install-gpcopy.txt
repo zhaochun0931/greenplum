@@ -8,3 +8,54 @@ export PATH=/usr/local/gpcopy-2.7.1:$PATH
 $ gpcopy --version
 gpcopy version 2.7.1
 $
+
+
+
+
+
+
+
+gpcopy --dbname testdb  --dest-host data75 --dest-dbname testdb --drop
+
+
+
+
+$ gpcopy --dbname testdb  --dest-host data75 --dest-dbname testdb --drop
+20250429:23:44:42.093524 gpcopy:gpadmin:data74:018429-[INFO]:-"--drop" will work as "--truncate" on partition tables
+20250429:23:44:42.094242 gpcopy:gpadmin:data74:018429-[INFO]:-Starting copy 2.7.1...
+20250429:23:44:42.094301 gpcopy:gpadmin:data74:018429-[INFO]:-Copy appname: gpcopy_202504292344_9ANHfmugEEbrNjUgwGfLtG
+20250429:23:44:42.094314 gpcopy:gpadmin:data74:018429-[INFO]:-'gpcopy' --dbname 'testdb' --dest-dbname 'testdb' --dest-host 'data75' --drop
+20250429:23:44:42.094326 gpcopy:gpadmin:data74:018429-[INFO]:-Initializing gpcopy
+20250429:23:44:42.139487 gpcopy:gpadmin:data74:018429-[INFO]:-------------------------------------------------
+20250429:23:44:42.139637 gpcopy:gpadmin:data74:018429-[INFO]:-Total elapsed time: 45.136446ms
+20250429:23:44:42.139704 gpcopy:gpadmin:data74:018429-[INFO]:-Total transferred data 0B, transfer rate 0B/h
+20250429:23:44:42.139775 gpcopy:gpadmin:data74:018429-[INFO]:-Copied 0 databases
+Error: failed to connect to `host=data75 user=gpadmin database=postgres`: server error (FATAL: no pg_hba.conf entry for host "172.80.0.217", user "gpadmin", database "postgres", SSL off (SQLSTATE 28000)) (data75:5432)
+[gpadmin@data74 ~]$ gpcopy --dbname testdb  --dest-host data75 --dest-dbname testdb --drop
+20250429:23:47:30.700499 gpcopy:gpadmin:data74:018725-[INFO]:-"--drop" will work as "--truncate" on partition tables
+20250429:23:47:30.701658 gpcopy:gpadmin:data74:018725-[INFO]:-Starting copy 2.7.1...
+20250429:23:47:30.701688 gpcopy:gpadmin:data74:018725-[INFO]:-Copy appname: gpcopy_202504292347_LWg9J5cijiBLXTofLXbQ8a
+20250429:23:47:30.7017 gpcopy:gpadmin:data74:018725-[INFO]:-'gpcopy' --dbname 'testdb' --dest-dbname 'testdb' --dest-host 'data75' --drop
+20250429:23:47:30.701738 gpcopy:gpadmin:data74:018725-[INFO]:-Initializing gpcopy
+20250429:23:47:30.754986 gpcopy:gpadmin:data74:018725-[INFO]:-Source cluster version: 7.4.0 build commit:27de6dc6d00607a5630a41fd2c0ad489f40e2ad4
+20250429:23:47:30.755061 gpcopy:gpadmin:data74:018725-[INFO]:-Destination cluster version: 7.4.0 build commit:27de6dc6d00607a5630a41fd2c0ad489f40e2ad4
+20250429:23:47:30.755518 gpcopy:gpadmin:data74:018725-[WARNING]:-It is recommended to run gpcopy on the coordinator node of the source gpdb cluster.
+20250429:23:47:30.755603 gpcopy:gpadmin:data74:018725-[WARNING]:-If not on the recommended node, some operations will be run through the executable external table.
+20250429:23:47:30.81366 gpcopy:gpadmin:data74:018725-[INFO]:-pg_dump (PostgreSQL) 12.12
+20250429:23:47:30.813738 gpcopy:gpadmin:data74:018725-[INFO]:-pg_dumpall (PostgreSQL) 12.12
+20250429:23:47:31.073212 gpcopy:gpadmin:data74:018725-[ERROR]:-failed to connect to `host=data75 user=gpadmin database=testdb`: server error (FATAL: database "testdb" does not exist (SQLSTATE 3D000))
+20250429:23:47:31.073256 gpcopy:gpadmin:data74:018725-[ERROR]:-Failed to connect the dest in function resolveCopyPathForDB() due to error: failed to connect to `host=data75 user=gpadmin database=testdb`: server error (FATAL: database "testdb" does not exist (SQLSTATE 3D000))
+20250429:23:47:32.041497 gpcopy:gpadmin:data74:018725-[INFO]:-Start copying database "testdb"
+20250429:23:47:32.15695 gpcopy:gpadmin:data74:018725-[INFO]:-[Worker 3] Start copying table "testdb"."public"."t1" => "testdb"."public"."t1"
+20250429:23:47:33.000233 gpcopy:gpadmin:data74:018725-[INFO]:-[Worker 3] [Progress: (0/1) DBs, (1/1) tables done] Finished copying table "testdb"."public"."t1" => "testdb"."public"."t1"
+20250429:23:47:33.000456 gpcopy:gpadmin:data74:018725-[INFO]:-[testdb] Finished copying database "Progress: (1/1) DBs, (1/1) tables done"
+20250429:23:47:33.357604 gpcopy:gpadmin:data74:018725-[INFO]:-------------------------------------------------
+20250429:23:47:33.357743 gpcopy:gpadmin:data74:018725-[INFO]:-Total elapsed time: 2.655779484s
+20250429:23:47:33.357794 gpcopy:gpadmin:data74:018725-[INFO]:-Total transferred data 6.6MB, transfer rate 103.3GB/h
+20250429:23:47:33.357886 gpcopy:gpadmin:data74:018725-[INFO]:-Transferred data 0B on coordinator, transfer rate 0B/h, the actual duration for executing the COPY command is 0s
+20250429:23:47:33.357942 gpcopy:gpadmin:data74:018725-[INFO]:-Transferred data 2.2MB on segment 0, transfer rate 32.7GB/h, the actual duration for executing the COPY command is 235.370295ms
+20250429:23:47:33.357986 gpcopy:gpadmin:data74:018725-[INFO]:-Transferred data 2.2MB on segment 1, transfer rate 35.1GB/h, the actual duration for executing the COPY command is 218.714508ms
+20250429:23:47:33.358045 gpcopy:gpadmin:data74:018725-[INFO]:-Transferred data 2.2MB on segment 2, transfer rate 35.5GB/h, the actual duration for executing the COPY command is 217.330653ms
+20250429:23:47:33.358099 gpcopy:gpadmin:data74:018725-[INFO]:-Copied 1 databases
+20250429:23:47:33.358158 gpcopy:gpadmin:data74:018725-[INFO]:-	Database testdb: successfully copied 1 tables, skipped 0 tables, failed 0 tables
+$
