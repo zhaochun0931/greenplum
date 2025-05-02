@@ -22,7 +22,7 @@ Note that at least one WAL segment will be created during the backup process eve
 postgresql.conf
 
 
-
+initdb -D /data1/
 pg_ctl -D /data1 restart
 
 
