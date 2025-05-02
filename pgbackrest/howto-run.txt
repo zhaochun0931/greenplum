@@ -83,6 +83,9 @@ $
 
 
 
+pgbackrest --stanza=demo --type=diff --log-level-console=info backup
+
+
 pgbackrest info
 
 
@@ -120,3 +123,17 @@ find /data1 -mindepth 1 -delete
 
 pgbackrest --stanza=demo restore
 pg_ctl -D /data1 start
+
+
+
+
+
+
+
+
+
+
+
+
+
+pgbackrest --stanza=demo --repo=1 --log-level-console=info stanza-delete
