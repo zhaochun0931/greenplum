@@ -28,3 +28,5 @@ pg_ctl -D /data1 restart
 
 # Create the Stanza
 
+pgbackrest --stanza=demo --log-level-console=info stanza-create
+pgbackrest --stanza=demo --log-level-console=info check
