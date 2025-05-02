@@ -8,7 +8,7 @@ sudo chown postgres:postgres /var/lib/pgbackrest
 
 
 
-
+# Configure Archiving
 Backing up a running PostgreSQL cluster requires WAL archiving to be enabled. 
 Note that at least one WAL segment will be created during the backup process even if no explicit writes are made to the cluster.
 
