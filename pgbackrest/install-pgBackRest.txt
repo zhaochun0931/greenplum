@@ -20,3 +20,41 @@ ninja -C /build/pgbackrest
 
 
 
+
+
+
+
+
+
+
+apt-get install postgresql-client libxml2 libssh2-1 -y
+
+scp /build/pgbackrest/src/pgbackrest /usr/bin
+
+chmod 755 /usr/bin/pgbackrest
+
+
+sudo mkdir -p -m 770 /var/log/pgbackrest
+sudo chown postgres:postgres /var/log/pgbackrest
+sudo mkdir -p /etc/pgbackrest
+sudo mkdir -p /etc/pgbackrest/conf.d
+sudo touch /etc/pgbackrest/pgbackrest.conf
+sudo chmod 640 /etc/pgbackrest/pgbackrest.conf
+sudo chown postgres:postgres /etc/pgbackrest/pgbackrest.conf
+
+
+
+sudo -u postgres pgbackrest
+
+
+
+
+pgbackrest version
+
+# pgbackrest version
+pgBackRest 2.55.0
+#
+
+
+
+
