@@ -1,8 +1,3 @@
-/etc/pgbackrest/pgbackrest.conf 
-
-
-
-
 #  Create the Repository
 sudo mkdir -p /var/lib/pgbackrest
 sudo chmod 750 /var/lib/pgbackrest
@@ -31,6 +26,10 @@ pg_ctl -D /data1 restart
 
 
 # Create the Stanza
+
+
+/etc/pgbackrest/pgbackrest.conf 
+
 
 pgbackrest --stanza=demo --log-level-console=info stanza-create
 pgbackrest --stanza=demo --log-level-console=info check
