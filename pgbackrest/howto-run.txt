@@ -83,7 +83,6 @@ $
 
 
 
-pgbackrest --stanza=demo --type=diff --log-level-console=info backup
 
 
 pgbackrest info
