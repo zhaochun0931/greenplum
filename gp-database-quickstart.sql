@@ -6,7 +6,7 @@ create database testdb;
 \c testdb
 
 create table t1 (id int);
-insert into t1 SELECT generate_series(1,100);
+insert into t1 SELECT generate_series(1,10);
 select count(*) from t1;
 
 
