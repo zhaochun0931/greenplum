@@ -100,6 +100,9 @@ In file system terms, a database cluster is a single directory under which all d
 
 To initialize a database cluster manually, run initdb and specify the desired file system location of the database cluster with the -D option. There is no default, although locations such as /usr/local/pgsql/data or /var/lib/pgsql/data are popular.
 
+
+initdb --version
+
 initdb -D /usr/local/pgsql/data
 
 Alternatively, you can run initdb via the pg_ctl program like so:
