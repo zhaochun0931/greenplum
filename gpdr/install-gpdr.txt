@@ -7,6 +7,23 @@ echo 'source /usr/local/gpdr/gpdr_path.sh' >> ~/.bashrc
 
 
 
+gpdr -v
+
+
+$ gpdr -v
+gpdr version 1.2.0
+$
+
+
+
+
+
+
+
+
+
+
+
 
 
 
