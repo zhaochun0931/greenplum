@@ -1,7 +1,7 @@
 #  Create the Repository
-sudo mkdir -p /var/lib/pgbackrest
-sudo chmod 750 /var/lib/pgbackrest
-sudo chown postgres:postgres /var/lib/pgbackrest
+mkdir -p /var/lib/pgbackrest
+chmod 750 /var/lib/pgbackrest
+chown postgres:postgres /var/lib/pgbackrest
 
 
 
@@ -18,7 +18,7 @@ postgresql.conf
 
 
 initdb -D /data1/
-pg_ctl -D /data1 restart
+pg_ctl -D /data1/ start
 
 
 
