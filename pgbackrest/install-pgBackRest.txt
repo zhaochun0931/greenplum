@@ -13,6 +13,10 @@ apt-get install python3-distutils meson gcc libpq-dev libssl-dev libxml2-dev \
 
 
 
+meson setup /build/pgbackrest /build/pgbackrest-release-2.55.0
+ninja -C /build/pgbackrest
+
+
 
 
 
