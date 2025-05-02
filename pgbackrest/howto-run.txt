@@ -102,3 +102,26 @@ stanza: demo
             repo1: backup set size: 4.2MB, backup size: 4.2MB
 $
 
+
+
+
+
+
+
+
+
+# Restore a Backup
+
+su - postgres
+pg_ctlcluster 14 demo stop
+rm /var/lib/postgresql/14/demo/global/pg_control
+
+
+find /var/lib/postgresql/14/demo -mindepth 1 -delete
+
+
+pgbackrest --stanza=demo restore
+pg_ctlcluster 14 demo start
+
+
+
