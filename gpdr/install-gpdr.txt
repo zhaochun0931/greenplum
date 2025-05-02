@@ -35,8 +35,6 @@ rm /usr/local/gpdr/configs/*
 cp /usr/local/gpdr/templates/posix_config_file.yml ~/
 
 gpdr configure backup --config-file posix_config_file.yml
-
-
 gpdr configure backup --reconfigure posix_config_file.yml
 
 
