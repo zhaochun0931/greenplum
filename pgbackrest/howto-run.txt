@@ -18,5 +18,8 @@ Backing up a running PostgreSQL cluster requires WAL archiving to be enabled. No
 
 
 
+postgresql.conf
+
+
 
 
