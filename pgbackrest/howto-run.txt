@@ -112,15 +112,11 @@ $
 # Restore a Backup
 
 su - postgres
-pg_ctlcluster 14 demo stop
-rm /var/lib/postgresql/14/demo/global/pg_control
 
+rm /data1/global/pg_control
 
-find /var/lib/postgresql/14/demo -mindepth 1 -delete
+find /data1 -mindepth 1 -delete
 
 
 pgbackrest --stanza=demo restore
-pg_ctlcluster 14 demo start
-
-
-
+pg_ctl -D /data1 start
