@@ -134,5 +134,73 @@ pg_ctl -D /data1 start
 
 
 
+$ pgbackrest info                                                                  
+stanza: demo                                                                       
+    status: ok                                                                     
+    cipher: none                                                                   
+                                                                                   
+    db (current)                                                                   
+        wal archive min/max (17): 000000010000000000000001/000000010000000000000005
+                                                                                   
+        full backup: 20250502-125803F                                              
+            timestamp start/stop: 2025-05-02 12:58:03+00 / 2025-05-02 12:58:04+00  
+            wal start/stop: 000000010000000000000003 / 000000010000000000000003    
+            database size: 22.1MB, database backup size: 22.1MB                    
+            repo1: backup set size: 2.9MB, backup size: 2.9MB                      
+                                                                                   
+        incr backup: 20250502-125803F_20250502-130025I                             
+            timestamp start/stop: 2025-05-02 13:00:25+00 / 2025-05-02 13:02:02+00  
+            wal start/stop: 000000010000000000000005 / 000000010000000000000005    
+            database size: 29.3MB, database backup size: 7.7MB                     
+            repo1: backup set size: 3.8MB, backup size: 1MB                        
+            backup reference total: 1 full                                         
+$                                                                                  
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+$ pgbackrest --stanza=demo --set=20250502-125803F info                             
+stanza: demo                                                                       
+    status: ok                                                                     
+    cipher: none                                                                   
+                                                                                   
+    db (current)                                                                   
+        wal archive min/max (17): 000000010000000000000001/000000010000000000000005
+                                                                                   
+        full backup: 20250502-125803F                                              
+            timestamp start/stop: 2025-05-02 12:58:03+00 / 2025-05-02 12:58:04+00  
+            wal start/stop: 000000010000000000000003 / 000000010000000000000003    
+            lsn start/stop: 0/3000028 / 0/3000120                                  
+            database size: 22.1MB, database backup size: 22.1MB                    
+            repo1: backup set size: 2.9MB, backup size: 2.9MB                      
+            database list: postgres (5)                                            
+$                                                                                  
+$                                                                                  
+$                                                                                  
+$                                                                                  
+$ pgbackrest --stanza=demo --set=20250502-125803F_20250502-130025I info            
+stanza: demo                                                                       
+    status: ok                                                                     
+    cipher: none                                                                   
+                                                                                   
+    db (current)                                                                   
+        wal archive min/max (17): 000000010000000000000001/000000010000000000000005
+                                                                                   
+        incr backup: 20250502-125803F_20250502-130025I                             
+            timestamp start/stop: 2025-05-02 13:00:25+00 / 2025-05-02 13:02:02+00  
+            wal start/stop: 000000010000000000000005 / 000000010000000000000005    
+            lsn start/stop: 0/5000028 / 0/5000158                                  
+            database size: 29.3MB, database backup size: 7.7MB                     
+            repo1: backup set size: 3.8MB, backup size: 1MB                        
+            backup reference list: 20250502-125803F                                
+            database list: postgres (5), test (16388)                              
+$                                                                                  
+
+
+
+
+
+
+
 
 pgbackrest --stanza=demo --repo=1 --log-level-console=info stanza-delete
