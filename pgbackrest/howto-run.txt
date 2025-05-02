@@ -26,7 +26,33 @@ postgresql.conf
 pg_ctl -D /data1 restart
 
 
+
+
+
+
 # Create the Stanza
 
 pgbackrest --stanza=demo --log-level-console=info stanza-create
 pgbackrest --stanza=demo --log-level-console=info check
+
+
+
+
+$ pgbackrest --stanza=demo --log-level-console=info stanza-create
+2025-05-02 08:35:18.623 P00   INFO: stanza-create command begin 2.55.0: --exec-id=7024-7af791e9 --log-level-console=info --pg1-path=/var/lib/postgresql/14/demo --repo1-path=/var/lib/pgbackrest --stanza=demo
+2025-05-02 08:35:18.631 P00   INFO: stanza-create for stanza 'demo' on repo1
+2025-05-02 08:35:18.638 P00   INFO: stanza-create command end: completed successfully (18ms)
+$
+$
+$
+$ pgbackrest --stanza=demo --log-level-console=info check
+2025-05-02 08:35:25.326 P00   INFO: check command begin 2.55.0: --exec-id=7035-8c82adb4 --log-level-console=info --pg1-path=/var/lib/postgresql/14/demo --repo1-path=/var/lib/pgbackrest --stanza=demo
+2025-05-02 08:35:25.335 P00   INFO: check repo1 configuration (primary)
+2025-05-02 08:35:25.353 P00   INFO: check repo1 archive for WAL (primary)
+2025-05-02 08:35:25.454 P00   INFO: WAL segment 00000001000000000000000A successfully archived to '/var/lib/pgbackrest/archive/demo/14-1/0000000100000000/00000001000000000000000A-1619de50036927475f2a2e01ece6186e38c8c013.gz' on repo1
+2025-05-02 08:35:25.454 P00   INFO: check command end: completed successfully (130ms)
+$
+$
+
+
+
