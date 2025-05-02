@@ -3,6 +3,7 @@
 
 
 
+#  Create the Repository
 sudo mkdir -p /var/lib/pgbackrest
 sudo chmod 750 /var/lib/pgbackrest
 sudo chown postgres:postgres /var/lib/pgbackrest
