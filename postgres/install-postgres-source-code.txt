@@ -144,7 +144,7 @@ While the server is running, its PID is stored in the file postmaster.pid in the
 
 
 
-
+su - postgres
 initdb -D /data1/
 pg_ctl -D /data1/ -l logfile start
 
