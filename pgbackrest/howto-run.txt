@@ -56,3 +56,30 @@ $
 
 
 
+
+
+
+
+pgbackrest --stanza=demo --log-level-console=info backup
+
+
+$ pgbackrest --stanza=demo --log-level-console=info backup
+2025-05-02 08:36:15.715 P00   INFO: backup command begin 2.55.0: --exec-id=7065-04f1fe20 --log-level-console=info --pg1-path=/var/lib/postgresql/14/demo --repo1-path=/var/lib/pgbackrest --stanza=demo
+2025-05-02 08:36:15.716 P00   WARN: option 'repo1-retention-full' is not set for 'repo1-retention-full-type=count', the repository may run out of space
+                                    HINT: to retain full backups indefinitely (without warning), set option 'repo1-retention-full' to the maximum.
+2025-05-02 08:36:15.724 P00   WARN: no prior backup exists, incr backup has been changed to full
+2025-05-02 08:36:15.724 P00   INFO: execute non-exclusive backup start: backup begins after the next regular checkpoint completes
+2025-05-02 08:36:15.740 P00   INFO: backup start archive = 00000001000000000000000C, lsn = 0/C000028
+2025-05-02 08:36:15.740 P00   INFO: check archive for prior segment 00000001000000000000000B
+2025-05-02 08:36:17.077 P00   INFO: execute non-exclusive backup stop and wait for all WAL segments to archive
+2025-05-02 08:36:17.084 P00   INFO: backup stop archive = 00000001000000000000000C, lsn = 0/C000138
+2025-05-02 08:36:17.086 P00   INFO: check archive for segment(s) 00000001000000000000000C:00000001000000000000000C
+2025-05-02 08:36:17.191 P00   INFO: new backup label = 20250502-083615F
+2025-05-02 08:36:17.205 P00   INFO: full backup size = 33.4MB, file total = 1242
+2025-05-02 08:36:17.205 P00   INFO: backup command end: completed successfully (1492ms)
+2025-05-02 08:36:17.205 P00   INFO: expire command begin 2.55.0: --exec-id=7065-04f1fe20 --log-level-console=info --repo1-path=/var/lib/pgbackrest --stanza=demo
+2025-05-02 08:36:17.206 P00   INFO: option 'repo1-retention-archive' is not set - archive logs will not be expired
+2025-05-02 08:36:17.206 P00   INFO: expire command end: completed successfully (1ms)
+$
+
+
