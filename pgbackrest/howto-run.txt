@@ -16,6 +16,10 @@ Note that at least one WAL segment will be created during the backup process eve
 
 postgresql.conf
 
+mkdir -p /var/run/postgresql
+chown postgres:postgres /var/run/postgresql
+
+
 mkdir /data1
 chown postgres:postgres /data1
 initdb -D /data1/
