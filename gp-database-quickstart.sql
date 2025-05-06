@@ -10,6 +10,24 @@ insert into t1 SELECT generate_series(1,10);
 select count(*) from t1;
 
 
+
+
+create table t1 (c1 text, c2 text);
+
+INSERT INTO t1 (c1, c2)
+VALUES
+    ('Hello', 'World'),
+    ('Greenplum', 'Database'),
+    ('Collation', 'Example');
+
+
+
+
+
+
+
+
+
 select * from pg_class where relname = 't1';
 
 SELECT attname, atttypid::regtype, attlen, attnotnull, atthasdef FROM pg_attribute 
