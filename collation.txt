@@ -27,5 +27,22 @@ VALUES
 
 
 
+test=# \d+ t1;
+                                   Table "public.t1"
+ Column | Type | Collation | Nullable | Default | Storage  | Stats target | Description
+--------+------+-----------+----------+---------+----------+--------------+-------------
+ c1     | text |           |          |         | extended |              |
+ c2     | text |           |          |         | extended |              |
+Distributed by: (c1)
+Access method: heap
+
+test=#
+
+
+
+
+
+
+
 explain select * from t1 order by c1 collate "en_US.utf8", c2 collate "en_US.utf8";
 
