@@ -98,6 +98,7 @@ update gp_segment_configuration set status = 'u' , role  = 'p' where dbid = 2;
 
 
 
+set optimizer_trace_fallback to on;
 
 
 select gp_segment_id, count(*) from t1 group by gp_segment_id;
