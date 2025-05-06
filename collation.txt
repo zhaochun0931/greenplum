@@ -17,6 +17,9 @@ test=#
 
 
 create table t1 (c1 text, c2 text);
+create table t2 (c1 text collate "en_US.utf8", c2 text collate "en_US.utf8");
+
+
 
 INSERT INTO t1 (c1, c2)
 VALUES
@@ -24,6 +27,13 @@ VALUES
     ('Greenplum', 'Database'),
     ('Collation', 'Example');
 
+
+
+INSERT INTO t2 (c1, c2)
+VALUES
+    ('Hello', 'World'),
+    ('Greenplum', 'Database'),
+    ('Collation', 'Example');
 
 
 \d+ t1;
