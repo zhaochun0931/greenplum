@@ -1,0 +1,7 @@
+create database test;
+
+create table t1 (c1 text, c2 text);
+
+
+explain select * from t1 order by c1 collate "en_US.utf8", c2 collate "en_US.utf8";
+
