@@ -12,13 +12,6 @@ select count(*) from t1;
 
 
 
-create table t1 (c1 text, c2 text);
-
-INSERT INTO t1 (c1, c2)
-VALUES
-    ('Hello', 'World'),
-    ('Greenplum', 'Database'),
-    ('Collation', 'Example');
 
 
 
