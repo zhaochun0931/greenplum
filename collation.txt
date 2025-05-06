@@ -1,6 +1,30 @@
 create database test;
 
+
+
+\l+ test;
+
+
+test=# \l+ test;
+                                              List of databases
+ Name |  Owner  | Encoding |   Collate   |    Ctype    | Access privileges | Size  | Tablespace | Description
+------+---------+----------+-------------+-------------+-------------------+-------+------------+-------------
+ test | gpadmin | UTF8     | en_US.UTF-8 | en_US.UTF-8 |                   | 80 MB | pg_default |
+(1 row)
+
+test=#
+
+
+
 create table t1 (c1 text, c2 text);
+
+INSERT INTO t1 (c1, c2)
+VALUES
+    ('Hello', 'World'),
+    ('Greenplum', 'Database'),
+    ('Collation', 'Example');
+
+
 
 
 explain select * from t1 order by c1 collate "en_US.utf8", c2 collate "en_US.utf8";
