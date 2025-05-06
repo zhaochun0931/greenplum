@@ -26,6 +26,8 @@ VALUES
 
 
 
+\d+ t1;
+
 
 test=# \d+ t1;
                                    Table "public.t1"
