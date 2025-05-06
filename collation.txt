@@ -1,6 +1,5 @@
 create database test;
 
-set optimizer_trace_fallback to on;
 
 
 \l+ test;
