@@ -41,6 +41,10 @@ test=#
 
 
 
+explain select * from t1 order by c1, c2;
+
+
+explain select * from t1 order by c1 collate "default", c2 collate "default";
 
 
 
