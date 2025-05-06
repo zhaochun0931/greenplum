@@ -63,3 +63,18 @@ explain select * from t1 order by c1 collate "default", c2 collate "default";
 
 explain select * from t1 order by c1 collate "en_US.utf8", c2 collate "en_US.utf8";
 
+
+
+
+
+
+
+
+CREATE DATABASE test2
+    LC_COLLATE = 'C'
+    LC_CTYPE = 'C'
+    ENCODING = 'UTF8'
+    TEMPLATE = template0;
+
+
+
