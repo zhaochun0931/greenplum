@@ -19,7 +19,7 @@ psql -h data75 -U user01 testdb
 
 
 
-
+# simple bind
 681b46d4.1222d89e 0x7fb7110c96c0 conn=1006 fd=12 ACCEPT from IP=172.80.0.226:54270 (IP=0.0.0.0:1389)
 681b46d4.1225c642 0x7fb7118ca6c0 conn=1006 op=0 BIND dn="cn=user01,ou=users,dc=example,dc=com" method=128
 681b46d4.12290289 0x7fb7118ca6c0 conn=1006 op=0 BIND dn="cn=user01,ou=users,dc=example,dc=com" mech=SIMPLE bind_ssf=0 ssf=0
@@ -27,6 +27,24 @@ psql -h data75 -U user01 testdb
 681b46d4.124a0320 0x7fb7110c96c0 conn=1006 op=1 UNBIND
 681b46d4.124fcb8b 0x7fb7110c96c0 conn=1006 fd=12 closed
 
+
+
+
+# simple + bind
+681b481c.21848b02 0x7fb7110c96c0 conn=1011 fd=12 ACCEPT from IP=172.80.0.226:55286 (IP=0.0.0.0:1389)
+681b481c.21879b44 0x7fb7118ca6c0 conn=1011 op=0 BIND dn="" method=128
+681b481c.218bfc2f 0x7fb7118ca6c0 conn=1011 op=0 RESULT tag=97 err=0 qtime=0.000045 etime=0.000345 text=
+681b481c.2198f420 0x7fb7110c96c0 conn=1011 op=1 SRCH base="dc=example,dc=com" scope=2 deref=0 filter="(uid=user01)"
+681b481c.219aacc0 0x7fb7110c96c0 conn=1011 op=1 SRCH attr=1.1
+681b481c.21b543c3 0x7fb7110c96c0 conn=1011 op=1 SEARCH RESULT tag=101 err=0 qtime=0.000079 etime=0.001989 nentries=1 text=
+681b481c.21d52ab9 0x7fb7110c96c0 conn=1011 op=2 UNBIND
+681b481c.21d60f9c 0x7fb7118ca6c0 conn=1012 fd=13 ACCEPT from IP=172.80.0.226:55292 (IP=0.0.0.0:1389)
+681b481c.21dabe32 0x7fb7110c96c0 conn=1011 fd=12 closed
+681b481c.21e7282d 0x7fb7118ca6c0 conn=1012 op=0 BIND dn="cn=user01,ou=users,dc=example,dc=com" method=128
+681b481c.21ea3dae 0x7fb7118ca6c0 conn=1012 op=0 BIND dn="cn=user01,ou=users,dc=example,dc=com" mech=SIMPLE bind_ssf=0 ssf=0
+681b481c.21ed3eb5 0x7fb7118ca6c0 conn=1012 op=0 RESULT tag=97 err=0 qtime=0.000047 etime=0.000519 text=
+681b481c.21f6e138 0x7fb701bfd6c0 conn=1012 op=1 UNBIND
+681b481c.21f9acf6 0x7fb701bfd6c0 conn=1012 fd=13 closed
 
 
 
