@@ -20,4 +20,15 @@ psql -h data75 -U user01 testdb
 
 
 
+681b46d4.1222d89e 0x7fb7110c96c0 conn=1006 fd=12 ACCEPT from IP=172.80.0.226:54270 (IP=0.0.0.0:1389)
+681b46d4.1225c642 0x7fb7118ca6c0 conn=1006 op=0 BIND dn="cn=user01,ou=users,dc=example,dc=com" method=128
+681b46d4.12290289 0x7fb7118ca6c0 conn=1006 op=0 BIND dn="cn=user01,ou=users,dc=example,dc=com" mech=SIMPLE bind_ssf=0 ssf=0
+681b46d4.122b86ef 0x7fb7118ca6c0 conn=1006 op=0 RESULT tag=97 err=0 qtime=0.000028 etime=0.000456 text=
+681b46d4.124a0320 0x7fb7110c96c0 conn=1006 op=1 UNBIND
+681b46d4.124fcb8b 0x7fb7110c96c0 conn=1006 fd=12 closed
+
+
+
+
+
 
