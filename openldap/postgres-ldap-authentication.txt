@@ -14,3 +14,10 @@ createuser user01
 
 
 
+
+psql -h data75 -U user01 testdb
+
+
+
+
+
