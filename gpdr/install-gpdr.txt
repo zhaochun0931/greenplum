@@ -87,6 +87,13 @@ gpdr configure restore --config-file posix_config_file.yml --recovery-cluster-co
 
 
 
+[gpadmin@data75 ~]$ gpdr configure restore --config-file posix_config_file.yml --recovery-cluster-config-file recovery_cluster_config_file_gp7.yml
+20250508:02:50:57 gpdr:gpadmin:data75:021606-[INFO]:-Configuring restore
+20250508:02:50:58 gpdr:gpadmin:data75:021606-[INFO]:-Successfully created pgbackrest configuration files for restore at /usr/local/gpdr/configs for the GPDB recovery cluster
+20250508:02:50:58 gpdr:gpadmin:data75:021606-[INFO]:-Successfully finished configuration steps for restore
+[gpadmin@data75 ~]$
+
+
 
 
 
