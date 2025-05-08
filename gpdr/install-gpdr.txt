@@ -63,6 +63,15 @@ gpdr configure backup --reconfigure posix_config_file.yml
 # recovery cluster
 gpdr configure restore --config-file posix_config_file.yml --use-existing-cluster
 
+[gpadmin@data75 ~]$ gpdr configure restore --config-file posix_config_file.yml --use-existing-cluster
+20250508:02:41:57 gpdr:gpadmin:data75:018298-[INFO]:-Configuring restore on gpinitsystem initialized cluster
+20250508:02:41:57 gpdr:gpadmin:data75:018298-[WARNING]:-Mirrors detected in the user-provided cluster.
+20250508:02:41:57 gpdr:gpadmin:data75:018298-[INFO]:-Generating script to delete mirrors
+20250508:02:41:57 gpdr:gpadmin:data75:018298-[WARNING]:-The mirrors will be orphaned after configuring for restore. To reclaim the space used by the mirrors, delete them using this generated script: "/usr/local/gpdr/logs/delete_mirrors_for_restore.sh". Note that you don't need to delete the mirrors unless you run the restore command.
+20250508:02:41:58 gpdr:gpadmin:data75:018298-[INFO]:-Successfully finished configuration steps for restore
+[gpadmin@data75 ~]$
+
+
 
 gpdr configure restore --config-file posix_config_file.yml --recovery-cluster-config-file recovery_cluster_config_file_gp6.yml
 
