@@ -119,8 +119,22 @@ gpdr backup --type full
 
 
 # recovery cluster
-gpstop -af
-gpdr restore -t incr --restore-point latest
+
+
+
+[gpadmin@data75 ~]$ gpdr restore -t full --restore-point latest
+20250508:02:51:53 gpdr:gpadmin:data75:021688-[INFO]:-Restoring database cluster
+20250508:02:51:53 gpdr:gpadmin:data75:021688-[INFO]:-Restoring latest restore point: 20250508-024409R_gpdr_full_backup
+.20250508:02:52:06 gpdr:gpadmin:data75:021688-[INFO]:-Successfully created pg_hba.conf files on coordinator and all primary segments.
+20250508:02:52:06 gpdr:gpadmin:data75:021688-[INFO]:-Waiting for all segments to replay WAL and shutdown...
+20250508:02:52:36 gpdr:gpadmin:data75:021688-[INFO]:-All segments are shut down
+20250508:02:52:36 gpdr:gpadmin:data75:021688-[INFO]:-Database cluster restore is successfully completed
+[gpadmin@data75 ~]$
+
+
+
+
+
 gpdr info restore
 gpdr promote
 gpstart
