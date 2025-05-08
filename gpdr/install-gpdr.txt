@@ -38,19 +38,29 @@ gpdr configure backup --config-file posix_config_file.yml
 
 
 
-$ gpdr configure backup --config-file posix_config_file.yml
-20250502:09:33:33 gpdr:gpadmin:data74:379300-[INFO]:-Configuring for backup
-20250502:09:33:34 gpdr:gpadmin:data74:379300-[INFO]:-Successfully created pgbackrest configuration files for backup at /usr/local/gpdr/configs for the GPDB primary cluster
-20250502:09:33:35 gpdr:gpadmin:data74:379300-[INFO]:-Creating pgbackrest stanzas for the GPDB primary cluster
-20250502:09:33:36 gpdr:gpadmin:data74:379300-[INFO]:-Successfully created stanzas for the GPDB primary cluster
-20250502:09:33:36 gpdr:gpadmin:data74:379300-[INFO]:-Configuring GPDB GUCs
-20250502:09:33:50 gpdr:gpadmin:data74:379300-[INFO]:-Successfully configured GPDB GUCs and enabled WAL archiving
-20250502:09:33:53 gpdr:gpadmin:data74:379300-[INFO]:-Successfully finished configuration steps for backup
-$
+[gpadmin@data74 ~]$ gpdr configure backup --config-file posix_config_file.yml
+20250508:02:41:04 gpdr:gpadmin:data74:019181-[INFO]:-Configuring for backup
+20250508:02:41:05 gpdr:gpadmin:data74:019181-[INFO]:-Successfully created pgbackrest configuration files for backup at /usr/local/gpdr/configs for the GPDB primary cluster
+20250508:02:41:05 gpdr:gpadmin:data74:019181-[INFO]:-Creating pgbackrest stanzas for the GPDB primary cluster
+20250508:02:41:06 gpdr:gpadmin:data74:019181-[INFO]:-Successfully created stanzas for the GPDB primary cluster
+20250508:02:41:06 gpdr:gpadmin:data74:019181-[INFO]:-Configuring GPDB GUCs
+20250508:02:41:20 gpdr:gpadmin:data74:019181-[INFO]:-Successfully configured GPDB GUCs and enabled WAL archiving
+20250508:02:41:23 gpdr:gpadmin:data74:019181-[INFO]:-Successfully finished configuration steps for backup
+[gpadmin@data74 ~]$
 
 
 
 gpdr configure backup --reconfigure posix_config_file.yml
+
+
+
+
+
+
+
+
+
+
 
 
 
