@@ -90,8 +90,24 @@ gpdr configure restore --config-file posix_config_file.yml --recovery-cluster-co
 
 
 
+
+
+
+
 # primary cluster
 gpdr backup --type full
+
+[gpadmin@data74 ~]$ gpdr backup --type full
+20250508:02:43:53 gpdr:gpadmin:data74:022607-[INFO]:-Backing up database
+20250508:02:43:55 gpdr:gpadmin:data74:022607-[INFO]:-Backup label: 20250508-024354F
+20250508:02:44:09 gpdr:gpadmin:data74:022607-[INFO]:-Creating checkpoint
+20250508:02:44:09 gpdr:gpadmin:data74:022607-[INFO]:-Creating restore point 20250508-024409R_gpdr_full_backup
+20250508:02:44:09 gpdr:gpadmin:data74:022607-[INFO]:-Switching WAL segment file
+20250508:02:44:10 gpdr:gpadmin:data74:022607-[INFO]:-Checking to see if restore point has been fully archived...
+20250508:02:44:11 gpdr:gpadmin:data74:022607-[INFO]:-Backup successfully completed
+[gpadmin@data74 ~]$
+
+
 
 
 
