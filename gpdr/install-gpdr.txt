@@ -135,14 +135,27 @@ gpdr backup --type full
 
 
 
-gpdr info restore
+
+
+
+
+
+
+
+
+
+
+
+
+
+# original primary cluster 
+gpconfig -r archive_mode  
+gpconfig -r archive_command 
+gpconfig -r wal_level --skipvalidation
+
+gpstop -a
+
+
+
+# original recovery cluster
 gpdr promote
-gpstart
-
-
-
-
-
-
-
-
