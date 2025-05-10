@@ -7,7 +7,7 @@ In the second mode, which we will call the search+bind mode, the server first bi
 
 
 
-
+createdb testdb
 createuser user01
 
 
