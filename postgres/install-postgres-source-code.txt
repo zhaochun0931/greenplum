@@ -1,30 +1,13 @@
 apt update
 apt-get install -y build-essential libreadline-dev zlib1g-dev flex bison libxml2-dev libxslt-dev libssl-dev libxml2-utils xsltproc ccache pkg-config
-apt-get install libkrb5-dev
-
-
-
-
-
-
-
-
+apt-get install -y libkrb5-dev
 
 
 wget https://ftp.postgresql.org/pub/source/v17.4/postgresql-17.4.tar.gz
+
 md5sum postgresql-17.4.tar.gz
+
 6c6cb3f34286ca839077176b714f494d  postgresql-17.4.tar.gz
-
-
-
-
-
-
-
-
-
-
-
 
 
 
