@@ -1,0 +1,6 @@
+apt-get install python3-psycopg2
+
+apt install python3-pip
+
+
+pip install patroni[etcd3]
