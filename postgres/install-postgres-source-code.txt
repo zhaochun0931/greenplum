@@ -16,7 +16,9 @@ cd postgresql-17.4
 ./configure
 make
 
-or make -j$(nproc)
+or
+
+make -j$(nproc)
 
 
 make install
