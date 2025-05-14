@@ -382,3 +382,11 @@ select pg_walfile_name('0/B7CBD30');
 select pg_walfile_name(pg_current_wal_lsn());
 select pg_walfile_name_offset(pg_current_wal_lsn());
 
+
+
+
+
+vaccum
+
+In PostgreSQL, the VACUUM command is used to clean up and reclaim storage by removing obsolete data (dead tuples) that accumulate due to updates and deletes.
+
