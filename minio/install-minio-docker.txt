@@ -23,3 +23,6 @@ docker run -it --rm --name minio \
 --env MINIO_ROOT_PASSWORD="password" \
 minio/minio server --address ":9000" --console-address ":9001" /data
 
+
+
+docker exec -it minio bash
