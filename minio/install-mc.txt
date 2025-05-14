@@ -1,3 +1,7 @@
+mc is the client to manage the minio
+
+
+
 # linux x86
 curl https://dl.min.io/client/mc/release/linux-amd64/mc \
   --create-dirs \
@@ -18,7 +22,6 @@ export PATH=$PATH:$HOME/minio-binaries/
 
 
 mc --version
-mc --help
 
 
 
@@ -35,55 +38,36 @@ mc --help
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-docker run -it -d --network minio-network minio/mc  
-
-
-
-
-
-
-docker exec -it 
-
-mc alias set myminio http://localhost:9000 admin password
+mc alias set my-minio http://localhost:9000 admin password
 
 mc config host list
 
-mc admin info myminio
+mc admin info my-minio
 
 
 
 
 
 
-mc mb myminio/gpbucket
-mc ls myminio
-mc ls myminio/gpbucket
+mc mb my-minio/my-bucket
+mc ls my-minio
+mc ls my-minio/my-bucket
 
 
 
 echo 123 > hello.txt
-mc cp hello.txt myminio/gpbucket
+mc cp hello.txt my-minio/my-bucket
+
+# mc ls my-minio/my-bucket
+[2025-05-14 14:36:54 UTC]     4B STANDARD hello.txt
+#
 
 
 
-mc cat myminio/gpbucket/hello.txt
+mc cat my-minio/my-bucket/hello.txt
 
 
 
 
 
-mc rb myminio/gpbucket
-
+mc rb my-minio/my-bucket --force
