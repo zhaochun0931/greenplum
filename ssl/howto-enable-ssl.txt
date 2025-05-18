@@ -1,4 +1,4 @@
-psql "host=localhost port=5433 dbname=testdb user=postgres password=password sslmode=require"
+psql "host=localhost port=5433 dbname=test user=postgres password=password sslmode=require"
 
 
 
@@ -6,15 +6,24 @@ psql "host=localhost port=5433 dbname=testdb user=postgres password=password ssl
 SHOW ssl;
 
 
+test=# show ssl;
+ ssl
+-----
+ on
+(1 row)
+
+test=#
+
+
 SELECT * FROM pg_stat_ssl WHERE pid = pg_backend_pid();
 
-testdb=# SELECT * FROM pg_stat_ssl WHERE pid = pg_backend_pid();
+test=# SELECT * FROM pg_stat_ssl WHERE pid = pg_backend_pid();
  pid  | ssl | version |         cipher         | bits | client_dn | client_serial | issuer_dn
 ------+-----+---------+------------------------+------+-----------+---------------+-----------
  4348 | t   | TLSv1.3 | TLS_AES_256_GCM_SHA384 |  256 |           |               |
 (1 row)
 
-testdb=#
+test=#
 
 
 
