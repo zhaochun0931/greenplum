@@ -96,6 +96,9 @@ initdb --version
 
 initdb -D /usr/local/pgsql/data
 
+
+
+
 Alternatively, you can run initdb via the pg_ctl program like so:
 
 pg_ctl -D /usr/local/pgsql/data initdb
