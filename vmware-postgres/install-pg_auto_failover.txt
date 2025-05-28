@@ -1,0 +1,1 @@
+yum install vmware-postgres16-advanced-16.6-1.el8.x86_64.rpm vmware-postgres16-advanced-libs-16.6-1.el8.x86_64.rpm
