@@ -13,3 +13,18 @@ initdb -D /var/lib/pgsql/data
 
 
 pg_ctl -D /var/lib/pgsql/data -l logfile start
+
+
+
+
+
+
+
+
+
+
+
+yum install vmware-postgres-patroni-3.3.3-3.el8.x86_64.rpm
+
+yum install vmware-postgres-etcd-3.5.15-3.el8.x86_64.rpm
+
