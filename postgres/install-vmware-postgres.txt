@@ -1,1 +1,6 @@
+unzip vmware-postgres-16.6.0.el8.x86_64.zip
+
+
+yum install vmware-postgres16-16.6-1.el8.x86_64.rpm vmware-postgres16-libs-16.6-1.el8.x86_64.rpm
+
 
