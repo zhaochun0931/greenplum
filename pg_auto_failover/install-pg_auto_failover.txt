@@ -1,1 +1,1 @@
-
+ apt-get install pg-auto-failover-cli -y
