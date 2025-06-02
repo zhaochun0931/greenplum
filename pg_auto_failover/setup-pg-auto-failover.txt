@@ -3,5 +3,11 @@ chown -R postgres:postgres /data
 
 
 su - postgres
+
 export PGDATA=/data
-pg_autoctl create monitor --ssl-self-signed --auth trust --hostname=host1
+
+pg_autoctl create monitor --ssl-self-signed --auth trust --hostname=host1 --run
+
+
+
+
