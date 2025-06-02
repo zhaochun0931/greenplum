@@ -8,7 +8,6 @@ export PGDATA=/data
 
 pg_autoctl create monitor --ssl-self-signed --auth trust --hostname=host1 --run
 
-pg_autoctl create monitor --no-ssl --auth trust --hostname=host1 --run
 
 
 postgres@host1:~$ pg_autoctl create monitor --ssl-self-signed --auth trust --hostname=host1 --run
