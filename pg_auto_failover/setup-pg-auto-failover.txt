@@ -103,3 +103,9 @@ $ pg_autoctl show uri
 
 $
 
+
+
+
+
+
+pg_autoctl show state
