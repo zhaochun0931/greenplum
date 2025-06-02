@@ -1,10 +1,5 @@
 su - postgres
 
-
-
-mkdir test
-
-
 sudo systemctl stop postgresql
 sudo systemctl disable postgresql
 
@@ -17,8 +12,8 @@ export PGDATA=/var/lib/postgresql/test
 export PGPORT=5433
 
 
-
-rm -Rf backup/ .config/ .local/ test/* /var/run/postgresql/*
+rm -Rf .config/ .local/ 
+rm -Rf backup/ test/ /var/run/postgresql/*
 
 
 pg_autoctl create monitor --ssl-self-signed --auth trust --hostname host1 --run
@@ -129,3 +124,36 @@ pg_autoctl create postgres \
 --ssl-self-signed \
 --monitor 'postgres://autoctl_node@host1:5432/pg_auto_failover?sslmode=require' \
 --run
+
+
+
+
+
+pg_autoctl create postgres --ssl-self-signed --auth trust --hostname host2 \
+--pgdata /var/lib/postgresql/test1 \
+--pgport 5432 \
+--monitor 'postgres://autoctl_node@host1:5432/pg_auto_failover?sslmode=require' \
+--run
+
+pg_autoctl create postgres --ssl-self-signed --auth trust --hostname host2 \
+--pgdata /var/lib/postgresql/test2 \
+--pgport 5433 \
+--monitor 'postgres://autoctl_node@host1:5432/pg_auto_failover?sslmode=require' \
+--run
+
+
+
+
+
+pg_autoctl show state
+
+postgres@host1:~$ pg_autoctl show state
+  Name |  Node |  Host:Port |       TLI: LSN |   Connection |      Reported State |      Assigned State
+-------+-------+------------+----------------+--------------+---------------------+--------------------
+node_1 |     1 | host2:5432 |   1: 0/301EF30 |   read-write |             primary |             primary
+node_2 |     2 | host2:5433 |   1: 0/301EF30 |    read-only |           secondary |           secondary
+
+postgres@host1:~$
+
+
+
