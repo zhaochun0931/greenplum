@@ -69,6 +69,24 @@ pg_auto_failover=# \dx
  plpgsql        | 1.0     | pg_catalog | PL/pgSQL procedural language
 (3 rows)
 
-pg_auto_failover=#
 
+
+
+
+
+
+
+
+
+pg_autoctl show uri
+
+
+
+$ pg_autoctl show uri
+        Type |    Name | Connection String
+-------------+---------+-------------------------------
+     monitor | monitor | postgres://autoctl_node@host1:5433/pg_auto_failover?sslmode=require
+   formation | default |
+
+$
 
