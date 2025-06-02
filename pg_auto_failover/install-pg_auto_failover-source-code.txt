@@ -1,0 +1,6 @@
+wget https://github.com/hapostgres/pg_auto_failover/archive/refs/tags/v2.2.tar.gz
+tar -xzvf v2.2.tar.gz
+
+
+
+
