@@ -109,3 +109,25 @@ $
 
 
 pg_autoctl show state
+
+
+
+
+
+
+
+pg_autoctl create postgres \
+--hostname host2 \
+--auth trust \
+--ssl-self-signed \
+--monitor 'postgres://autoctl_node@host1:5433/pg_auto_failover?sslmode=require' \
+--run
+
+
+
+pg_autoctl create postgres \
+--hostname paf3 \c
+--auth trust \
+--ssl-self-signed \
+--monitor 'postgres://autoctl_node@host1:5433/pg_auto_failover?sslmode=require' \
+--run
