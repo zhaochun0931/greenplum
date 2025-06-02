@@ -99,7 +99,7 @@ pg_autoctl show uri
 $ pg_autoctl show uri
         Type |    Name | Connection String
 -------------+---------+-------------------------------
-     monitor | monitor | postgres://autoctl_node@host1:5433/pg_auto_failover?sslmode=require
+     monitor | monitor | postgres://autoctl_node@host1:5432/pg_auto_failover?sslmode=require
    formation | default |
 
 $
@@ -121,14 +121,14 @@ pg_autoctl create postgres \
 --hostname host2 \
 --auth trust \
 --ssl-self-signed \
---monitor 'postgres://autoctl_node@host1:5433/pg_auto_failover?sslmode=require' \
+--monitor 'postgres://autoctl_node@host1:5432/pg_auto_failover?sslmode=require' \
 --run
 
 
 
 pg_autoctl create postgres \
---hostname paf3 \c
+--hostname host3 \
 --auth trust \
 --ssl-self-signed \
---monitor 'postgres://autoctl_node@host1:5433/pg_auto_failover?sslmode=require' \
+--monitor 'postgres://autoctl_node@host1:5432/pg_auto_failover?sslmode=require' \
 --run
