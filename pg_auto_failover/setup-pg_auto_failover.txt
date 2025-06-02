@@ -128,6 +128,7 @@ pg_autoctl create postgres \
 
 
 
+# you can run 3 nodes in the same host for test
 
 pg_autoctl create postgres --ssl-self-signed --auth trust --hostname host2 \
 --pgdata /var/lib/postgresql/test1 \
@@ -142,7 +143,11 @@ pg_autoctl create postgres --ssl-self-signed --auth trust --hostname host2 \
 --run
 
 
-
+pg_autoctl create postgres --ssl-self-signed --auth trust --hostname host2 \
+--pgdata /var/lib/postgresql/test3 \
+--pgport 5434 \
+--monitor 'postgres://autoctl_node@host1:5432/pg_auto_failover?sslmode=require' \
+--run
 
 
 pg_autoctl show state
@@ -150,8 +155,9 @@ pg_autoctl show state
 postgres@host1:~$ pg_autoctl show state
   Name |  Node |  Host:Port |       TLI: LSN |   Connection |      Reported State |      Assigned State
 -------+-------+------------+----------------+--------------+---------------------+--------------------
-node_1 |     1 | host2:5432 |   1: 0/301EF30 |   read-write |             primary |             primary
-node_2 |     2 | host2:5433 |   1: 0/301EF30 |    read-only |           secondary |           secondary
+node_1 |     1 | host2:5432 |   3: 0/5000000 |   read-write |             primary |             primary
+node_2 |     2 | host2:5433 |   3: 0/5000000 |    read-only |           secondary |           secondary
+node_3 |     3 | host2:5434 |   3: 0/5000000 |    read-only |           secondary |           secondary
 
 postgres@host1:~$
 
