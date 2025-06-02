@@ -5,6 +5,10 @@ chown -R postgres:postgres /data
 su - postgres
 
 export PGDATA=/data
+export PGPORT=5433
+
+
+
 
 pg_autoctl create monitor --ssl-self-signed --auth trust --hostname=host1 --run
 
