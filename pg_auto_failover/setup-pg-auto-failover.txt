@@ -1,25 +1,25 @@
-mkdir /data
-mkdir /backup
-chown -R postgres:postgres /data /backup
-
-
-systemctl stop postgresql
-systemctl disable postgresql
-
-
-
-
-
 su - postgres
 
-export PGDATA=/data
+
+
+mkdir test
+
+
+sudo systemctl stop postgresql
+sudo systemctl disable postgresql
+
+
+
+
+
+
+export PGDATA=/var/lib/postgresql/test
 export PGPORT=5433
 
 
 
 rm -Rf /var/run/postgresql/*
-rm -Rf /data/* 
-rm -Rf /backup/*
+rm -Rf ~/backup/
 rm -Rf ~/.config/
 rm -Rf ~/.local/
 
