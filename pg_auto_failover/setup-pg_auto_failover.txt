@@ -163,3 +163,17 @@ postgres@host1:~$
 
 
 
+
+
+
+
+
+pg_autoctl perform switchover
+
+
+pg_autoctl perform failover
+
+
+
+
+
