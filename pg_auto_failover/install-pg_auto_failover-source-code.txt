@@ -3,4 +3,6 @@ tar -xzvf v2.2.tar.gz
 
 
 
+cd pg_auto_failover-2.2
+
 
