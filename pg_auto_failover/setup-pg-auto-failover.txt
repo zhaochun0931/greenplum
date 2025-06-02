@@ -1,5 +1,6 @@
 mkdir /data
-chown -R postgres:postgres /data
+mkdir /backup
+chown -R postgres:postgres /data /backup
 
 
 systemctl stop postgresql
