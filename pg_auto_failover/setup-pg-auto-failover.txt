@@ -18,7 +18,8 @@ export PGPORT=5433
 
 
 rm -Rf /var/run/postgresql/*
-rm -Rf /data/*
+rm -Rf /data/* 
+rm -Rf /backup/*
 
 
 
