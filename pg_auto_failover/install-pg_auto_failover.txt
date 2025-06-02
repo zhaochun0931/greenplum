@@ -8,3 +8,8 @@ echo 'create_main_cluster = false' | sudo tee -a /etc/postgresql-common/createcl
 apt-get update
 apt-get install -y --no-install-recommends postgresql-16
 
+
+
+apt-get install pg-auto-failover-cli
+
+apt-get install postgresql-16-auto-failover
