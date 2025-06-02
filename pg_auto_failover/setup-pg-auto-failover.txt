@@ -1,6 +1,7 @@
 mkdir /data
+chown -R postgres:postgres /data
 
+
+su - postgres
 export PGDATA=/data
-
-
-pg_autoctl create monitor --ssl-self-signed --auth trust 
+pg_autoctl create monitor --ssl-self-signed --auth trust --hostname=host1
