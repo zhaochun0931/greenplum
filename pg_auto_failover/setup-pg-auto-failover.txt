@@ -22,7 +22,7 @@ rm -Rf /data/*
 rm -Rf /backup/*
 
 
-
+rm -Rf .config/ .local/
 
 
 pg_autoctl create monitor --ssl-self-signed --auth trust --hostname=host1 --run
