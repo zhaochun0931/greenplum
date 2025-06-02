@@ -1,0 +1,6 @@
+mkdir /data
+
+export PGDATA=/data
+
+
+pg_autoctl create monitor --ssl-self-signed --auth trust 
