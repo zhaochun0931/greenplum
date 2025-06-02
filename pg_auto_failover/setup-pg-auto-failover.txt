@@ -18,10 +18,7 @@ export PGPORT=5433
 
 
 
-rm -Rf /var/run/postgresql/*
-rm -Rf ~/backup/
-rm -Rf ~/.config/
-rm -Rf ~/.local/
+rm -Rf backup/ .config/ .local/ test/ /var/run/postgresql/*
 
 
 pg_autoctl create monitor --ssl-self-signed --auth trust --hostname=host1 --run
