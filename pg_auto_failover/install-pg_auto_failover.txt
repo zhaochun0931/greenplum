@@ -1,4 +1,3 @@
-
 sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
@@ -11,7 +10,7 @@ apt-get install -y --no-install-recommends postgresql-16
 
 
 
-apt-get install pg-auto-failover-cli
+apt-get install pg-auto-failover-cli -y
 
 apt-get install postgresql-16-auto-failover
 
