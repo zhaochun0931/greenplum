@@ -177,3 +177,9 @@ pg_autoctl perform failover
 
 
 
+pg_autoctl perform promotion --name node_3
+
+
+
+
+
