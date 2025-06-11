@@ -1,0 +1,5 @@
+yum install -y postgresql-devel python3-devel
+
+pip3 install --user psycopg2-binary
+
+
