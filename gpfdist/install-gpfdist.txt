@@ -49,14 +49,17 @@ Serving HTTP on port 8080, directory /home/gpadmin/gpAdminLogs
 
 
 
+  
 
-
-CREATE EXTERNAL TABLE ext_test_table (id  INT, name VARCHAR(100), age INT, address VARCHAR(200))
+CREATE EXTERNAL TABLE t1 (id  INT, name VARCHAR(100), age INT, address VARCHAR(200))
 LOCATION ('gpfdist://localhost:8080/data.csv')
 FORMAT 'TEXT' (DELIMITER ',');
 
 
 
+create external table t1 (id int, name varchar(100)) location ('gpfdist://localhost:8080/data.csv') format 'TEXT' (DELIMITER ',');
+
+create external table t2 (id int, name varchar(100)) location ('gpfdist://localhost:8080/data.csv') format 'csv' (DELIMITER ',');
 
 
 
