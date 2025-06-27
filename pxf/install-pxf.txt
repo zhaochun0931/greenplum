@@ -85,9 +85,11 @@ grant insert ON PROTOCOL pxf to gpadmin;
 
 
 
-CREATE EXTERNAL TABLE t1(id int) LOCATION ('pxf://hadoop/data1/test/xxx?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=E',');
+CREATE EXTERNAL TABLE t1(name text) LOCATION ('pxf://hadoop/data1/t1?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=E',');
+
+CREATE EXTERNAL TABLE t2(id int, name varchar(20)) LOCATION ('pxf://hadoop/data1/t2?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=',');
+
 CREATE EXTERNAL TABLE t2(location text) LOCATION ('pxf://hadoop/data1/xxx1?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=E',');
-CREATE EXTERNAL TABLE t3(id int, name varchar(20)) LOCATION ('pxf://hadoop/data1/test/xxx2?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=',');
 select * from t1;
 drop external table t1;
 
