@@ -19,6 +19,12 @@ export PATH=/usr/local/pxf-gp7/bin:$PATH
 
 
 
+/usr/local/pxf-gp6/conf/pxf-env.sh
+
+
+
+
+
 which java
 
 
