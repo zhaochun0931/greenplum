@@ -6,6 +6,8 @@ yum install -y pxf-gp7-6.11.0-2.el8.x86_64.rpm
 chown -R gpadmin:gpadmin /usr/local/pxf-gp*
 
 
+add the following line to .bashrc
+
 export PATH=/usr/local/pxf-gp7/bin:$PATH
 
 
