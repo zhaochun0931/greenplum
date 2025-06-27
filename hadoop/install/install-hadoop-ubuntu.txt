@@ -41,27 +41,30 @@ chown -Rf hadoop:hadoop /hadoop
 
 su - hadoop
 
-add the following line to ~/.bash_profile
-
-export JAVA_HOME=/usr
-export HADOOP_HOME=/home/hadoop/hadoop-3.4.1
-export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
+copy the .bash_profile to ~/.bash_profile
 
 
 
 
 
-add the following lines to $HADOOP_HOME/etc/hadoop/hadoop-env.sh
-
-export JAVA_HOME=/usr
-export HADOOP_HOME=/home/hadoop/hadoop-3.4.1
 
 
+
+
+
+cp hadoop-env.sh $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+cp core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml
+cp hdfs-site.xml $HADOOP_HOME/etc/hdfs-site.xml
 
 
 
 
 hadoop version
+
+
+
+
+# install completed
 
 
 
