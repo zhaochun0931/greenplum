@@ -33,8 +33,8 @@ hdfs dfs -cat /hadoop/data1/t2
 
 
 
-echo 222 >> xxx1
-hdfs dfs -put -f xxx1 /hadoop/data1/
-hdfs dfs -cat /hadoop/data1/xxx1
+echo 333 >> t3
+hdfs dfs -put -f t3 /hadoop/data1/test/t3
+hdfs dfs -cat /hadoop/data1/test/t3
 
 
