@@ -89,7 +89,9 @@ CREATE EXTERNAL TABLE t1(name text) LOCATION ('pxf://hadoop/data1/t1?PROFILE=hdf
 
 CREATE EXTERNAL TABLE t2(id int, name varchar(20)) LOCATION ('pxf://hadoop/data1/t2?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=',');
 
-CREATE EXTERNAL TABLE t2(location text) LOCATION ('pxf://hadoop/data1/xxx1?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=E',');
+CREATE EXTERNAL TABLE t3(id int) LOCATION ('pxf://hadoop/data1/test/t3?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=E',');
+
+
 select * from t1;
 drop external table t1;
 
@@ -110,8 +112,8 @@ drop external table t1;
 
 
 
-CREATE WRITABLE EXTERNAL TABLE t1(id int) LOCATION ('pxf://hadoop/data1/test/t1?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
-insert into t1 select * from generate_series(1,10);
+CREATE WRITABLE EXTERNAL TABLE t4(id int) LOCATION ('pxf://hadoop/data1/t4?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
+insert into t4 select * from generate_series(1,10);
 
 
 CREATE WRITABLE EXTERNAL TABLE ext_hdfs_data6(name text) LOCATION ('pxf://testdata/green2hadoop?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
