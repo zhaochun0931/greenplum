@@ -1,17 +1,27 @@
 hdfs dfs -mkdir -p /hadoop/data1/test
 
+hdfs dfs -ls /hadoop/data1
 hdfs dfs -ls /hadoop/data1/test
 
 
-echo "hello world 1" > xxx1
-echo "hello world 2" > xxx2
-hdfs dfs -put xxx1 /hadoop/data1/test
-hdfs dfs -put xxx2 /hadoop/data1/test
+
+echo "hello1" > file1
+
+cat << done > file2
+1,xiaoming1
+2,xiaoming2
+3,xiaoming3
+done
 
 
 
-hdfs dfs -cat /hadoop/data1/test/xxx1
-hdfs dfs -cat /hadoop/data1/test/xxx2
+hdfs dfs -put file1 /hadoop/data1/
+hdfs dfs -put file2 /hadoop/data1/
+
+
+
+hdfs dfs -cat /hadoop/data1/file1
+hdfs dfs -cat /hadoop/data1/file2
 
 
 
