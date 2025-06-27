@@ -112,7 +112,7 @@ drop external table t1;
 
 
 
-CREATE WRITABLE EXTERNAL TABLE t4(id int) LOCATION ('pxf://hadoop/data1/t4?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
+CREATE WRITABLE EXTERNAL TABLE t4(id int) LOCATION ('pxf://hadoop/data1/test/t4?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
 insert into t4 select * from generate_series(1,10);
 
 
