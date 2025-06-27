@@ -1,7 +1,19 @@
+# create a new test directory in hdfs file system
 hdfs dfs -mkdir -p /hadoop/data1/test
+
+# change the owner of this new test directory and ask the gpadmin to write the external table, otherwise it will fail
+hdfs dfs -chown gpadmin  /hadoop/data1/test
+
 
 hdfs dfs -ls /hadoop/data1
 hdfs dfs -ls /hadoop/data1/test
+
+
+
+
+
+
+
 
 
 
