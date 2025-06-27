@@ -40,6 +40,15 @@ cd /home/hadoop/hadoop-3.4.1/etc/hadoop
 
 cp /home/hadoop/hadoop-3.4.1/etc/hadoop/core-site.xml /usr/local/pxf-gp6/servers/default
 cp /home/hadoop/hadoop-3.4.1/etc/hadoop/hdfs-site.xml /usr/local/pxf-gp6/servers/default
+
+
+# the configuration file core-site.xml and hdfs-site.xml should be sufficient to test
+
+
+
+
+
+
 cp /home/hadoop/hadoop-3.4.1/etc/hadoop/mapred-site.xml /usr/local/pxf-gp6/servers/default
 cp /home/hadoop/hadoop-3.4.1/etc/hadoop/yarn-site.xml /usr/local/pxf-gp6/servers/default
 
@@ -77,33 +86,9 @@ grant insert ON PROTOCOL pxf to gpadmin;
 
 
 CREATE EXTERNAL TABLE t1(id int) LOCATION ('pxf://hadoop/data1/test/xxx?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=E',');
-CREATE EXTERNAL TABLE t2(location text) LOCATION ('pxf://testdata/xxx?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=E',');
-CREATE EXTERNAL TABLE t3(id int, name varchar(20)) LOCATION ('pxf://testdata/testcsv?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=',');
-
+CREATE EXTERNAL TABLE t2(location text) LOCATION ('pxf://hadoop/data1/xxx1?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=E',');
+CREATE EXTERNAL TABLE t3(id int, name varchar(20)) LOCATION ('pxf://hadoop/data1/test/xxx2?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=',');
 select * from t1;
-
-
-postgres=# select * from t1;
-   location
---------------
- hello hadoop
-(1 row)
-
-postgres=#
-
-
-postgres=# select * from ext_hdfs_data4;
- id |   name
-----+----------
-  1 | xiaoming
-  2 | xxx
-  3 | yyy
-(3 rows)
-
-postgres=#
-
-
-
 drop external table t1;
 
 
@@ -123,10 +108,12 @@ drop external table t1;
 
 
 
-CREATE WRITABLE EXTERNAL TABLE t2_w(id int) LOCATION ('pxf://hadoop/t2_w?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
+CREATE WRITABLE EXTERNAL TABLE t1(id int) LOCATION ('pxf://hadoop/data1/test/t1?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
+insert into t1 select * from generate_series(1,10);
+
 
 CREATE WRITABLE EXTERNAL TABLE ext_hdfs_data6(name text) LOCATION ('pxf://testdata/green2hadoop?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
-INSERT INTO ext_hdfs_data6 (name) VALUES ('xiaoming'),('xiaoming2');
+INSERT INTO t1 (name) VALUES ('xiaoming'),('xiaoming2');
 
 
 
