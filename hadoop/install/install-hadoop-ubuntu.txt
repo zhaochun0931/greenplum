@@ -48,7 +48,18 @@ export HADOOP_HOME=/home/hadoop/hadoop-3.4.1
 export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
 
 
+
+
+
 add the following lines to $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+
+export JAVA_HOME=/usr
+export HADOOP_HOME=/home/hadoop/hadoop-3.4.1
+
+
+
+
+
 
 hadoop version
 
@@ -78,7 +89,15 @@ $ start-dfs.sh
 Starting namenodes on [0.0.0.0]
 Starting datanodes
 Starting secondary namenodes [gp2]
-$ jps
+$ 
+$
+$
+
+
+jps
+
+
+$jps
 8658 Jps
 8549 SecondaryNameNode
 8198 NameNode
