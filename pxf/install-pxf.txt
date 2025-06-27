@@ -116,18 +116,50 @@ CREATE WRITABLE EXTERNAL TABLE t4(id int) LOCATION ('pxf://hadoop/data1/test/t4?
 insert into t4 select * from generate_series(1,10);
 
 
-CREATE WRITABLE EXTERNAL TABLE ext_hdfs_data6(name text) LOCATION ('pxf://testdata/green2hadoop?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
-INSERT INTO t1 (name) VALUES ('xiaoming'),('xiaoming2');
+CREATE WRITABLE EXTERNAL TABLE t5(id int, name varchar(100)) LOCATION ('pxf://hadoop/data1/test/t5?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=',');
+INSERT INTO t5 VALUES(5, 'xiaoming5');
+INSERT INTO t5 VALUES(6, 'xiaoming6');
 
 
 
-$ hdfs dfs -ls /testdata/
-drwxr-xr-x   - gpadmin supergroup          0 2025-03-14 23:59 /testdata/green2hadoop
-$ 
-$ hdfs dfs -cat /testdata/green2hadoop/*
-xiaoming
-xiaoming2
+
+
+
+
+
+
+hdfs dfs -ls  /hadoop/data1/test/t4
+
+$ hdfs dfs -ls  /hadoop/data1/test/t4
+Found 3 items
+-rw-r--r--   3 gpadmin supergroup         10 2025-06-27 19:25 /hadoop/data1/test/t4/50-0000000004_0
+-rw-r--r--   3 gpadmin supergroup          9 2025-06-27 19:25 /hadoop/data1/test/t4/50-0000000004_1
+-rw-r--r--   3 gpadmin supergroup          2 2025-06-27 19:25 /hadoop/data1/test/t4/50-0000000004_2
+$ hdfs dfs -cat  /hadoop/data1/test/t4/*
+2
+4
+7
+8
+9
+3
+5
+6
+10
+1
 $
 
 
 
+
+
+
+
+[hadoop@data75 ~]$ hdfs dfs -ls  /hadoop/data1/test/t5/*
+-rw-r--r--   3 gpadmin supergroup         12 2025-06-27 19:35 /hadoop/data1/test/t5/50-0000000009_0
+-rw-r--r--   3 gpadmin supergroup         12 2025-06-27 19:35 /hadoop/data1/test/t5/50-0000000011_2
+[hadoop@data75 ~]$
+[hadoop@data75 ~]$
+$ hdfs dfs -cat  /hadoop/data1/test/t5/*
+5,xiaoming5
+6,xiaoming6
+$
