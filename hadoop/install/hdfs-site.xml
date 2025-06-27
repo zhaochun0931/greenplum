@@ -2,12 +2,12 @@
 
     <property>
         <name>dfs.namenode.name.dir</name>
-        <value>file:///hadoop/namenode</value>
+        <value>file:///hadoop/name</value>
     </property>
     
     <property>
         <name>dfs.datanode.data.dir</name>
-        <value>file:///hadoop/datanode</value>
+        <value>file:///hadoop/data1</value>
     </property>
 
 </configuration>
