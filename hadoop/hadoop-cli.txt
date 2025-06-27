@@ -34,6 +34,8 @@ hdfs dfs -cat /hadoop/data1/t2
 
 
 echo 333 >> t3
+
+# copy the file to test directory
 hdfs dfs -put -f t3 /hadoop/data1/test/t3
 hdfs dfs -cat /hadoop/data1/test/t3
 
