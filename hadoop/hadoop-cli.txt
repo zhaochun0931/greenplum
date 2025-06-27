@@ -27,7 +27,7 @@ hdfs dfs -cat /hadoop/data1/t2
 
 
 
-
+hdfs fsck /hadoop/data1/t1 -files -blocks -locations
 
 
 
