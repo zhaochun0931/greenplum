@@ -63,16 +63,14 @@ grant insert ON PROTOCOL pxf to gpadmin;
 
 
 
-CREATE EXTERNAL TABLE ext_hdfs_data(id int) LOCATION ('pxf://hadoop/data1/xxx?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=E',');
+CREATE EXTERNAL TABLE t1(id int) LOCATION ('pxf://hadoop/data1/test/xxx?PROFILE=hdfsTextSimple') FORMAT 'TEXT' (delimiter=E',');
+CREATE EXTERNAL TABLE t2(location text) LOCATION ('pxf://testdata/xxx?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=E',');
+CREATE EXTERNAL TABLE t3(id int, name varchar(20)) LOCATION ('pxf://testdata/testcsv?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=',');
 
-CREATE EXTERNAL TABLE ext_hdfs_data2(location text) LOCATION ('pxf://testdata/xxx?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=E',');
-
-CREATE EXTERNAL TABLE ext_hdfs_data4(id int, name varchar(20)) LOCATION ('pxf://testdata/testcsv?PROFILE=hdfs:text') FORMAT 'TEXT' (delimiter=',');
-
-select * from ext_hdfs_data;
+select * from t1;
 
 
-postgres=# select * from ext_hdfs_data;
+postgres=# select * from t1;
    location
 --------------
  hello hadoop
@@ -90,6 +88,21 @@ postgres=# select * from ext_hdfs_data4;
 (3 rows)
 
 postgres=#
+
+
+
+drop external table t1;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
