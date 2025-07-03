@@ -1,15 +1,25 @@
 # Use root/pivotal gpadmin/pivotal credentials
-
 services:
 
   gp:
     image: datagrip/greenplum
     restart: always
     hostname: gp
+    container_name: greenplum
+    ports:
+      - "5432:5432"
     networks:
       - gp_network
 
+  ubuntu-client:
+    image: ubuntu:22.04
+    container_name: ubuntu-client
+    command: ["sleep", "infinity"]
+    tty: true
+    networks:
+      - gp_network
 
 networks:
   gp_network:
     driver: bridge
+
