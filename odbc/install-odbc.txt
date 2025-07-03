@@ -1,1 +1,4 @@
+pip install pyodbc
+apt install odbc-postgresql
+
 
