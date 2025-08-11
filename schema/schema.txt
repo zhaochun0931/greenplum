@@ -1,4 +1,30 @@
-Every database has a default schema named public. If you do not create any schemas, objects are created in the public schema.
+Common Default User Schemas
+
+Every database has a default schema named public. If you do not create any schemas, objects are created in the public schema. 
+
+
+
+
+
+
+
+System Schemas (built-in)
+These exist in every Greenplum database and should generally not be modified except by administrators:
+
+ gp_toolkit
+ information_schema
+ pg_aoseg
+ pg_bitmapindex
+ pg_catalog
+ pg_toast
+ public
+
+
+
+
+
+
+
 
 
 
@@ -26,3 +52,35 @@ test=# SHOW search_path;
 (1 row)
 
 test=#
+
+
+
+
+
+
+\dn
+
+test=# \dn
+   List of schemas
+    Name    |  Owner
+------------+---------
+ gp_toolkit | gpadmin
+ public     | gpadmin
+(2 rows)
+
+test=#
+
+
+
+
+
+
+
+SELECT schema_name
+FROM information_schema.schemata
+ORDER BY schema_name;
+
+
+
+
+
