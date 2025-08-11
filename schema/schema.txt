@@ -1,0 +1,18 @@
+Every database has a default schema named public. If you do not create any schemas, objects are created in the public schema.
+
+
+
+
+SELECT current_schema();
+
+test=# SELECT current_schema();
+ current_schema
+----------------
+ public
+(1 row)
+
+test=#
+
+
+
+
