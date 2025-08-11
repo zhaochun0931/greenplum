@@ -16,3 +16,13 @@ test=#
 
 
 
+
+SHOW search_path;
+
+test=# SHOW search_path;
+   search_path
+-----------------
+ "$user", public
+(1 row)
+
+test=#
