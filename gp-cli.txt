@@ -168,3 +168,14 @@ FROM generate_series(1, 20000) a,
 WHERE sqrt(abs(sin(a) * cos(b))) > 0.5;
 
 
+
+
+SELECT pid, datname, usename, application_name, client_addr, query
+FROM pg_stat_activity
+WHERE state = 'active';
+
+
+
+
+
+
