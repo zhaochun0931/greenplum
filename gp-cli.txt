@@ -157,3 +157,12 @@ copy pg_class from '/tmp/111' with oids;
 select * from pg_sleep(10);
 
 
+
+# cpu intensive
+
+SELECT COUNT(*)
+FROM generate_series(1, 20000) a,
+     generate_series(1, 20000) b
+WHERE sqrt(abs(sin(a) * cos(b))) > 0.5;
+
+
