@@ -155,6 +155,8 @@ copy pg_class from '/tmp/111' with oids;
 
 
 select * from pg_sleep(10);
+SELECT CLOCK_TIMESTAMP(), PG_SLEEP(3), CLOCK_TIMESTAMP();
+
 
 
 
