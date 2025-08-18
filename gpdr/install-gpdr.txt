@@ -136,7 +136,7 @@ gpdr backup --type full
 
 # recovery cluster
 
-
+gpdr restore -t full --restore-point latest
 
 [gpadmin@data75 ~]$ gpdr restore -t full --restore-point latest
 20250508:02:51:53 gpdr:gpadmin:data75:021688-[INFO]:-Restoring database cluster
