@@ -104,6 +104,7 @@ gpdr configure restore --config-file posix_config_file.yml --recovery-cluster-co
 
 
 # primary cluster
+
 gpdr backup --type full
 
 [gpadmin@data74 ~]$ gpdr backup --type full
@@ -159,5 +160,8 @@ gpstop -a
 
 
 
-# original recovery cluster
+# promote the secondary to primary 
 gpdr promote
+gpstart
+
+
