@@ -72,7 +72,7 @@ gpdr configure backup --reconfigure posix_config_file.yml
 
 
 
-# recovery cluster
+# secondary cluster
 
 # make sure the secondary cluster is down before recovery
 
@@ -116,6 +116,10 @@ gpdr configure restore --config-file posix_config_file.yml --recovery-cluster-co
 
 
 
+
+
+# perform the backup and restore
+
 # primary cluster
 
 gpdr backup --type full
@@ -134,7 +138,7 @@ gpdr backup --type full
 
 
 
-# recovery cluster
+# secondary cluster
 
 gpdr restore -t full --restore-point latest
 
@@ -173,8 +177,11 @@ gpstop -a
 
 
 
+
+
 # promote the secondary to primary 
 gpdr promote
+
 gpstart
 
 
