@@ -22,6 +22,8 @@ $
 
 
 
+# configure the nfs
+
 
 
 
