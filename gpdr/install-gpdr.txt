@@ -141,7 +141,7 @@ gpdr restore -t full --restore-point latest
 
 
 
-
+gpdr restore -t incremental --restore-point latest
 
 
 
