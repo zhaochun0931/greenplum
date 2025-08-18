@@ -73,6 +73,9 @@ gpdr configure backup --reconfigure posix_config_file.yml
 
 
 # recovery cluster
+
+# make sure the secondary cluster is down before recovery
+
 gpdr configure restore --config-file posix_config_file.yml --use-existing-cluster
 
 [gpadmin@data75 ~]$ gpdr configure restore --config-file posix_config_file.yml --use-existing-cluster
