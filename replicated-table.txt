@@ -1,0 +1,24 @@
+Normally, Greenplum tables are distributed (rows are spread across segments using a distribution key).
+
+A replicated table (also called a replicated distribution) is fully copied to each segment.
+
+
+
+
+
+
+
+
+create table t1 (id int) distributed replicated;
+create table t2 (id int);
+
+
+insert into t1 select * from generate_series(1,10);
+insert into t2 select * from generate_series(1,10);
+
+
+
+
+
+
+PGOPTIONS='-c gp_session_role=utility' psql -p 6002 -d test
